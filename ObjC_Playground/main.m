@@ -10,12 +10,8 @@
 
 int main(int argc, const char * argv[])
 {
-
 	@autoreleasepool {
-	    
-	    // insert code here...
-	    NSLog(@"Hello, World!");
-	    
+	    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
 	}
     return 0;
 }

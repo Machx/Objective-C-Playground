@@ -10,7 +10,43 @@
 		B85EE756163AECB000265870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE755163AECB000265870 /* Foundation.framework */; };
 		B85EE759163AECB000265870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE758163AECB000265870 /* main.m */; };
 		B85EE75D163AECB000265870 /* ObjC_Playground.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EE75C163AECB000265870 /* ObjC_Playground.1 */; };
+		B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
+		B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE77E163B277200265870 /* SenTestingKit.framework */; };
+		B85EE781163B277300265870 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE780163B277300265870 /* Cocoa.framework */; };
+		B85EE78B163B277300265870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85EE789163B277300265870 /* InfoPlist.strings */; };
+		B85EE78E163B277300265870 /* ObjC_PlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE78D163B277300265870 /* ObjC_PlaygroundTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B85EE770163AF96800265870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17395C7213B280EE00C900BD;
+			remoteInfo = Zangetsu;
+		};
+		B85EE772163AF96800265870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B8F5E66912A02EB400E58C94;
+			remoteInfo = "Unit Tests";
+		};
+		B85EE774163AF96800265870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B869BAF914C3AA5A00ED2908;
+			remoteInfo = ZangetsuTouch;
+		};
+		B85EE776163AF96800265870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B869BB0814C3AA5B00ED2908;
+			remoteInfo = ZangetsuTouchTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B85EE74F163AECB000265870 /* CopyFiles */ = {
@@ -31,6 +67,20 @@
 		B85EE758163AECB000265870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B85EE75B163AECB000265870 /* ObjC_Playground-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC_Playground-Prefix.pch"; sourceTree = "<group>"; };
 		B85EE75C163AECB000265870 /* ObjC_Playground.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObjC_Playground.1; sourceTree = "<group>"; };
+		B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBlockNotificationCenter.h; sourceTree = "<group>"; };
+		B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBlockNotificationCenter.m; sourceTree = "<group>"; };
+		B85EE766163AF96700265870 /* Zangetsu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zangetsu.xcodeproj; path = ../Zangetsu/Zangetsu.xcodeproj; sourceTree = "<group>"; };
+		B85EE77D163B277200265870 /* ObjC_PlaygroundTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjC_PlaygroundTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B85EE77E163B277200265870 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B85EE780163B277300265870 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		B85EE783163B277300265870 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B85EE784163B277300265870 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B85EE785163B277300265870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B85EE788163B277300265870 /* ObjC_PlaygroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjC_PlaygroundTests-Info.plist"; sourceTree = "<group>"; };
+		B85EE78A163B277300265870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B85EE78C163B277300265870 /* ObjC_PlaygroundTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjC_PlaygroundTests.h; sourceTree = "<group>"; };
+		B85EE78D163B277300265870 /* ObjC_PlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjC_PlaygroundTests.m; sourceTree = "<group>"; };
+		B85EE78F163B277300265870 /* ObjC_PlaygroundTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC_PlaygroundTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,13 +92,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B85EE779163B277200265870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */,
+				B85EE781163B277300265870 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B85EE746163AECB000265870 = {
 			isa = PBXGroup;
 			children = (
+				B85EE766163AF96700265870 /* Zangetsu.xcodeproj */,
 				B85EE757163AECB000265870 /* ObjC_Playground */,
+				B85EE786163B277300265870 /* ObjC_PlaygroundTests */,
 				B85EE754163AECB000265870 /* Frameworks */,
 				B85EE752163AECB000265870 /* Products */,
 			);
@@ -58,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B85EE751163AECB000265870 /* ObjC_Playground */,
+				B85EE77D163B277200265870 /* ObjC_PlaygroundTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				B85EE755163AECB000265870 /* Foundation.framework */,
+				B85EE77E163B277200265870 /* SenTestingKit.framework */,
+				B85EE780163B277300265870 /* Cocoa.framework */,
+				B85EE782163B277300265870 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +141,8 @@
 				B85EE758163AECB000265870 /* main.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
+				B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */,
+				B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */,
 			);
 			path = ObjC_Playground;
 			sourceTree = "<group>";
@@ -84,6 +151,47 @@
 			isa = PBXGroup;
 			children = (
 				B85EE75B163AECB000265870 /* ObjC_Playground-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B85EE767163AF96700265870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B85EE771163AF96800265870 /* Zangetsu.framework */,
+				B85EE773163AF96800265870 /* Unit Tests.octest */,
+				B85EE775163AF96800265870 /* libZangetsuTouch.a */,
+				B85EE777163AF96800265870 /* ZangetsuTouchTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B85EE782163B277300265870 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B85EE783163B277300265870 /* AppKit.framework */,
+				B85EE784163B277300265870 /* CoreData.framework */,
+				B85EE785163B277300265870 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B85EE786163B277300265870 /* ObjC_PlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				B85EE78C163B277300265870 /* ObjC_PlaygroundTests.h */,
+				B85EE78D163B277300265870 /* ObjC_PlaygroundTests.m */,
+				B85EE787163B277300265870 /* Supporting Files */,
+			);
+			path = ObjC_PlaygroundTests;
+			sourceTree = "<group>";
+		};
+		B85EE787163B277300265870 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B85EE788163B277300265870 /* ObjC_PlaygroundTests-Info.plist */,
+				B85EE789163B277300265870 /* InfoPlist.strings */,
+				B85EE78F163B277300265870 /* ObjC_PlaygroundTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +216,24 @@
 			productReference = B85EE751163AECB000265870 /* ObjC_Playground */;
 			productType = "com.apple.product-type.tool";
 		};
+		B85EE77C163B277200265870 /* ObjC_PlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B85EE790163B277300265870 /* Build configuration list for PBXNativeTarget "ObjC_PlaygroundTests" */;
+			buildPhases = (
+				B85EE778163B277200265870 /* Sources */,
+				B85EE779163B277200265870 /* Frameworks */,
+				B85EE77A163B277200265870 /* Resources */,
+				B85EE77B163B277200265870 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjC_PlaygroundTests;
+			productName = ObjC_PlaygroundTests;
+			productReference = B85EE77D163B277200265870 /* ObjC_PlaygroundTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -127,12 +253,77 @@
 			mainGroup = B85EE746163AECB000265870;
 			productRefGroup = B85EE752163AECB000265870 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B85EE767163AF96700265870 /* Products */;
+					ProjectRef = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B85EE750163AECB000265870 /* ObjC_Playground */,
+				B85EE77C163B277200265870 /* ObjC_PlaygroundTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B85EE771163AF96800265870 /* Zangetsu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zangetsu.framework;
+			remoteRef = B85EE770163AF96800265870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B85EE773163AF96800265870 /* Unit Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests.octest";
+			remoteRef = B85EE772163AF96800265870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B85EE775163AF96800265870 /* libZangetsuTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZangetsuTouch.a;
+			remoteRef = B85EE774163AF96800265870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B85EE777163AF96800265870 /* ZangetsuTouchTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZangetsuTouchTests.octest;
+			remoteRef = B85EE776163AF96800265870 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B85EE77A163B277200265870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85EE78B163B277300265870 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B85EE77B163B277200265870 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B85EE74D163AECB000265870 /* Sources */ = {
@@ -140,10 +331,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85EE759163AECB000265870 /* main.m in Sources */,
+				B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B85EE778163B277200265870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85EE78E163B277300265870 /* ObjC_PlaygroundTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B85EE789163B277300265870 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B85EE78A163B277300265870 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B85EE75E163AECB000265870 /* Debug */ = {
@@ -217,6 +428,32 @@
 			};
 			name = Release;
 		};
+		B85EE791163B277300265870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
+				INFOPLIST_FILE = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B85EE792163B277300265870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
+				INFOPLIST_FILE = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +471,14 @@
 			buildConfigurations = (
 				B85EE761163AECB000265870 /* Debug */,
 				B85EE762163AECB000265870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B85EE790163B277300265870 /* Build configuration list for PBXNativeTarget "ObjC_PlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85EE791163B277300265870 /* Debug */,
+				B85EE792163B277300265870 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
