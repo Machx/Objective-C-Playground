@@ -7,6 +7,8 @@
 //
 
 #import "ObjC_PlaygroundTests.h"
+#import "CWErrorUtils.h"
+#import <Zangetsu/Zangetsu.h>
 
 @implementation ObjC_PlaygroundTests
 
@@ -24,6 +26,32 @@
     [super tearDown];
 }
 
+-(void)testErrorMethod
+{
+	NSUInteger counter = 50;
+	
+	NSError *error;
+	
+	CWOnError(counter > 100,
+			  @"Domain", 404,
+			  @"Counter less than 100",
+			  &error);
+	
+	CWLogError(error);
+}
 
+-(void)testErrorBlockMethod
+{
+	NSUInteger counter = 10;
+	
+	NSError *error;
+	
+	CWBOnError(counter > 100,
+			   ^NSError *{
+				   return CWCreateError(@"Domain", 101, @"Counter is less than 100");
+			   }, &error);
+	
+	CWLogError(error);
+}
 
 @end
