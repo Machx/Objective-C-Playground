@@ -46,10 +46,10 @@
 	
 	NSError *error;
 	
-	CWBOnError(counter > 100,
-			   ^NSError *{
-				   return CWCreateError(@"Domain", 101, @"Counter is less than 100");
-			   }, &error);
+	CWErrorTrap(counter > 100,
+				^NSError *{
+					return CWCreateError(@"Domain", 101, @"Counter is less than 100");
+				}, &error);
 	
 	CWLogError(error);
 }

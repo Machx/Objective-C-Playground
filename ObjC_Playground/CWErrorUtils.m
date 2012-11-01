@@ -21,9 +21,9 @@ void CWOnError(BOOL cond,
 	}
 }
 
-void CWBOnError(BOOL cond,
-				NSError *(^errorBlock)(void),
-				NSError **error)
+void CWErrorTrap(BOOL cond,
+				 NSError *(^errorBlock)(void),
+				 NSError **error)
 {
 	if (!cond) {
 		if (error) {

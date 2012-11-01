@@ -15,6 +15,6 @@ void CWOnError(BOOL cond,
 			   NSString *description,
 			   NSError **error);
 
-void CWBOnError(BOOL cond,
-				NSError *(^errorBlock)(void),
-				NSError **error);
+void CWErrorTrap(BOOL cond,
+				 NSError *(^errorBlock)(void),
+				 NSError **error);
