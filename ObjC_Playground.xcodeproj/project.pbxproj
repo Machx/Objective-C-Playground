@@ -20,6 +20,7 @@
 		B85EE80B163D806C00265870 /* CWErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE7CD163CD8C300265870 /* CWErrorUtils.m */; };
 		B8F28C311641BAE100BA8497 /* CWBlockNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F28C301641BAE100BA8497 /* CWBlockNotificationCenterTests.m */; };
 		B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
+		B8F28C6C1641F78C00BA8497 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +51,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = B869BB0814C3AA5B00ED2908;
 			remoteInfo = ZangetsuTouchTests;
-		};
-		B85EE7D0163CDDAC00265870 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B85EE766163AF96700265870 /* Zangetsu.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Zangetsu;
 		};
 		B8F28C321641BCA600BA8497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -111,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F28C6C1641F78C00BA8497 /* Zangetsu.framework in Frameworks */,
 				B85EE756163AECB000265870 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +252,6 @@
 			);
 			dependencies = (
 				B8F28C331641BCA600BA8497 /* PBXTargetDependency */,
-				B85EE7D1163CDDAC00265870 /* PBXTargetDependency */,
 			);
 			name = ObjC_PlaygroundTests;
 			productName = ObjC_PlaygroundTests;
@@ -380,11 +374,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B85EE7D1163CDDAC00265870 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Zangetsu;
-			targetProxy = B85EE7D0163CDDAC00265870 /* PBXContainerItemProxy */;
-		};
 		B8F28C331641BCA600BA8497 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B85EE750163AECB000265870 /* ObjC_Playground */;

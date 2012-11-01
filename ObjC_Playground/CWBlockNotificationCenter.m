@@ -7,6 +7,7 @@
 //
 
 #import "CWBlockNotificationCenter.h"
+#import <Zangetsu/Zangetsu.h>
 
 @interface CWBlockQueuePair : NSObject
 @property(copy) dispatch_block_t block;
