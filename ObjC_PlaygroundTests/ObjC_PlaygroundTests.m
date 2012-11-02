@@ -9,6 +9,7 @@
 #import "ObjC_PlaygroundTests.h"
 #import "CWErrorUtils.h"
 #import <Zangetsu/Zangetsu.h>
+#import <Zangetsu/CWAssertionMacros.h>
 
 @implementation ObjC_PlaygroundTests
 
@@ -37,7 +38,8 @@
 			  @"Counter less than 100",
 			  &error);
 	
-	CWLogError(error);
+	CWAssertEqualsStrings(@"Domain", [error domain]);
+	STAssertTrue(404 == [error code], nil);
 }
 
 -(void)testErrorBlockMethod
@@ -51,7 +53,8 @@
 					return CWCreateError(@"Domain", 101, @"Counter is less than 100");
 				}, &error);
 	
-	CWLogError(error);
+	CWAssertEqualsStrings(@"Domain", [error domain]);
+	STAssertTrue(101 == [error code], nil);
 }
 
 @end
