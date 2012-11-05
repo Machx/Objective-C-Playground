@@ -116,7 +116,7 @@ forNotification:(NSString *)notificationName
 	
 	[notification.blocks cw_each:^(id object, NSUInteger index, BOOL *stop) {
 		CWBlockQueuePair *pair = (CWBlockQueuePair *)object;
-		dispatch_async(pair.queue, pair.block);
+		dispatch_sync(pair.queue, pair.block);
 	}];
 	
 	return YES;
