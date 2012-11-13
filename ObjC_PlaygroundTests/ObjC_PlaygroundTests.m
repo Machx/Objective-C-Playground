@@ -9,6 +9,7 @@
 #import "ObjC_PlaygroundTests.h"
 #import <Zangetsu/Zangetsu.h>
 #import <Zangetsu/CWAssertionMacros.h>
+#import "CWErrorUtils.h"
 
 @implementation ObjC_PlaygroundTests
 
@@ -17,6 +18,25 @@
     [super setUp];
     
     // Set-up code here.
+}
+
+-(void)testErrorSet
+{
+	NSError *error1;
+	
+	CWSetError(@"domain",404,@"message",&error1);
+	
+	CWAssertEqualsStrings(@"domain", error1.domain);
+	STAssertTrue(404 == error1.code, nil);
+	CWAssertEqualsStrings(@"message", error1.localizedDescription);
+	
+	NSError *error2 = nil;
+	
+	CWSetError(@"domain",404,@"message",&error2);
+	
+	CWAssertEqualsStrings(@"domain", error2.domain);
+	STAssertTrue(404 == error2.code, nil);
+	CWAssertEqualsStrings(@"message", error2.localizedDescription);
 }
 
 - (void)tearDown

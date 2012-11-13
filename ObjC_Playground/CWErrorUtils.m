@@ -20,3 +20,12 @@ void CWOnError(BOOL cond,
 		}
 	}
 }
+
+void CWSetError(NSString *domain,
+				NSInteger errorNo,
+				NSString *description,
+				NSError **error)
+{
+	error = error ? error : &( NSError *){ nil };
+	*error = CWCreateError(domain, errorNo, description);
+}

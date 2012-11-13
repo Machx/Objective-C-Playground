@@ -14,3 +14,8 @@ void CWOnError(BOOL cond,
 			   NSInteger errorNo,
 			   NSString *description,
 			   NSError **error);
+
+void CWSetError(NSString *domain,
+				NSInteger errorNo,
+				NSString *description,
+				NSError **error);
