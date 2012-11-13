@@ -20,14 +20,3 @@ void CWOnError(BOOL cond,
 		}
 	}
 }
-
-void CWErrorTrap(BOOL cond,
-				 NSError *(^errorBlock)(void),
-				 NSError **error)
-{
-	if (!cond) {
-		if (error) {
-			*error = errorBlock();
-		}
-	}
-}

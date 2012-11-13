@@ -14,7 +14,3 @@ void CWOnError(BOOL cond,
 			   NSInteger errorNo,
 			   NSString *description,
 			   NSError **error);
-
-void CWErrorTrap(BOOL cond,
-				 NSError *(^errorBlock)(void),
-				 NSError **error);
