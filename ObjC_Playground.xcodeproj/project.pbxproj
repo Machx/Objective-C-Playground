@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B853C74A16549E2C00266C31 /* CWBaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B853C74916549E2C00266C31 /* CWBaseFuture.m */; };
 		B85EE756163AECB000265870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE755163AECB000265870 /* Foundation.framework */; };
 		B85EE759163AECB000265870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE758163AECB000265870 /* main.m */; };
 		B85EE75D163AECB000265870 /* ObjC_Playground.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EE75C163AECB000265870 /* ObjC_Playground.1 */; };
@@ -75,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B853C74816549E2C00266C31 /* CWBaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBaseFuture.h; sourceTree = "<group>"; };
+		B853C74916549E2C00266C31 /* CWBaseFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBaseFuture.m; sourceTree = "<group>"; };
 		B85EE751163AECB000265870 /* ObjC_Playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_Playground; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85EE755163AECB000265870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B85EE758163AECB000265870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 				B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */,
 				B85EE7CC163CD8C300265870 /* CWErrorUtils.h */,
 				B85EE7CD163CD8C300265870 /* CWErrorUtils.m */,
+				B853C74816549E2C00266C31 /* CWBaseFuture.h */,
+				B853C74916549E2C00266C31 /* CWBaseFuture.m */,
 			);
 			path = ObjC_Playground;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				B85EE759163AECB000265870 /* main.m in Sources */,
 				B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */,
 				B85EE7CE163CD8C300265870 /* CWErrorUtils.m in Sources */,
+				B853C74A16549E2C00266C31 /* CWBaseFuture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
