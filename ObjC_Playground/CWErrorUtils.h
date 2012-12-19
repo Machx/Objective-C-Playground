@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Zangetsu/Zangetsu.h>
 
+#define CW_ERROR_INITIALIZE(x) x = x ? x : &( NSError *){ nil };
+
 void CWOnError(BOOL cond,
 			   NSString *domain,
 			   NSInteger errorNo,
