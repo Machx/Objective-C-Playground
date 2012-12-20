@@ -20,6 +20,8 @@
 		B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 		B85EE80B163D806C00265870 /* CWErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE7CD163CD8C300265870 /* CWErrorUtils.m */; };
 		B8A4600D16814C840087C624 /* CWPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A4600C16814C840087C624 /* CWPriorityQueue.m */; };
+		B8A46010168217C60087C624 /* CWPriorityQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A4600F168217C60087C624 /* CWPriorityQueueTests.m */; };
+		B8A46011168219B70087C624 /* CWPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A4600C16814C840087C624 /* CWPriorityQueue.m */; };
 		B8F28C311641BAE100BA8497 /* CWBlockNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F28C301641BAE100BA8497 /* CWBlockNotificationCenterTests.m */; };
 		B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
 		B8F28C6C1641F78C00BA8497 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
@@ -102,6 +104,8 @@
 		B85EE7CD163CD8C300265870 /* CWErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWErrorUtils.m; sourceTree = "<group>"; };
 		B8A4600B16814C840087C624 /* CWPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPriorityQueue.h; sourceTree = "<group>"; };
 		B8A4600C16814C840087C624 /* CWPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueue.m; sourceTree = "<group>"; };
+		B8A4600E168217C60087C624 /* CWPriorityQueueTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPriorityQueueTests.h; sourceTree = "<group>"; };
+		B8A4600F168217C60087C624 /* CWPriorityQueueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueueTests.m; sourceTree = "<group>"; };
 		B8F28C2F1641BAE100BA8497 /* CWBlockNotificationCenterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBlockNotificationCenterTests.h; sourceTree = "<group>"; };
 		B8F28C301641BAE100BA8497 /* CWBlockNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBlockNotificationCenterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +218,8 @@
 				B85EE78D163B277300265870 /* ObjC_PlaygroundTests.m */,
 				B8F28C2F1641BAE100BA8497 /* CWBlockNotificationCenterTests.h */,
 				B8F28C301641BAE100BA8497 /* CWBlockNotificationCenterTests.m */,
+				B8A4600E168217C60087C624 /* CWPriorityQueueTests.h */,
+				B8A4600F168217C60087C624 /* CWPriorityQueueTests.m */,
 				B85EE787163B277300265870 /* Supporting Files */,
 			);
 			path = ObjC_PlaygroundTests;
@@ -380,6 +386,8 @@
 				B85EE80B163D806C00265870 /* CWErrorUtils.m in Sources */,
 				B8F28C311641BAE100BA8497 /* CWBlockNotificationCenterTests.m in Sources */,
 				B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */,
+				B8A46010168217C60087C624 /* CWPriorityQueueTests.m in Sources */,
+				B8A46011168219B70087C624 /* CWPriorityQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
