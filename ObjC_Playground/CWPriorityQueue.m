@@ -52,7 +52,7 @@
 		} else if (obj1Priority == obj2Priority) {
 			return NSOrderedSame;
 		} else {
-			return NSOrderedAscending;
+			return NSOrderedDescending;
 		}
 	}];
 }
