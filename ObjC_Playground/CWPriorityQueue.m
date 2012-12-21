@@ -25,6 +25,16 @@
     return self;
 }
 
++(instancetype)itemWithObject:(id)object
+				  andPriority:(NSUInteger)priority
+{
+	NSParameterAssert(object);
+	CWPriorityQueueItem *queueItem = [self new];
+	queueItem.item = object;
+	queueItem.priority = priority;
+	return queueItem;
+}
+
 @end
 
 @interface CWPriorityQueue ()
@@ -60,9 +70,9 @@
 -(void)addItem:(id)item
   withPriority:(NSUInteger)priority
 {
-	CWPriorityQueueItem *container = [CWPriorityQueueItem new];
-	container.item = item;
-	container.priority = priority;
+	NSParameterAssert(item);
+	CWPriorityQueueItem *container = [CWPriorityQueueItem itemWithObject:item
+															 andPriority:priority];
 	[self.storage addObject:container];
 	[self _sortStorage];
 }
