@@ -24,4 +24,24 @@
 	STAssertTrue([@"5" isEqualToString:[queue pop]], nil);
 }
 
+-(void)testObjectsOfPriority
+{
+	CWPriorityQueue *queue = [CWPriorityQueue new];
+	
+	[queue addItem:@"All" withPriority:0];
+	[queue addItem:@"Glory" withPriority:3];
+	[queue addItem:@"To" withPriority:1];
+	[queue addItem:@"The" withPriority:5];
+	[queue addItem:@"Hypnotoad" withPriority:5];
+	[queue addItem:@"Fry" withPriority:13];
+	[queue addItem:@"Leela" withPriority:2];
+	
+	NSSet *results = [queue allObjectsOfPriority:5];
+	
+	STAssertTrue(results.count == 2, nil);
+	
+	NSSet *expected = [NSSet setWithObjects:@"The",@"Hypnotoad", nil];
+	STAssertTrue([expected isEqualToSet:results], nil);
+}
+
 @end
