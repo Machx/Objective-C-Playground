@@ -19,4 +19,6 @@
 
 -(id)pop;
 
+-(NSSet *)allObjectsOfPriority:(NSUInteger)priority;
+
 @end

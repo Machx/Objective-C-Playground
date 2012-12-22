@@ -84,4 +84,16 @@
 	return obj;
 }
 
+-(NSSet *)allObjectsOfPriority:(NSUInteger)priority;
+{
+	NSMutableSet *results = [NSMutableSet set];
+	[self.storage enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		CWPriorityQueueItem *item = (CWPriorityQueueItem *)obj;
+		if (item.priority == priority) {
+			[results addObject:item.item];
+		}
+	}];
+	return results;
+}
+
 @end
