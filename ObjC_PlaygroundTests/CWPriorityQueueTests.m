@@ -19,9 +19,9 @@
 	[queue addItem:@"5" withPriority:5];
 	[queue addItem:@"3" withPriority:3];
 	
-	STAssertTrue([@"1" isEqualToString:[queue pop]], nil);
-	STAssertTrue([@"3" isEqualToString:[queue pop]], nil);
-	STAssertTrue([@"5" isEqualToString:[queue pop]], nil);
+	STAssertTrue([@"1" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"3" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"5" isEqualToString:[queue dequeue]], nil);
 }
 
 -(void)testObjectsOfPriority
