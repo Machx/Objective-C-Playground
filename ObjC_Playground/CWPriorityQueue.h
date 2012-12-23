@@ -17,7 +17,7 @@
 -(void)addItem:(id)item //lower the # higher the priority
   withPriority:(NSUInteger)priority;
 
--(id)pop;
+-(id)dequeue;
 
 -(NSSet *)allObjectsOfPriority:(NSUInteger)priority;
 

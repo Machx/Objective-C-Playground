@@ -77,7 +77,7 @@
 	[self _sortStorage];
 }
 
--(id)pop
+-(id)dequeue
 {
 	id obj = ((CWPriorityQueueItem *)self.storage[0]).item;
 	[self.storage removeObjectAtIndex:0];
