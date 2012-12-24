@@ -18,10 +18,18 @@
 	[queue addItem:@"1" withPriority:1];
 	[queue addItem:@"5" withPriority:5];
 	[queue addItem:@"3" withPriority:3];
+	[queue addItem:@"2" withPriority:2];
+	[queue addItem:@"100" withPriority:100];
+	[queue addItem:@"20" withPriority:20];
+	[queue addItem:@"9" withPriority:9];
 	
 	STAssertTrue([@"1" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"2" isEqualToString:[queue dequeue]], nil);
 	STAssertTrue([@"3" isEqualToString:[queue dequeue]], nil);
 	STAssertTrue([@"5" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"9" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"20" isEqualToString:[queue dequeue]], nil);
+	STAssertTrue([@"100" isEqualToString:[queue dequeue]], nil);
 }
 
 -(void)testObjectsOfPriority
