@@ -79,6 +79,7 @@
 
 -(id)dequeue
 {
+	if(self.storage.count == 0) { return nil; }
 	id obj = ((CWPriorityQueueItem *)self.storage[0]).item;
 	[self.storage removeObjectAtIndex:0];
 	return obj;
