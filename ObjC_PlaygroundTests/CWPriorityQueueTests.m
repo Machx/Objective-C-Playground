@@ -52,4 +52,27 @@
 	STAssertTrue([expected isEqualToSet:results], nil);
 }
 
+-(void)testCountOfPriority
+{
+	CWPriorityQueue *queue = [CWPriorityQueue new];
+	
+	[queue addItem:[NSNull null] withPriority:1];
+	[queue addItem:[NSNull null] withPriority:2];
+	[queue addItem:[NSNull null] withPriority:3];
+	[queue addItem:[NSNull null] withPriority:3];
+	[queue addItem:[NSNull null] withPriority:3];
+	[queue addItem:[NSNull null] withPriority:3];
+	[queue addItem:[NSNull null] withPriority:4];
+	[queue addItem:[NSNull null] withPriority:7];
+	[queue addItem:[NSNull null] withPriority:9];
+	[queue addItem:[NSNull null] withPriority:9];
+	
+	STAssertTrue([queue countofObjectsWithPriority:1] == 1, nil);
+	STAssertTrue([queue countofObjectsWithPriority:2] == 1, nil);
+	STAssertTrue([queue countofObjectsWithPriority:3] == 4, nil);
+	STAssertTrue([queue countofObjectsWithPriority:4] == 1, nil);
+	STAssertTrue([queue countofObjectsWithPriority:7] == 1, nil);
+	STAssertTrue([queue countofObjectsWithPriority:9] == 2, nil);
+}
+
 @end
