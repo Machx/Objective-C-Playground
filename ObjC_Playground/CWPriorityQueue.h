@@ -44,4 +44,6 @@
  */
 -(NSSet *)allObjectsOfPriority:(NSUInteger)priority;
 
+-(NSUInteger)countofObjectsWithPriority:(NSUInteger)priority;
+
 @end

@@ -97,4 +97,13 @@
 	return results;
 }
 
+-(NSUInteger)countofObjectsWithPriority:(NSUInteger)priority
+{
+	NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+		return (((CWPriorityQueueItem *)evaluatedObject).priority == priority);
+	}];
+	NSUInteger count = [self.storage filteredArrayUsingPredicate:predicate].count;
+	return count;
+}
+
 @end
