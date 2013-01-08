@@ -23,7 +23,7 @@
  @param item to be added to the queue
  @param priority this number is used to sort the item in the queue
  */
--(void)addItem:(id)item //lower the # higher the priority
+-(void)addItem:(id)item
   withPriority:(NSUInteger)priority;
 
 /**
