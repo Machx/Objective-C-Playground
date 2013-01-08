@@ -7,6 +7,7 @@
 //
 
 #import "CWPriorityQueue.h"
+#import <Zangetsu/Zangetsu.h>
 
 @interface CWPriorityQueueItem : NSObject
 @property(retain) id item;
@@ -94,11 +95,13 @@
 -(NSSet *)allObjectsOfPriority:(NSUInteger)priority;
 {
 	NSMutableSet *results = [NSMutableSet set];
-	[self.storage enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-		CWPriorityQueueItem *item = (CWPriorityQueueItem *)obj;
-		if (item.priority == priority) {
-			[results addObject:item.item];
-		}
+	NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+		return (((CWPriorityQueueItem *)evaluatedObject).priority == priority);
+	}];
+	NSArray *filteredResults = [self.storage filteredArrayUsingPredicate:predicate];
+	[filteredResults cw_each:^(id object, NSUInteger index, BOOL *stop) {
+		CWPriorityQueueItem *queueItem = (CWPriorityQueueItem *)object;
+		[results addObject:queueItem.item];
 	}];
 	return results;
 }
