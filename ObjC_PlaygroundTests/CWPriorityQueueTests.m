@@ -56,16 +56,16 @@
 {
 	CWPriorityQueue *queue = [CWPriorityQueue new];
 	
-	[queue addItem:[NSNull null] withPriority:1];
-	[queue addItem:[NSNull null] withPriority:2];
-	[queue addItem:[NSNull null] withPriority:3];
-	[queue addItem:[NSNull null] withPriority:3];
-	[queue addItem:[NSNull null] withPriority:3];
-	[queue addItem:[NSNull null] withPriority:3];
-	[queue addItem:[NSNull null] withPriority:4];
-	[queue addItem:[NSNull null] withPriority:7];
-	[queue addItem:[NSNull null] withPriority:9];
-	[queue addItem:[NSNull null] withPriority:9];
+	[queue addItem:@"1" withPriority:1];
+	[queue addItem:@"2" withPriority:2];
+	[queue addItem:@"3" withPriority:3];
+	[queue addItem:@"3" withPriority:3];
+	[queue addItem:@"3" withPriority:3];
+	[queue addItem:@"3" withPriority:3];
+	[queue addItem:@"4" withPriority:4];
+	[queue addItem:@"7" withPriority:7];
+	[queue addItem:@"9" withPriority:9];
+	[queue addItem:@"9" withPriority:9];
 	
 	STAssertTrue([queue countofObjectsWithPriority:1] == 1, nil);
 	STAssertTrue([queue countofObjectsWithPriority:2] == 1, nil);
