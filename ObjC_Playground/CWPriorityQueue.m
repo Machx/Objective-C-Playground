@@ -108,11 +108,13 @@
 
 -(NSUInteger)countofObjectsWithPriority:(NSUInteger)priority
 {
-	NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
-		return (((CWPriorityQueueItem *)evaluatedObject).priority == priority);
+	__block int32_t count = 0;
+	[self.storage cw_eachConcurrentlyWithBlock:^(id object, NSUInteger index, BOOL *stop) {
+		if (((CWPriorityQueueItem *)object).priority == priority) {
+			OSAtomicIncrement32(&count);
+		}
 	}];
-	NSUInteger count = [self.storage filteredArrayUsingPredicate:predicate].count;
-	return count;
+	return (NSUInteger)count;
 }
 
 @end
