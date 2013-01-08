@@ -35,6 +35,12 @@
 	return queueItem;
 }
 
+-(NSString *)description
+{
+	return [NSString stringWithFormat:@"%@: Priority: %ld Item: %@",
+			NSStringFromClass([self class]), _priority,_item];
+}
+
 @end
 
 @interface CWPriorityQueue ()
