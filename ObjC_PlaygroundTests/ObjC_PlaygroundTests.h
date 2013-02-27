@@ -6,8 +6,4 @@
 //  Copyright (c) 2012 Colin Wheeler. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-
-@interface ObjC_PlaygroundTests : SenTestCase
-
-@end
+#import "ObjC_Playground-Prefix.pch"

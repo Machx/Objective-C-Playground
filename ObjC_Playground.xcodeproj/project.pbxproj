@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
+		B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3916DE785C0011506D /* libSpecta-macosx.a */; };
 		B85EE756163AECB000265870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE755163AECB000265870 /* Foundation.framework */; };
 		B85EE759163AECB000265870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE758163AECB000265870 /* main.m */; };
 		B85EE75D163AECB000265870 /* ObjC_Playground.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EE75C163AECB000265870 /* ObjC_Playground.1 */; };
@@ -75,6 +77,51 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B83C4B1616DE78400011506D /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBackwardCompatibility.h; path = External/Expecta/EXPBackwardCompatibility.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1716DE78400011506D /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = External/Expecta/EXPBlockDefinedMatcher.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1816DE78400011506D /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = External/Expecta/EXPDefines.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1916DE78400011506D /* EXPDoubleTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = External/Expecta/EXPDoubleTuple.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1A16DE78400011506D /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = External/Expecta/Expecta.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1B16DE78400011506D /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = External/Expecta/ExpectaSupport.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1C16DE78400011506D /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = External/Expecta/EXPExpect.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1D16DE78400011506D /* EXPFloatTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = External/Expecta/EXPFloatTuple.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1E16DE78400011506D /* EXPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = External/Expecta/EXPMatcher.h; sourceTree = SOURCE_ROOT; };
+		B83C4B1F16DE78400011506D /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = External/Expecta/EXPMatcherHelpers.h; sourceTree = SOURCE_ROOT; };
+		B83C4B2016DE78400011506D /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPMatchers.h; path = External/Expecta/EXPMatchers.h; sourceTree = SOURCE_ROOT; };
+		B83C4B2116DE78400011506D /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beCloseTo.h"; path = "External/Expecta/EXPMatchers+beCloseTo.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2216DE78400011506D /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beFalsy.h"; path = "External/Expecta/EXPMatchers+beFalsy.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2316DE78400011506D /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "External/Expecta/EXPMatchers+beGreaterThan.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2416DE78400011506D /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThanOrEqualTo.h"; path = "External/Expecta/EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2516DE78400011506D /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beIdenticalTo.h"; path = "External/Expecta/EXPMatchers+beIdenticalTo.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2616DE78400011506D /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInstanceOf.h"; path = "External/Expecta/EXPMatchers+beInstanceOf.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2716DE78400011506D /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "External/Expecta/EXPMatchers+beInTheRangeOf.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2816DE78400011506D /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "External/Expecta/EXPMatchers+beKindOf.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2916DE78400011506D /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThan.h"; path = "External/Expecta/EXPMatchers+beLessThan.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2A16DE78400011506D /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThanOrEqualTo.h"; path = "External/Expecta/EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2B16DE78400011506D /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "External/Expecta/EXPMatchers+beNil.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2C16DE78400011506D /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "External/Expecta/EXPMatchers+beSubclassOf.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2D16DE78400011506D /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "External/Expecta/EXPMatchers+beTruthy.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2E16DE78400011506D /* EXPMatchers+contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+contain.h"; path = "External/Expecta/EXPMatchers+contain.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B2F16DE78400011506D /* EXPMatchers+equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+equal.h"; path = "External/Expecta/EXPMatchers+equal.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3016DE78400011506D /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+haveCountOf.h"; path = "External/Expecta/EXPMatchers+haveCountOf.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3116DE78400011506D /* EXPMatchers+raise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "External/Expecta/EXPMatchers+raise.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3216DE78400011506D /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "External/Expecta/EXPMatchers+raiseWithReason.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3316DE78400011506D /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPUnsupportedObject.h; path = External/Expecta/EXPUnsupportedObject.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3416DE78400011506D /* libExpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libExpecta-macosx.a"; path = "External/Expecta/libExpecta-macosx.a"; sourceTree = SOURCE_ROOT; };
+		B83C4B3516DE78400011506D /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Expecta.h"; path = "External/Expecta/NSObject+Expecta.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3616DE78400011506D /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "External/Expecta/NSValue+Expecta.h"; sourceTree = SOURCE_ROOT; };
+		B83C4B3916DE785C0011506D /* libSpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-macosx.a"; path = "External/Specta/libSpecta-macosx.a"; sourceTree = SOURCE_ROOT; };
+		B83C4B3A16DE785C0011506D /* Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Specta.h; path = External/Specta/Specta.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3B16DE785C0011506D /* SpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpectaSupport.h; path = External/Specta/SpectaSupport.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3C16DE785C0011506D /* SpectaTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpectaTypes.h; path = External/Specta/SpectaTypes.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3D16DE785C0011506D /* SpectaUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = External/Specta/SpectaUtility.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3E16DE785C0011506D /* SPTExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTExample.h; path = External/Specta/SPTExample.h; sourceTree = SOURCE_ROOT; };
+		B83C4B3F16DE785C0011506D /* SPTExampleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = External/Specta/SPTExampleGroup.h; sourceTree = SOURCE_ROOT; };
+		B83C4B4016DE785C0011506D /* SPTSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSenTestCase.h; path = External/Specta/SPTSenTestCase.h; sourceTree = SOURCE_ROOT; };
+		B83C4B4116DE785C0011506D /* SPTSenTestInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSenTestInvocation.h; path = External/Specta/SPTSenTestInvocation.h; sourceTree = SOURCE_ROOT; };
+		B83C4B4216DE785C0011506D /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSharedExampleGroups.h; path = External/Specta/SPTSharedExampleGroups.h; sourceTree = SOURCE_ROOT; };
+		B83C4B4316DE785C0011506D /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = External/Specta/SPTSpec.h; sourceTree = SOURCE_ROOT; };
+		B83C4B4516DE789D0011506D /* ObjC_Playground_UnitTests.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC_Playground_UnitTests.pch; sourceTree = "<group>"; };
 		B85EE751163AECB000265870 /* ObjC_Playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_Playground; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85EE755163AECB000265870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B85EE758163AECB000265870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,12 +164,81 @@
 				B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */,
 				B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */,
 				B85EE781163B277300265870 /* Cocoa.framework in Frameworks */,
+				B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */,
+				B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B83C4B1416DE780F0011506D /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B83C4B3816DE78470011506D /* Specta */,
+				B83C4B1516DE78160011506D /* Expecta */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		B83C4B1516DE78160011506D /* Expecta */ = {
+			isa = PBXGroup;
+			children = (
+				B83C4B1616DE78400011506D /* EXPBackwardCompatibility.h */,
+				B83C4B1716DE78400011506D /* EXPBlockDefinedMatcher.h */,
+				B83C4B1816DE78400011506D /* EXPDefines.h */,
+				B83C4B1916DE78400011506D /* EXPDoubleTuple.h */,
+				B83C4B1A16DE78400011506D /* Expecta.h */,
+				B83C4B1B16DE78400011506D /* ExpectaSupport.h */,
+				B83C4B1C16DE78400011506D /* EXPExpect.h */,
+				B83C4B1D16DE78400011506D /* EXPFloatTuple.h */,
+				B83C4B1E16DE78400011506D /* EXPMatcher.h */,
+				B83C4B1F16DE78400011506D /* EXPMatcherHelpers.h */,
+				B83C4B2016DE78400011506D /* EXPMatchers.h */,
+				B83C4B2116DE78400011506D /* EXPMatchers+beCloseTo.h */,
+				B83C4B2216DE78400011506D /* EXPMatchers+beFalsy.h */,
+				B83C4B2316DE78400011506D /* EXPMatchers+beGreaterThan.h */,
+				B83C4B2416DE78400011506D /* EXPMatchers+beGreaterThanOrEqualTo.h */,
+				B83C4B2516DE78400011506D /* EXPMatchers+beIdenticalTo.h */,
+				B83C4B2616DE78400011506D /* EXPMatchers+beInstanceOf.h */,
+				B83C4B2716DE78400011506D /* EXPMatchers+beInTheRangeOf.h */,
+				B83C4B2816DE78400011506D /* EXPMatchers+beKindOf.h */,
+				B83C4B2916DE78400011506D /* EXPMatchers+beLessThan.h */,
+				B83C4B2A16DE78400011506D /* EXPMatchers+beLessThanOrEqualTo.h */,
+				B83C4B2B16DE78400011506D /* EXPMatchers+beNil.h */,
+				B83C4B2C16DE78400011506D /* EXPMatchers+beSubclassOf.h */,
+				B83C4B2D16DE78400011506D /* EXPMatchers+beTruthy.h */,
+				B83C4B2E16DE78400011506D /* EXPMatchers+contain.h */,
+				B83C4B2F16DE78400011506D /* EXPMatchers+equal.h */,
+				B83C4B3016DE78400011506D /* EXPMatchers+haveCountOf.h */,
+				B83C4B3116DE78400011506D /* EXPMatchers+raise.h */,
+				B83C4B3216DE78400011506D /* EXPMatchers+raiseWithReason.h */,
+				B83C4B3316DE78400011506D /* EXPUnsupportedObject.h */,
+				B83C4B3416DE78400011506D /* libExpecta-macosx.a */,
+				B83C4B3516DE78400011506D /* NSObject+Expecta.h */,
+				B83C4B3616DE78400011506D /* NSValue+Expecta.h */,
+			);
+			name = Expecta;
+			sourceTree = "<group>";
+		};
+		B83C4B3816DE78470011506D /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				B83C4B3916DE785C0011506D /* libSpecta-macosx.a */,
+				B83C4B3A16DE785C0011506D /* Specta.h */,
+				B83C4B3B16DE785C0011506D /* SpectaSupport.h */,
+				B83C4B3C16DE785C0011506D /* SpectaTypes.h */,
+				B83C4B3D16DE785C0011506D /* SpectaUtility.h */,
+				B83C4B3E16DE785C0011506D /* SPTExample.h */,
+				B83C4B3F16DE785C0011506D /* SPTExampleGroup.h */,
+				B83C4B4016DE785C0011506D /* SPTSenTestCase.h */,
+				B83C4B4116DE785C0011506D /* SPTSenTestInvocation.h */,
+				B83C4B4216DE785C0011506D /* SPTSharedExampleGroups.h */,
+				B83C4B4316DE785C0011506D /* SPTSpec.h */,
+			);
+			name = Specta;
+			sourceTree = "<group>";
+		};
 		B85EE746163AECB000265870 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +273,7 @@
 		B85EE757163AECB000265870 /* ObjC_Playground */ = {
 			isa = PBXGroup;
 			children = (
+				B83C4B1416DE780F0011506D /* External */,
 				B85EE758163AECB000265870 /* main.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
@@ -202,6 +319,7 @@
 		B85EE786163B277300265870 /* ObjC_PlaygroundTests */ = {
 			isa = PBXGroup;
 			children = (
+				B83C4B4516DE789D0011506D /* ObjC_Playground_UnitTests.pch */,
 				B85EE78C163B277300265870 /* ObjC_PlaygroundTests.h */,
 				B85EE78D163B277300265870 /* ObjC_PlaygroundTests.m */,
 				B85EE787163B277300265870 /* Supporting Files */,
@@ -467,11 +585,23 @@
 		B85EE791163B277300265870 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Specta\"",
+					"\"$(SRCROOT)/External/Expecta\"",
+				);
 				INFOPLIST_FILE = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Expecta\"",
+					"\"$(SRCROOT)/External/Specta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -480,11 +610,23 @@
 		B85EE792163B277300265870 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Specta\"",
+					"\"$(SRCROOT)/External/Expecta\"",
+				);
 				INFOPLIST_FILE = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Expecta\"",
+					"\"$(SRCROOT)/External/Specta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

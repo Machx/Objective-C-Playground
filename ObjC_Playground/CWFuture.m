@@ -8,7 +8,7 @@
 
 #import "CWFuture.h"
 
-typedef id (^CWFutureBlock)(void) CWFutureBlock;
+typedef id (^CWFutureBlock)(void);
 
 @interface CWFuture ()
 @property (nonatomic, assign) dispatch_once_t once;

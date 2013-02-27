@@ -7,43 +7,48 @@
 //
 
 #import "ObjC_PlaygroundTests.h"
-#import <Zangetsu/Zangetsu.h>
-#import <Zangetsu/CWAssertionMacros.h>
-#import "CWErrorUtils.h"
+#import "ObjC_Playground_UnitTests.pch"
 
-@implementation ObjC_PlaygroundTests
+SpecBegin(ObjcPlayground)
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
+it(@"should do something", ^{
+	expect(YES).to.beTruthy();
+});
 
--(void)testErrorSet
-{
-	NSError *error1;
-	
-	CWSetError(@"domain",404,@"message",&error1);
-	
-	CWAssertEqualsStrings(@"domain", error1.domain);
-	STAssertTrue(404 == error1.code, nil);
-	CWAssertEqualsStrings(@"message", error1.localizedDescription);
-	
-	NSError *error2 = nil;
-	
-	CWSetError(@"domain",404,@"message",&error2);
-	
-	CWAssertEqualsStrings(@"domain", error2.domain);
-	STAssertTrue(404 == error2.code, nil);
-	CWAssertEqualsStrings(@"message", error2.localizedDescription);
-}
+SpecEnd
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-@end
+//@implementation ObjC_PlaygroundTests
+//
+//- (void)setUp
+//{
+//    [super setUp];
+//    
+//    // Set-up code here.
+//}
+//
+//-(void)testErrorSet
+//{
+//	NSError *error1;
+//	
+//	CWSetError(@"domain",404,@"message",&error1);
+//	
+//	CWAssertEqualsStrings(@"domain", error1.domain);
+//	STAssertTrue(404 == error1.code, nil);
+//	CWAssertEqualsStrings(@"message", error1.localizedDescription);
+//	
+//	NSError *error2 = nil;
+//	
+//	CWSetError(@"domain",404,@"message",&error2);
+//	
+//	CWAssertEqualsStrings(@"domain", error2.domain);
+//	STAssertTrue(404 == error2.code, nil);
+//	CWAssertEqualsStrings(@"message", error2.localizedDescription);
+//}
+//
+//- (void)tearDown
+//{
+//    // Tear-down code here.
+//    
+//    [super tearDown];
+//}
+//

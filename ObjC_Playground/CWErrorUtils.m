@@ -26,6 +26,6 @@ void CWSetError(NSString *domain,
 				NSString *description,
 				NSError **error)
 {
-	error = error ? error : &( NSError *){ nil };
+	//error = error ? error : &( NSError *){ nil };
 	*error = CWCreateError(domain, errorNo, description);
 }
