@@ -17,4 +17,11 @@
 
 -(id)resolveFuture;
 
+/**
+ Returns a BOOl indicated if the future has been resolved or not
+ 
+ @return BOOL indicating if the future has been resolved or not
+ */
+-(BOOL)futureResolved;
+
 @end

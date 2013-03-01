@@ -53,4 +53,8 @@ typedef id (^CWFutureBlock)(void);
 	return [[self resolveFuture] hash];
 }
 
+-(BOOL)futureResolved {
+	return ((BOOL)self.resolvedValue);
+}
+
 @end
