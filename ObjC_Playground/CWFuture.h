@@ -11,10 +11,17 @@
 @interface CWFuture : NSObject
 
 /**
- Returns a CWFuture instance copying 
+ Returns a CWFuture instance copying the block
+ 
+ Block - the expression returned from this becomes the future value
  */
 +(id)futureWithBlock:(id (^)(void))block;
 
+/**
+ Resolves the future and returns the value from the Future
+ 
+ @return the value from tne return expression passed into the block
+ */
 -(id)resolveFuture;
 
 /**
