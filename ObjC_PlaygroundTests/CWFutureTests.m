@@ -34,6 +34,10 @@ it(@"should return the hash of the resolved future", ^{
 	expect([future hash] == [[future resolveFuture] hash]).to.beTruthy();
 });
 
+it(@"should return if the resolved future is a member of a class", ^{
+	expect([future isMemberOfClass:NSClassFromString(@"__NSCFNumber")]).to.beTruthy();
+});
+
 afterAll(^{
 	it(@"should return YES when the future value has been resolved", ^{
 		expect([future futureResolved]).to.beTruthy();
