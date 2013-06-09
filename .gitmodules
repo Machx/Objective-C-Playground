@@ -1,0 +1,3 @@
+[submodule "External/CWFuture"]
+	path = External/CWFuture
+	url = https://github.com/Machx/CWFuture.git
