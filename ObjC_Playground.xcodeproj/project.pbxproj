@@ -21,6 +21,7 @@
 		B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 		B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
 		B8F28C6C1641F78C00BA8497 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
+		B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B850337B1764D75C00B17D1B /* CWFuture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -476,6 +477,7 @@
 			files = (
 				B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */,
 				B85033831764D76C00B17D1B /* CWFutureTests.m in Sources */,
+				B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
