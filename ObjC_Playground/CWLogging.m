@@ -39,4 +39,10 @@ void CWLog2(int level, NSString *messageFormat, ...) {
 		asl_add_log_file(NULL, STDERR_FILENO);
 	});
 	//log message
+	va_list args;
+	va_start(args, messageFormat);
+	NSString *logMessage = [[NSString alloc] initWithFormat:messageFormat arguments:args];
+	va_end(args);
+	
+	asl_log(NULL, NULL, level, [logMessage UTF8String]);
 }
