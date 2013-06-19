@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B800AEE5177205F2002FEA25 /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B800AEE4177205F2002FEA25 /* CWLogging.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3916DE785C0011506D /* libSpecta-macosx.a */; };
 		B850337C1764D75C00B17D1B /* CWFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B850337B1764D75C00B17D1B /* CWFuture.m */; };
@@ -76,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B800AEE3177205F2002FEA25 /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLogging.h; sourceTree = "<group>"; };
+		B800AEE4177205F2002FEA25 /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLogging.m; sourceTree = "<group>"; };
 		B83C4B1616DE78400011506D /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBackwardCompatibility.h; path = External/Expecta/EXPBackwardCompatibility.h; sourceTree = SOURCE_ROOT; };
 		B83C4B1716DE78400011506D /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = External/Expecta/EXPBlockDefinedMatcher.h; sourceTree = SOURCE_ROOT; };
 		B83C4B1816DE78400011506D /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = External/Expecta/EXPDefines.h; sourceTree = SOURCE_ROOT; };
@@ -271,6 +274,8 @@
 			children = (
 				B850337A1764D75C00B17D1B /* CWFuture.h */,
 				B850337B1764D75C00B17D1B /* CWFuture.m */,
+				B800AEE3177205F2002FEA25 /* CWLogging.h */,
+				B800AEE4177205F2002FEA25 /* CWLogging.m */,
 				B83C4B1416DE780F0011506D /* External */,
 				B85EE758163AECB000265870 /* main.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
@@ -468,6 +473,7 @@
 				B85EE759163AECB000265870 /* main.m in Sources */,
 				B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */,
 				B850337C1764D75C00B17D1B /* CWFuture.m in Sources */,
+				B800AEE5177205F2002FEA25 /* CWLogging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
