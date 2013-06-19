@@ -41,4 +41,4 @@
 	#endif
 #endif
 
-void CWLog2(NSUInteger level, NSString *messageFormat, ...);
+void CWLog2(int level, NSString *messageFormat, ...);
