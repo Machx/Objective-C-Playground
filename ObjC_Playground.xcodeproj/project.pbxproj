@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B800AEE5177205F2002FEA25 /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B800AEE4177205F2002FEA25 /* CWLogging.m */; };
+		B800AEEC17720E49002FEA25 /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B800AEEB17720E49002FEA25 /* CWLoggingTests.m */; };
+		B800AEED17720E98002FEA25 /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B800AEE4177205F2002FEA25 /* CWLogging.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3916DE785C0011506D /* libSpecta-macosx.a */; };
 		B850337C1764D75C00B17D1B /* CWFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B850337B1764D75C00B17D1B /* CWFuture.m */; };
@@ -79,6 +81,8 @@
 /* Begin PBXFileReference section */
 		B800AEE3177205F2002FEA25 /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLogging.h; sourceTree = "<group>"; };
 		B800AEE4177205F2002FEA25 /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLogging.m; sourceTree = "<group>"; };
+		B800AEEA17720E49002FEA25 /* CWLoggingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLoggingTests.h; sourceTree = "<group>"; };
+		B800AEEB17720E49002FEA25 /* CWLoggingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLoggingTests.m; sourceTree = "<group>"; };
 		B83C4B1616DE78400011506D /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBackwardCompatibility.h; path = External/Expecta/EXPBackwardCompatibility.h; sourceTree = SOURCE_ROOT; };
 		B83C4B1716DE78400011506D /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = External/Expecta/EXPBlockDefinedMatcher.h; sourceTree = SOURCE_ROOT; };
 		B83C4B1816DE78400011506D /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = External/Expecta/EXPDefines.h; sourceTree = SOURCE_ROOT; };
@@ -321,6 +325,8 @@
 				B85033811764D76C00B17D1B /* CWFutureTests.h */,
 				B85033821764D76C00B17D1B /* CWFutureTests.m */,
 				B85EE787163B277300265870 /* Supporting Files */,
+				B800AEEA17720E49002FEA25 /* CWLoggingTests.h */,
+				B800AEEB17720E49002FEA25 /* CWLoggingTests.m */,
 			);
 			path = ObjC_PlaygroundTests;
 			sourceTree = "<group>";
@@ -484,6 +490,8 @@
 				B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */,
 				B85033831764D76C00B17D1B /* CWFutureTests.m in Sources */,
 				B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */,
+				B800AEEC17720E49002FEA25 /* CWLoggingTests.m in Sources */,
+				B800AEED17720E98002FEA25 /* CWLogging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
