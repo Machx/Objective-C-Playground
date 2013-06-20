@@ -33,6 +33,8 @@
 #import "CWLogging.h"
 
 void CWLog2(int level, NSString *messageFormat, ...) {
+	if(level > CW_LOG_LEVEL) return;
+	
 	//Add STDERR for ASL Logging
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
