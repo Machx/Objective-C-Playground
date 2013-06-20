@@ -69,6 +69,15 @@
  The lowest priority, and normally not logged except for messages from the kernel.
  */
 
+#define CWLOG_EMERG   ASL_LEVEL_EMERG
+#define CWLOG_ALERT   ASL_LEVEL_ALERT
+#define CWLOG_CRIT    ASL_LEVEL_CRIT
+#define CWLOG_ERR     ASL_LEVEL_ERR
+#define CWLOG_WARNING ASL_LEVEL_WARNING
+#define CWLOG_NOTICE  ASL_LEVEL_NOTICE
+#define CWLOG_INFO    ASL_LEVEL_INFO
+#define CWLOG_DEBUG   ASL_LEVEL_DEBUG
+
 #ifndef CW_LOG_LEVEL
 	#ifdef DEBUG
 		#define CW_LOG_LEVEL ASL_LEVEL_DEBUG
