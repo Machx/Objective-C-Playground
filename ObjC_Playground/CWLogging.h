@@ -44,29 +44,24 @@
  #define ASL_LEVEL_INFO    6
  #define ASL_LEVEL_DEBUG   7
  
- Emergency (level 0)
- The highest priority, usually reserved for catastrophic failures and reboot notices.
+ Emergency (level 0) - The highest priority, usually reserved for catastrophic 
+ failures and reboot notices.
  
- Alert (level 1)
- A serious failure in a key system.
+ Alert (level 1) - A serious failure in a key system.
  
- Critical (level 2)
- A failure in a key system.
+ Critical (level 2) - A failure in a key system.
  
- Error (level 3)
- Something has failed.
+ Error (level 3) - Something has failed.
  
- Warning (level 4)
- Something is amiss and might fail if not corrected.
+ Warning (level 4) - Something is amiss and might fail if not corrected.
  
- Notice (level 5)
- Things of moderate interest to the user or administrator.
+ Notice (level 5) - Things of moderate interest to the user or administrator.
  
- Info (level 6)
- The lowest priority that you would normally log, and purely informational in nature.
+ Info (level 6) - The lowest priority that you would normally log, and purely 
+ informational in nature.
  
- Debug (level 7)
- The lowest priority, and normally not logged except for messages from the kernel.
+ Debug (level 7) - The lowest priority, and normally not logged except for 
+ messages from the kernel.
  */
 
 #define CWLOG_EMERG   ASL_LEVEL_EMERG
