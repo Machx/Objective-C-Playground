@@ -90,7 +90,15 @@
  */
 void CWLog2(int level, NSString *messageFormat, ...);
 
-
+/**
+ Logs the message passed in with ASL to the most common INFO level
+ 
+ If an appropriate CW_LOG_LEVEL is defined this function works, otherwise it
+ simply has no effect. This method is a convenience method that simply calls
+ CWLog2 passing in ASL_LEVEL_INFO and the message.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL <= CWLOG_INFO
 void CWLog2Info(NSString *messageFormat, ...);
 #else
