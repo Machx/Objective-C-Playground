@@ -64,6 +64,10 @@
  messages from the kernel.
  */
 
+/**
+ Replace "DEBUG" with whatever you have defined to specifically mark the your
+ development builds vs your release builds.
+ */
 #ifndef CW_LOG_LEVEL
 	#ifdef DEBUG
 		#define CW_LOG_LEVEL ASL_LEVEL_DEBUG
