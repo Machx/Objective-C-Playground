@@ -94,3 +94,11 @@
  @param messageFormat the message to log
  */
 void CWLog2(int level, NSString *messageFormat, ...);
+
+
+#if CW_LOG_LEVEL <= CWLOG_INFO
+void CWLog2Info(NSString *messageFormat, ...);
+#else
+#define CWLog2info(...)
+#endif
+
