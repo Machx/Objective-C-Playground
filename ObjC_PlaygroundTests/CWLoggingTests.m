@@ -6,7 +6,9 @@
 //  Copyright (c) 2013 Colin Wheeler. All rights reserved.
 //
 
-//#define CW_LOG_LEVEL 3
+#import <asl.h>
+
+#define CW_LOG_LEVEL ASL_LEVEL_INFO
 
 #import "CWLoggingTests.h"
 #import "CWLogging.h"
@@ -27,6 +29,9 @@ it(@"should log", ^{
 //	CWLog2(ASL_LEVEL_ALERT, @"Log Alert Message");
 //	CWLog2(ASL_LEVEL_EMERG, @"Log Emergency Message");
 //	CWLog2(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
+	
+	//still experimental
+	//CWLog2info(@"CWLog2Info Message");
 });
 
 SpecEnd
