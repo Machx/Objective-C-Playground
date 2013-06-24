@@ -102,6 +102,6 @@ void CWLog2(int level, NSString *messageFormat, ...);
 #if CW_LOG_LEVEL >= ASL_LEVEL_INFO
 	void CWLog2Info(NSString *messageFormat, ...);
 #else
-	#define CWLog2info(...)
+	#define CWLog2Info(...)
 #endif
 
