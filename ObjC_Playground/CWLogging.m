@@ -50,7 +50,6 @@ void CWLog2(int level, NSString *messageFormat, ...) {
 	asl_log(NULL/*aslclient*/, NULL/*aslmsg*/, level, "%s", [logMessage UTF8String]);
 }
 
-#if CW_LOG_LEVEL >= ASL_LEVEL_INFO
 void CWLog2Info(NSString *messageFormat, ...) {
 	va_list args;
 	va_start(args, messageFormat);
@@ -58,4 +57,3 @@ void CWLog2Info(NSString *messageFormat, ...) {
 	va_end(args);
 	CWLog2(ASL_LEVEL_INFO, logMessage);
 }
-#endif
