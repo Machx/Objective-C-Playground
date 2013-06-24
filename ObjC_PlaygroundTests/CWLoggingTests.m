@@ -30,8 +30,7 @@ it(@"should log", ^{
 //	CWLog2(ASL_LEVEL_EMERG, @"Log Emergency Message");
 //	CWLog2(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
 	
-	//still experimental
-	//CWLog2info(@"CWLog2Info Message");
+//	CWLog2Info(@"CWLog2Info Message");
 });
 
 SpecEnd
