@@ -93,9 +93,11 @@ void CWLog2(int level, NSString *messageFormat, ...);
 /**
  Logs the message passed in with ASL to the most common INFO level
  
- If an appropriate CW_LOG_LEVEL is defined this function works, otherwise it
- simply has no effect. This method is a convenience method that simply calls
- CWLog2 passing in ASL_LEVEL_INFO and the message.
+ If a CW_LOG_LEVEL of ASL_LEVEL_INFO (6) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level. 
+ However if a sufficient enough level is not defined then this method simply
+ becomes a #define and is not compiled in your code at all. Thus in development
+ you can use this method freely and in release builds just change the log level.
  
  @param messageFormat the message to log
  */
