@@ -81,9 +81,7 @@
  
  CWLog2 utilizes the asl api's and sets the output of the logging to STDERR. 
  It also uses ASL's Logging levels to ensure that messages are logged
- appropriately. This API uses the CW_LOG_LEVEL macro to make sure that messages
- below a certain priority level are not logged because they are not important
- enough. 
+ appropriately.
  
  @param level the level of the log message, you can use the CWLOG or ASL levels
  @param messageFormat the message to log
