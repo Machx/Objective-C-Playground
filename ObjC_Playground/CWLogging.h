@@ -76,6 +76,12 @@
 	#endif
 #endif
 
+#define CWLog2Shell(level,msgFormat, ...) \
+do { \
+	NSString *shellFormat = [NSString stringWithFormat:@"%s L#%i: %@", __PRETTY_FUNCTION__, __LINE__, msgFormat]; \
+	CWLog2(level,shellFormat,##__VA_ARGS__); \
+}while(0)
+
 /**
  Logs the message passed in with the ASL API's
  
