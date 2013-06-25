@@ -31,6 +31,9 @@ it(@"should log", ^{
 //	CWLog2(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
 	
 //	CWLog2Info(@"CWLog2Info Message");
+	
+	CWLog2Shell(ASL_LEVEL_INFO, @"Hello Info world!");
+	CWLog2Shell(ASL_LEVEL_INFO, @"Hello %@",@"World!");
 });
 
 SpecEnd
