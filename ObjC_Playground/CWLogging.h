@@ -94,6 +94,42 @@ do { \
  */
 void CWLog2(int level, NSString *messageFormat, ...);
 
+#if CW_LOG_LEVEL >= ASL_LEVEL_EMERG
+	#define CWLog2Emergency(msgFormat, ...) CWLog2Shell(ASL_LEVEL_EMERG, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Emergency(...)
+#endif
+
+#if CW_LOG_LEVEL >= ASL_LEVEL_ALERT
+	#define CWLog2Alert(msgFormat, ...) CWLog2Shell(ASL_LEVEL_ALERT, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Alert(...)
+#endif
+
+#if CW_LOG_LEVEL >= ASL_LEVEL_CRIT
+	#define CWLog2Critical(msgFormat, ...) CWLog2Shell(ASL_LEVEL_CRIT, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Critical(...)
+#endif
+
+#if CW_LOG_LEVEL >= ASL_LEVEL_ERR
+	#define CWLog2Error(msgFormat, ...) CWLog2Shell(ASL_LEVEL_ERR, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Error(...)
+#endif
+
+#if CW_LOG_LEVEL >= ASL_LEVEL_WARNING
+	#define CWLog2Warning(msgFormat, ...) CWLog2Shell(ASL_LEVEL_WARNING, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Warning(...)
+#endif
+
+#if CW_LOG_LEVEL >= ASL_LEVEL_NOTICE
+	#define CWLog2Notice(msgFormat, ...) CWLog2Shell(ASL_LEVEL_NOTICE, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Notice(...)
+#endif
+
 /**
  Logs the message passed in with ASL to the most common INFO level
  
@@ -106,8 +142,15 @@ void CWLog2(int level, NSString *messageFormat, ...);
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_INFO
-	void CWLog2Info(NSString *messageFormat, ...);
+	#define CWLog2Info(msgFormat, ...) CWLog2Shell(ASL_LEVEL_INFO, msgFormat, ##__VA_ARGS__)
 #else
 	#define CWLog2Info(...)
 #endif
 
+#if CW_LOG_LEVEL >= ASL_LEVEL_DEBUG
+	#define CWLog2Debug(msgFormat, ...) CWLog2Shell(ASL_LEVEL_DEBUG, msgFormat, ##__VA_ARGS__)
+#else
+	#define CWLog2Debug(...)
+#endif
+
+//#undef CWLog2Shell
