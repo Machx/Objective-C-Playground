@@ -76,6 +76,13 @@
 	#endif
 #endif
 
+/**
+ This will eventually be called something like CWDebugLog or something to 
+ properly indicate that it will log the class and maybe additionally the file 
+ and so forth. This define is necessary so that the __PRETTY_FUNCTION__, 
+ __LINE__, etc can be captured and prepended onto the string for the CWLog2
+ method which won't do it on its own.
+ */
 #define CWLog2Shell(level,msgFormat, ...) \
 do { \
 	NSString *shellFormat = [NSString stringWithFormat:@"%s L#%i: %@", __PRETTY_FUNCTION__, __LINE__, msgFormat]; \
