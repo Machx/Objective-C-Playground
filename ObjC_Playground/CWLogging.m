@@ -47,11 +47,3 @@ void CWLog2(int level, NSString *messageFormat, ...) {
 	//use "%s", ... to avoid clangs warning on non string literals
 	asl_log(NULL/*aslclient*/, NULL/*aslmsg*/, level, "%s", [logMessage UTF8String]);
 }
-
-void CWLog2Info(NSString *messageFormat, ...) {
-	va_list args;
-	va_start(args, messageFormat);
-	NSString *logMessage = [[NSString alloc] initWithFormat:messageFormat arguments:args];
-	va_end(args);
-	CWLog2(ASL_LEVEL_INFO, logMessage);
-}
