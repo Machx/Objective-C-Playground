@@ -8,7 +8,7 @@
 
 #import <asl.h>
 
-#define CW_LOG_LEVEL ASL_LEVEL_INFO
+#define CW_LOG_LEVEL ASL_LEVEL_DEBUG
 
 #import "CWLoggingTests.h"
 #import "CWLogging.h"
@@ -29,11 +29,18 @@ it(@"should log", ^{
 //	CWLog2(ASL_LEVEL_ALERT, @"Log Alert Message");
 //	CWLog2(ASL_LEVEL_EMERG, @"Log Emergency Message");
 //	CWLog2(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
+//	
+//	CWLog2Emergency(@"Emergency Message");
+//	CWLog2Alert(@"Alert Message");
+//	CWLog2Critical(@"Critical Message");
+//	CWLog2Error(@"Error Message");
+//	CWLog2Warning(@"Warning Message");
+//	CWLog2Notice(@"Notice Message");
+//	CWLog2Info(@"Info Message");
+//	CWLog2Debug(@"Debug Message");
 	
-//	CWLog2Info(@"CWLog2Info Message");
-	
-	CWLog2Shell(ASL_LEVEL_INFO, @"Hello Info world!");
-	CWLog2Shell(ASL_LEVEL_INFO, @"Hello %@",@"World!");
+	//CWLog2Shell(ASL_LEVEL_INFO, @"Hello Info world!");
+	//CWLog2Shell(ASL_LEVEL_INFO, @"Hello %@",@"World!");
 });
 
 SpecEnd
