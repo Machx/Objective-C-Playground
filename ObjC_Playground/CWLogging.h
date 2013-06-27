@@ -34,7 +34,9 @@
 #import <asl.h>
 
 /**
- CW_LOG_LEVELS exactly match ASL_LOG levels as defined in asl.h
+ Log levels made available in the log functions in this header use the ASL Log
+ Levels as defined in asl.h.
+ 
  #define ASL_LEVEL_EMERG   0
  #define ASL_LEVEL_ALERT   1
  #define ASL_LEVEL_CRIT    2
