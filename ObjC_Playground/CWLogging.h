@@ -94,7 +94,7 @@ do { \
 /**
  Logs the message passed in with the ASL API's
  
- CWLog2 utilizes the asl api's and sets the output of the logging to STDERR. 
+ CWLog2 utilizes asl_log and sets the output of the logging to STDERR. 
  It also uses ASL's Logging levels to ensure that messages are logged
  appropriately.
  
@@ -161,5 +161,3 @@ void CWLog2(int level, NSString *messageFormat, ...);
 #else
 	#define CWLog2Debug(...)
 #endif
-
-//#undef CWLog2Shell
