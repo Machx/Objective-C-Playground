@@ -112,17 +112,16 @@ do { \
 }while(0)
 
 /**
- Logs the message passed in with the ASL API's
+ Logs a Message with asl_log passing in ASL_LEVEL_EMERG & your message
  
- CWLog2 utilizes asl_log and sets the output of the logging to STDERR. 
- It also uses ASL's Logging levels to ensure that messages are logged
- appropriately.
+ If a CW_LOG_LEVEL of ASL_LEVEL_EMERG (0) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
  
- @param level the level of the log message, you can use the CWLOG or ASL levels
  @param messageFormat the message to log
  */
-void CWLog2(int level, NSString *messageFormat, ...);
-
 #if CW_LOG_LEVEL >= ASL_LEVEL_EMERG
 	#define CWLog2Emergency(msgFormat, ...) CWDebugLog2(ASL_LEVEL_EMERG, msgFormat, ##__VA_ARGS__)
 #else
