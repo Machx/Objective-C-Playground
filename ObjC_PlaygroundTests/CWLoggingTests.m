@@ -38,9 +38,9 @@ it(@"should log", ^{
 //	CWLog2Notice(@"Notice Message");
 //	CWLog2Info(@"Info Message");
 //	CWLog2Debug(@"Debug Message");
-	
-	//CWLog2Shell(ASL_LEVEL_INFO, @"Hello Info world!");
-	//CWLog2Shell(ASL_LEVEL_INFO, @"Hello %@",@"World!");
+//	
+//	CWDebugLog2(ASL_LEVEL_INFO, @"Hello Info world!");
+//	CWDebugLog2(ASL_LEVEL_INFO, @"Hello %@",@"World!");
 });
 
 SpecEnd
