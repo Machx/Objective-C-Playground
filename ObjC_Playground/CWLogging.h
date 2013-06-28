@@ -69,6 +69,12 @@
 /**
  Replace "DEBUG" with whatever you have defined to specifically mark the your
  development builds vs your release builds.
+ 
+ The log level defined here determines which log calls such as CWLog2Info and
+ CWLog2Notice, etc actually call CWLog2 and which ones are just simply don't
+ even compile into your code at all. You have the option of changing the levels
+ defined here in the header file or simply defining CW_LOG_LEVEL somewhere in
+ your code.
  */
 #ifndef CW_LOG_LEVEL
 	#ifdef DEBUG
