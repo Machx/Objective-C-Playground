@@ -85,9 +85,21 @@
 #endif
 
 /**
+ Logs the message passed in with the ASL API's
+ 
+ CWLog2 utilizes asl_log and sets the output of the logging to STDERR. 
+ It also uses ASL's Logging levels to ensure that messages are logged
+ appropriately.
+ 
+ @param level the level of the log message, you can use the CWLOG or ASL levels
+ @param messageFormat the message to log
+ */
+void CWLog2(int level, NSString *messageFormat, ...);
+
+/**
  Calls CWLog2 prepending the message string with the current method & line
  
- This is equalent to calling CWLog2 and passing in format arguments for 
+ This is equalent to calling CWLog2 and passing in format arguments for
  including __PRETTY_FUNCTION__ and __LINE__ in the message format.
  
  @param level One of the predefined ASL log levels as described in asl.h
