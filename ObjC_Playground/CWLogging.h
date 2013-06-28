@@ -128,30 +128,85 @@ do { \
 	#define CWLog2Emergency(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_ALERT & your message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_ALERT (1) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_ALERT
 	#define CWLog2Alert(msgFormat, ...) CWDebugLog2(ASL_LEVEL_ALERT, msgFormat, ##__VA_ARGS__)
 #else
 	#define CWLog2Alert(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_CRIT & your message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_CRIT (2) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_CRIT
 	#define CWLog2Critical(msgFormat, ...) CWDebugLog2(ASL_LEVEL_CRIT, msgFormat, ##__VA_ARGS__)
 #else
 	#define CWLog2Critical(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_ERR & your message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_ERR (3) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_ERR
 	#define CWLog2Error(msgFormat, ...) CWDebugLog2(ASL_LEVEL_ERR, msgFormat, ##__VA_ARGS__)
 #else
 	#define CWLog2Error(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_WARNING & your message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_WARNING (4) or higher is defined then this 
+ method is the same as calling asl_log() passing in ASL_LEVEL_INFO for the 
+ level. However if a sufficient enough level is not defined then this method 
+ simply is not compiled in your code at all. Thus in development you can use 
+ this method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_WARNING
 	#define CWLog2Warning(msgFormat, ...) CWDebugLog2(ASL_LEVEL_WARNING, msgFormat, ##__VA_ARGS__)
 #else
 	#define CWLog2Warning(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_NOTICE for level & the message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_NOTICE (5) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_NOTICE
 	#define CWLog2Notice(msgFormat, ...) CWDebugLog2(ASL_LEVEL_NOTICE, msgFormat, ##__VA_ARGS__)
 #else
@@ -159,13 +214,13 @@ do { \
 #endif
 
 /**
- Logs the message passed in with ASL to the most common INFO level
+ Logs a Message with asl_log passing in ASL_LEVEL_INFO for level & your message
  
  If a CW_LOG_LEVEL of ASL_LEVEL_INFO (6) or higher is defined then this method
  is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level. 
  However if a sufficient enough level is not defined then this method simply
- becomes a #define and is not compiled in your code at all. Thus in development
- you can use this method freely and in release builds just change the log level.
+ is not compiled in your code at all. Thus in development you can use this 
+ method freely and in release builds just change the log level.
  
  @param messageFormat the message to log
  */
@@ -175,6 +230,17 @@ do { \
 	#define CWLog2Info(...)
 #endif
 
+/**
+ Logs a Message with asl_log passing in ASL_LEVEL_DEBUG for level & your message
+ 
+ If a CW_LOG_LEVEL of ASL_LEVEL_DEBUG (7) or higher is defined then this method
+ is the same as calling asl_log() passing in ASL_LEVEL_INFO for the level.
+ However if a sufficient enough level is not defined then this method simply
+ is not compiled in your code at all. Thus in development you can use this
+ method freely and in release builds just change the log level.
+ 
+ @param messageFormat the message to log
+ */
 #if CW_LOG_LEVEL >= ASL_LEVEL_DEBUG
 	#define CWLog2Debug(msgFormat, ...) CWDebugLog2(ASL_LEVEL_DEBUG, msgFormat, ##__VA_ARGS__)
 #else
