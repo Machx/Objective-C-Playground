@@ -1,3 +1,6 @@
 [submodule "External/CWFuture"]
 	path = External/CWFuture
 	url = https://github.com/Machx/CWFuture.git
+[submodule "External/CWLogging"]
+	path = External/CWLogging
+	url = https://github.com/Machx/CWLogging.git
