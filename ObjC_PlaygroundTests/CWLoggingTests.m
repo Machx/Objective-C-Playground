@@ -20,27 +20,27 @@ it(@"should log", ^{
 	 This is here as a means to verify that the function 
 	 is working correctly. It is not a true unit test.
 	 */
-//	CWLog2(ASL_LEVEL_DEBUG, @"Log Debug Message");
-//	CWLog2(ASL_LEVEL_INFO, @"Log Info Message");
-//	CWLog2(ASL_LEVEL_NOTICE, @"Log Notice Message");
-//	CWLog2(ASL_LEVEL_WARNING, @"Log Warning Message");
-//	CWLog2(ASL_LEVEL_ERR, @"Log Error Message");
-//	CWLog2(ASL_LEVEL_CRIT, @"Log Critical Message");
-//	CWLog2(ASL_LEVEL_ALERT, @"Log Alert Message");
-//	CWLog2(ASL_LEVEL_EMERG, @"Log Emergency Message");
-//	CWLog2(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
+//	CWLog(ASL_LEVEL_DEBUG, @"Log Debug Message");
+//	CWLog(ASL_LEVEL_INFO, @"Log Info Message");
+//	CWLog(ASL_LEVEL_NOTICE, @"Log Notice Message");
+//	CWLog(ASL_LEVEL_WARNING, @"Log Warning Message");
+//	CWLog(ASL_LEVEL_ERR, @"Log Error Message");
+//	CWLog(ASL_LEVEL_CRIT, @"Log Critical Message");
+//	CWLog(ASL_LEVEL_ALERT, @"Log Alert Message");
+//	CWLog(ASL_LEVEL_EMERG, @"Log Emergency Message");
+//	CWLog(ASL_LEVEL_DEBUG, @"Log Var arg Message %@",@"Hello World!");
 //	
-//	CWLog2Emergency(@"Emergency Message");
-//	CWLog2Alert(@"Alert Message");
-//	CWLog2Critical(@"Critical Message");
-//	CWLog2Error(@"Error Message");
-//	CWLog2Warning(@"Warning Message");
-//	CWLog2Notice(@"Notice Message");
-//	CWLog2Info(@"Info Message");
-//	CWLog2Debug(@"Debug Message");
+//	CWLogEmergency(@"Emergency Message");
+//	CWLogAlert(@"Alert Message");
+//	CWLogCritical(@"Critical Message");
+//	CWLogError(@"Error Message");
+//	CWLogWarning(@"Warning Message");
+//	CWLogNotice(@"Notice Message");
+//	CWLogInfo(@"Info Message");
+//	CWLogDebug(@"Debug Message");
 //	
-//	CWDebugLog2(ASL_LEVEL_INFO, @"Hello Info world!");
-//	CWDebugLog2(ASL_LEVEL_INFO, @"Hello %@",@"World!");
+//	CWDebugLog(ASL_LEVEL_INFO, @"Hello Info world!");
+//	CWDebugLog(ASL_LEVEL_INFO, @"Hello %@",@"World!");
 });
 
 SpecEnd
