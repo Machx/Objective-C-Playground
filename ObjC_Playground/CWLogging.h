@@ -1,6 +1,5 @@
 /*
 //  CWLogging.h
-//  ObjC_Playground
 //
 //  Created by Colin Wheeler on 6/19/13.
 //  Copyright (c) 2013 Colin Wheeler. All rights reserved.
@@ -70,8 +69,8 @@
  Replace "DEBUG" with whatever you have defined to specifically mark the your
  development builds vs your release builds.
  
- The log level defined here determines which log calls such as CWLog2Info and
- CWLog2Notice, etc actually call CWLog2 and which ones are just simply don't
+ The log level defined here determines which log calls such as CWLogInfo and
+ CWLogNotice, etc actually call CWLog and which ones are just simply don't
  even compile into your code at all. You have the option of changing the levels
  defined here in the header file or simply defining CW_LOG_LEVEL somewhere in
  your code.
@@ -87,28 +86,28 @@
 /**
  Logs the message passed in with the ASL API's
  
- CWLog2 utilizes asl_log and sets the output of the logging to STDERR. 
+ CWLog utilizes asl_log and sets the output of the logging to STDERR. 
  It also uses ASL's Logging levels to ensure that messages are logged
  appropriately.
  
  @param level the level of the log message, you can use the CWLOG or ASL levels
  @param messageFormat the message to log
  */
-void CWLog2(int level, NSString *messageFormat, ...);
+void CWLog(int level, NSString *messageFormat, ...);
 
 /**
- Calls CWLog2 prepending the message string with the current method & line
+ Calls CWLog prepending the message string with the current method & line
  
- This is equalent to calling CWLog2 and passing in format arguments for
+ This is equalent to calling CWLog and passing in format arguments for
  including __PRETTY_FUNCTION__ and __LINE__ in the message format.
  
  @param level One of the predefined ASL log levels as described in asl.h
  @param msgFormat The message to be logged, will be prepended with debug info
  */
-#define CWDebugLog2(level,msgFormat, ...) \
+#define CWDebugLog(level,msgFormat, ...) \
 do { \
 	NSString *shellFormat = [NSString stringWithFormat:@"%s L# %i: %@", __PRETTY_FUNCTION__, __LINE__,msgFormat]; \
-	CWLog2(level,shellFormat,##__VA_ARGS__); \
+	CWLog(level,shellFormat,##__VA_ARGS__); \
 }while(0)
 
 /**
@@ -123,9 +122,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_EMERG
-	#define CWLog2Emergency(msgFormat, ...) CWDebugLog2(ASL_LEVEL_EMERG, msgFormat, ##__VA_ARGS__)
+	#define CWLogEmergency(msgFormat, ...) CWDebugLog(ASL_LEVEL_EMERG, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Emergency(...)
+	#define CWLogEmergency(...)
 #endif
 
 /**
@@ -140,9 +139,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_ALERT
-	#define CWLog2Alert(msgFormat, ...) CWDebugLog2(ASL_LEVEL_ALERT, msgFormat, ##__VA_ARGS__)
+	#define CWLogAlert(msgFormat, ...) CWDebugLog(ASL_LEVEL_ALERT, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Alert(...)
+	#define CWLogAlert(...)
 #endif
 
 /**
@@ -157,9 +156,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_CRIT
-	#define CWLog2Critical(msgFormat, ...) CWDebugLog2(ASL_LEVEL_CRIT, msgFormat, ##__VA_ARGS__)
+	#define CWLogCritical(msgFormat, ...) CWDebugLog(ASL_LEVEL_CRIT, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Critical(...)
+	#define CWLogCritical(...)
 #endif
 
 /**
@@ -174,9 +173,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_ERR
-	#define CWLog2Error(msgFormat, ...) CWDebugLog2(ASL_LEVEL_ERR, msgFormat, ##__VA_ARGS__)
+	#define CWLogError(msgFormat, ...) CWDebugLog(ASL_LEVEL_ERR, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Error(...)
+	#define CWLogError(...)
 #endif
 
 /**
@@ -191,9 +190,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_WARNING
-	#define CWLog2Warning(msgFormat, ...) CWDebugLog2(ASL_LEVEL_WARNING, msgFormat, ##__VA_ARGS__)
+	#define CWLogWarning(msgFormat, ...) CWDebugLog(ASL_LEVEL_WARNING, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Warning(...)
+	#define CWLogWarning(...)
 #endif
 
 /**
@@ -208,9 +207,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_NOTICE
-	#define CWLog2Notice(msgFormat, ...) CWDebugLog2(ASL_LEVEL_NOTICE, msgFormat, ##__VA_ARGS__)
+	#define CWLogNotice(msgFormat, ...) CWDebugLog(ASL_LEVEL_NOTICE, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Notice(...)
+	#define CWLogNotice(...)
 #endif
 
 /**
@@ -225,9 +224,9 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_INFO
-	#define CWLog2Info(msgFormat, ...) CWDebugLog2(ASL_LEVEL_INFO, msgFormat, ##__VA_ARGS__)
+	#define CWLogInfo(msgFormat, ...) CWDebugLog(ASL_LEVEL_INFO, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Info(...)
+	#define CWLogInfo(...)
 #endif
 
 /**
@@ -242,7 +241,7 @@ do { \
  @param messageFormat the message to log
  */
 #if CW_LOG_LEVEL >= ASL_LEVEL_DEBUG
-	#define CWLog2Debug(msgFormat, ...) CWDebugLog2(ASL_LEVEL_DEBUG, msgFormat, ##__VA_ARGS__)
+	#define CWLogDebug(msgFormat, ...) CWDebugLog(ASL_LEVEL_DEBUG, msgFormat, ##__VA_ARGS__)
 #else
-	#define CWLog2Debug(...)
+	#define CWLogDebug(...)
 #endif
