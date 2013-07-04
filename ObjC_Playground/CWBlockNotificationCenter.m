@@ -75,11 +75,10 @@
 
 -(void)addBlock:(dispatch_block_t)block
 forNotification:(NSString *)notificationName
-		onQueue:(dispatch_queue_t)queue
-{
-	NSParameterAssert(block);
-	NSParameterAssert(notificationName);
-	NSParameterAssert(queue);
+		onQueue:(dispatch_queue_t)queue {
+	CWAssert(block != nil);
+	CWAssert(notificationName != nil);
+	CWAssert(queue != NULL);
 	
 	CWBlockNotification *object = [self.notifications cw_findWithBlock:^BOOL(id object) {
 		CWBlockNotification *notification = (CWBlockNotification *)object;
