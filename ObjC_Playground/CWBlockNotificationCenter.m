@@ -12,6 +12,8 @@
 @interface CWBlockQueuePair : NSObject
 @property(copy) dispatch_block_t block;
 @property(assign) dispatch_queue_t queue;
++(instancetype)pairWithQueue:(dispatch_queue_t)queue
+					andBlock:(dispatch_block_t)block;
 @end
 
 @implementation CWBlockQueuePair
@@ -24,6 +26,16 @@
 		_queue = NULL;
     }
     return self;
+}
+
++(instancetype)pairWithQueue:(dispatch_queue_t)queue
+					andBlock:(dispatch_block_t)block {
+	CWAssert(queue != NULL);
+	CWAssert(block != nil);
+	CWBlockQueuePair *pair = [CWBlockQueuePair new];
+	pair.queue = queue;
+	pair.block = block;
+	return pair;
 }
 
 @end
