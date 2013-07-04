@@ -106,9 +106,8 @@ forNotification:(NSString *)notificationName
 		[self.notifications addObject:object];
 	}
 	
-	CWBlockQueuePair *pair = [CWBlockQueuePair new];
-	pair.block = block;
-	pair.queue = queue;
+	CWBlockQueuePair *pair = [CWBlockQueuePair pairWithQueue:queue
+													andBlock:block];
 	
 	[object.blocks addObject:pair];
 }
