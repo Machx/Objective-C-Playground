@@ -18,8 +18,7 @@
 
 @implementation CWBlockQueuePair
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         _block = nil;
@@ -47,8 +46,7 @@
 
 @implementation CWBlockNotification
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         _notificationName = nil;
@@ -65,8 +63,7 @@
 
 @implementation CWBlockNotificationCenter
 
-+(CWBlockNotificationCenter *)defaultCenter
-{
++(CWBlockNotificationCenter *)defaultCenter {
 	static CWBlockNotificationCenter *center = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
@@ -75,8 +72,7 @@
 	return center;
 }
 
--(id)init
-{
+-(id)init {
 	self = [super init];
 	if (self) {
 		_notifications = [NSMutableArray array];
@@ -112,8 +108,7 @@ forNotification:(NSString *)notificationName
 	[object.blocks addObject:pair];
 }
 
--(BOOL)postNotificationWithName:(NSString *)notificationName
-{
+-(BOOL)postNotificationWithName:(NSString *)notificationName {
 	CWBlockNotification *notification = [self.notifications cw_findWithBlock:^BOOL(id object) {
 		CWBlockNotification *not = (CWBlockNotification *)object;
 		if ([not.notificationName isEqualToString:notificationName]) {
