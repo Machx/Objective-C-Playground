@@ -99,7 +99,7 @@ forNotification:(NSString *)notificationName
 		return NO;
 	}];
 	
-	if (!object) {
+	if (object == nil) {
 		object = [CWBlockNotification new];
 		object.notificationName = notificationName;
 		[self.notifications addObject:object];
@@ -120,7 +120,7 @@ forNotification:(NSString *)notificationName
 		return NO;
 	}];
 	
-	if (!notification) return NO;
+	if (notification == nil) return NO;
 	
 	[notification.blocks cw_each:^(id object, NSUInteger index, BOOL *stop) {
 		CWBlockQueuePair *pair = (CWBlockQueuePair *)object;
