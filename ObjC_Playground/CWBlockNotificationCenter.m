@@ -20,10 +20,11 @@
 
 - (id)init {
     self = [super init];
-    if (self) {
-        _block = nil;
-		_queue = NULL;
-    }
+    if (self == nil) return self;
+	
+	_block = nil;
+	_queue = NULL;
+	
     return self;
 }
 
@@ -48,10 +49,11 @@
 
 - (id)init {
     self = [super init];
-    if (self) {
-        _notificationName = nil;
-		_blocks = [NSMutableArray array];
-    }
+    if (self == nil) return self;
+	
+	_notificationName = nil;
+	_blocks = [NSMutableArray array];
+	
     return self;
 }
 
@@ -74,9 +76,10 @@
 
 -(id)init {
 	self = [super init];
-	if (self) {
-		_notifications = [NSMutableArray array];
-	}
+	if (self == nil) return self;
+	
+	_notifications = [NSMutableArray array];
+	
 	return self;
 }
 
