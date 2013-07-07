@@ -107,8 +107,7 @@ forNotification:(NSString *)notificationName
 	}];
 	
 	if (object == nil) {
-		object = [CWBlockNotification new];
-		object.notificationName = notificationName;
+		object = [CWBlockNotification blockNotificationWithName:notificationName];
 		[self.notifications addObject:object];
 	}
 	
