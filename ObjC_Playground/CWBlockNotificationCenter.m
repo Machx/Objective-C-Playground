@@ -57,6 +57,13 @@
     return self;
 }
 
++(instancetype)blockNotificationWithName:(NSString *)name {
+	CWAssert(name != nil);
+	CWBlockNotification *notification = [CWBlockNotification new];
+	notification.notificationName = name;
+	return notification;
+}
+
 @end
 
 @interface CWBlockNotificationCenter ()
@@ -107,7 +114,6 @@ forNotification:(NSString *)notificationName
 	
 	CWBlockQueuePair *pair = [CWBlockQueuePair pairWithQueue:queue
 													andBlock:block];
-	
 	[object.blocks addObject:pair];
 }
 
