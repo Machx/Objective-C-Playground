@@ -57,7 +57,7 @@
     return self;
 }
 
-+(instancetype)blockNotificationWithName:(NSString *)name {
++(instancetype)notificationWithName:(NSString *)name {
 	CWAssert(name != nil);
 	CWBlockNotification *notification = [CWBlockNotification new];
 	notification.notificationName = name;
@@ -107,7 +107,7 @@ forNotification:(NSString *)notificationName
 	}];
 	
 	if (object == nil) {
-		object = [CWBlockNotification blockNotificationWithName:notificationName];
+		object = [CWBlockNotification notificationWithName:notificationName];
 		[self.notifications addObject:object];
 	}
 	
