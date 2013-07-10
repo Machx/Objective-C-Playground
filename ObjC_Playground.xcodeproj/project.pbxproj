@@ -11,6 +11,7 @@
 		B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F4161177F511900ABED6D /* CWLoggingTests.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3916DE785C0011506D /* libSpecta-macosx.a */; };
+		B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */; };
 		B850337C1764D75C00B17D1B /* CWFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B850337B1764D75C00B17D1B /* CWFuture.m */; };
 		B85033831764D76C00B17D1B /* CWFutureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B85033821764D76C00B17D1B /* CWFutureTests.m */; };
 		B85EE756163AECB000265870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE755163AECB000265870 /* Foundation.framework */; };
@@ -126,6 +127,8 @@
 		B83C4B4116DE785C0011506D /* SPTSenTestInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSenTestInvocation.h; path = External/Specta/SPTSenTestInvocation.h; sourceTree = SOURCE_ROOT; };
 		B83C4B4216DE785C0011506D /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSharedExampleGroups.h; path = External/Specta/SPTSharedExampleGroups.h; sourceTree = SOURCE_ROOT; };
 		B83C4B4316DE785C0011506D /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = External/Specta/SPTSpec.h; sourceTree = SOURCE_ROOT; };
+		B84E0479178DBBFB00E272D6 /* CWBinaryHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBinaryHeap.h; sourceTree = "<group>"; };
+		B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBinaryHeap.m; sourceTree = "<group>"; };
 		B850337A1764D75C00B17D1B /* CWFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWFuture.h; path = External/CWFuture/CWFuture.h; sourceTree = SOURCE_ROOT; };
 		B850337B1764D75C00B17D1B /* CWFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWFuture.m; path = External/CWFuture/CWFuture.m; sourceTree = SOURCE_ROOT; };
 		B85033811764D76C00B17D1B /* CWFutureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWFutureTests.h; path = External/CWFuture/CWFutureTests.h; sourceTree = SOURCE_ROOT; };
@@ -279,6 +282,8 @@
 			children = (
 				B83C4B1416DE780F0011506D /* External */,
 				B85EE758163AECB000265870 /* main.m */,
+				B84E0479178DBBFB00E272D6 /* CWBinaryHeap.h */,
+				B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
 				B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */,
@@ -495,6 +500,7 @@
 				B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */,
 				B850337C1764D75C00B17D1B /* CWFuture.m in Sources */,
 				B81F415F177F50F800ABED6D /* CWLogging.m in Sources */,
+				B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
