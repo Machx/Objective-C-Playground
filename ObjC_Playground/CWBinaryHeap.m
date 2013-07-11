@@ -86,4 +86,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(object));
 }
 
+-(NSUInteger)count {
+	return (NSUInteger)CFBinaryHeapGetCount(self.heap);
+}
+
 @end

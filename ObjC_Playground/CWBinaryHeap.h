@@ -40,5 +40,6 @@
 
 -(void)addObject:(id<CWBinaryHeapComparitor>)object;
 
-@end
+-(NSUInteger)count;
 
+@end
