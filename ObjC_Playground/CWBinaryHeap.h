@@ -32,14 +32,13 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol CWBinaryHeapComparitor <NSObject>
+-(NSComparisonResult)compare:(id)obj1 to:(id)obj2;
+@end
+
 @interface CWBinaryHeap : NSObject
 
--(void)addObject:(id)object;
+-(void)addObject:(id<CWBinaryHeapComparitor>)object;
 
 @end
 
-@protocol CWBinaryHeapComparitor <NSObject>
-
--(NSComparisonResult)compare:(id)obj1 to:(id)obj2;
-
-@end
