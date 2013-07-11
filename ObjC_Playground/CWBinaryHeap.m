@@ -90,4 +90,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return (NSUInteger)CFBinaryHeapGetCount(self.heap);
 }
 
+-(void)dealloc {
+	CFRelease(_heap);
+}
+
 @end
