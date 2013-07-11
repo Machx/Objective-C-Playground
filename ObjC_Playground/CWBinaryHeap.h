@@ -34,6 +34,8 @@
 
 @interface CWBinaryHeap : NSObject
 
+-(void)addObject:(id)object;
+
 @end
 
 @protocol CWBinaryHeapComparitor <NSObject>

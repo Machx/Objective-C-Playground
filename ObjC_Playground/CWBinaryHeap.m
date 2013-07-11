@@ -32,6 +32,7 @@
  */
 
 #import "CWBinaryHeap.h"
+#import <Zangetsu/CWAssertionMacros.h>
 
 #pragma callbacks
 
@@ -65,8 +66,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 
 @implementation CWBinaryHeap
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (!self) return self;
 	
@@ -79,6 +79,11 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
 	
     return self;
+}
+
+-(void)addObject:(id)object {
+	CWAssert(object != nil);
+	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(object));
 }
 
 @end
