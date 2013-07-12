@@ -94,4 +94,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CFRelease(_heap);
 }
 
+-(void)removeAllObjects {
+	CFBinaryHeapRemoveAllValues(self.heap);
+}
+
 @end

@@ -42,4 +42,6 @@
 
 -(NSUInteger)count;
 
+-(void)removeAllObjects;
+
 @end
