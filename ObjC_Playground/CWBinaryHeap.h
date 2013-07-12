@@ -42,6 +42,8 @@
 
 -(NSUInteger)count;
 
+-(NSArray *)allObjects;
+
 -(void)removeAllObjects;
 
 @end

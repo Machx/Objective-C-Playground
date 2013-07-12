@@ -90,6 +90,18 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return (NSUInteger)CFBinaryHeapGetCount(self.heap);
 }
 
+-(NSArray *)allObjects {
+	const void **carray = calloc(CFBinaryHeapGetCount(self.heap), sizeof(void *));
+	CFBinaryHeapGetValues(self.heap, carray);
+	
+	NSArray *values = [NSArray arrayWithObjects:(__unsafe_unretained id *)(void *)carray
+										  count:CFBinaryHeapGetCount(self.heap)];
+	
+	free(carray);
+	
+	return values;
+}
+
 -(void)removeAllObjects {
 	CFBinaryHeapRemoveAllValues(self.heap);
 }
