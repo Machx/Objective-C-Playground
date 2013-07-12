@@ -7,7 +7,18 @@
 //
 
 #import "CWBinaryHeapTests.h"
+#import "CWBinaryHeap.h"
 
-@implementation CWBinaryHeapTests
+SpecBegin(CWBinaryHeap)
 
-@end
+it(@"should have correct count", ^{
+	CWBinaryHeap *heap = [CWBinaryHeap new];
+	
+	expect(heap.count == 0).to.beTruthy();
+	
+	[heap addObject:@"hello"];
+	
+	expect(heap.count == 1).to.beTruthy();
+});
+
+SpecEnd
