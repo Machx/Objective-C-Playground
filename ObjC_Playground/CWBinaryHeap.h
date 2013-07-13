@@ -32,13 +32,14 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CWBinaryHeapComparitor <NSObject>
--(NSComparisonResult)compare:(id)obj1 to:(id)obj2;
-@end
-
 @interface CWBinaryHeap : NSObject
 
 -(void)addObject:(id<CWBinaryHeapComparitor>)object;
+
+//objects added here must respond to -compare: if not using -initWithSortBlock:
+//otherwise this data structure treats all objects as having the same value
+//therefore any benefits of the data structure are lost as a result
+-(void)addObject:(id)object;
 
 -(NSUInteger)count;
 

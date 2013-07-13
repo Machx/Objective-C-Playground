@@ -50,13 +50,17 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	return description;
 }
 
-static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2, void *context) {
-	NSObject *obj1 = (__bridge NSObject *)ptr1;
-	NSObject *obj2 = (__bridge NSObject *)ptr2;
-	
-	id<CWBinaryHeapComparitor> comparitor = (__bridge id<CWBinaryHeapComparitor>)ptr1;
-	return [comparitor compare:obj1 to:obj2];
-}
+//static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2, void *context) {
+//	NSObject *obj1 = (__bridge NSObject *)ptr1;
+//	NSObject *obj2 = (__bridge NSObject *)ptr2;
+//	
+//	if ([obj1 respondsToSelector:@selector(compare:)]) {
+//		return [(id)obj1 compare:(id)obj2];
+//	}
+//	
+//	CWLogInfo(@"Object does not respond to the -compare message. The benefits of this data structure have been lost.");
+//	return kCFCompareEqualTo;
+//}
 
 #pragma class extension
 
