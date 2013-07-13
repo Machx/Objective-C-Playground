@@ -33,6 +33,7 @@
 
 #import "CWBinaryHeap.h"
 #import <Zangetsu/CWAssertionMacros.h>
+#import <Zangetsu/CWLogging.h>
 
 #pragma callbacks
 
@@ -87,6 +88,9 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 -(void)addObject:(id)object {
 	CWAssert(object != nil);
+	if (![object respondsToSelector:@selector(compare:)]) {
+		CWLogInfo(@"Object doesn't respond to -compare. You should implement this.");
+	}
 	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(object));
 }
 
