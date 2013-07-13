@@ -34,7 +34,9 @@
 
 @interface CWBinaryHeap : NSObject
 
--(void)addObject:(id<CWBinaryHeapComparitor>)object;
+//need to typecast the const void ptr's to NSObjects
+//will throw an assertion if block is nil
+-(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block;
 
 //objects added here must respond to -compare: if not using -initWithSortBlock:
 //otherwise this data structure treats all objects as having the same value
