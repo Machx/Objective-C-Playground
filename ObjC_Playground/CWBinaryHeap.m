@@ -92,6 +92,24 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
     return self;
 }
 
+-(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block {
+	CWAssert(block != nil);
+	
+	self = [super init];
+	if (self == nil) return self;
+	
+	CFBinaryHeapCallBacks callBacks;
+	callBacks.version = 0;
+	callBacks.retain = CWBinaryHeapRetain;
+	callBacks.release = CWBinaryHeapRelease;
+	callBacks.copyDescription = CWBinaryHeapCopyDescription;
+	callBacks.compare = (__bridge void *)block;
+	
+	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
+	
+	return self;
+}
+
 -(void)addObject:(id)object {
 	CWAssert(object != nil);
 	if (![object respondsToSelector:@selector(compare:)]) {
