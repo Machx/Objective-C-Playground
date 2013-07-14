@@ -71,26 +71,26 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 @implementation CWBinaryHeap
 
-- (id)init {
-    self = [super init];
-    if (self == nil) return self;
-	
-	CFBinaryHeapCallBacks callBacks;
-	callBacks.version = 0;
-	callBacks.retain = CWBinaryHeapRetain;
-	callBacks.release = CWBinaryHeapRelease;
-	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	callBacks.compare = (__bridge void *)^(const void *ptr1, const void *ptr2, void *context) {
-		NSObject *obj1 = (__bridge NSObject *)ptr1;
-		NSObject *obj2 = (__bridge NSObject *)ptr2;
-		
-		return (CFComparisonResult)[(id)obj1 compare:(id)obj2];
-	};
-	
-	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
-	
-    return self;
-}
+//- (id)init {
+//    self = [super init];
+//    if (self == nil) return self;
+//	
+//	CFBinaryHeapCallBacks callBacks;
+//	callBacks.version = 0;
+//	callBacks.retain = CWBinaryHeapRetain;
+//	callBacks.release = CWBinaryHeapRelease;
+//	callBacks.copyDescription = CWBinaryHeapCopyDescription;
+//	callBacks.compare = (__bridge void *)^(const void *ptr1, const void *ptr2, void *context) {
+//		NSObject *obj1 = (__bridge NSObject *)ptr1;
+//		NSObject *obj2 = (__bridge NSObject *)ptr2;
+//		
+//		return (CFComparisonResult)[(id)obj1 compare:(id)obj2];
+//	};
+//	
+//	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
+//	
+//    return self;
+//}
 
 -(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block {
 	CWAssert(block != nil);
