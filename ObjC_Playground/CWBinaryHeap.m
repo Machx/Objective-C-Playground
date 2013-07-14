@@ -67,6 +67,7 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 @interface CWBinaryHeap ()
 @property(assign) CFBinaryHeapRef heap;
+@property(copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
 @end
 
 @implementation CWBinaryHeap
@@ -98,12 +99,19 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	self = [super init];
 	if (self == nil) return self;
 	
+	self.heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
+		NSObject *obj1 = (__bridge NSObject *)ptr1;
+		NSObject *obj2 = (__bridge NSObject *)ptr2;
+		return (CFComparisonResult)block(obj1,obj2);
+	};
+	
 	CFBinaryHeapCallBacks callBacks;
 	callBacks.version = 0;
 	callBacks.retain = CWBinaryHeapRetain;
 	callBacks.release = CWBinaryHeapRelease;
 	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	callBacks.compare = (__bridge void *)block;
+	callBacks.compare = (__bridge void *)self.heapInternalBlock;
+	//callBacks.compare = (__bridge void *)block;
 	
 	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
 	
