@@ -91,7 +91,12 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 //	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
 //	
 //    return self;
-//}
+//
+
+-(id)init {
+	CWAssert(0,@"Call -initWithSortBlock: not -init");
+	return nil;
+}
 
 -(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block {
 	CWAssert(block != nil);
