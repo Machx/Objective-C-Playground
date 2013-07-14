@@ -92,7 +92,7 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 //    return self;
 //}
 
--(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block {
+-(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block {
 	CWAssert(block != nil);
 	
 	self = [super init];
