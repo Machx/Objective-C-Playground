@@ -68,6 +68,7 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 @interface CWBinaryHeap ()
 @property(assign) CFBinaryHeapRef heap;
 @property(copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
+@property(copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
 @end
 
 @implementation CWBinaryHeap
@@ -103,6 +104,8 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	
 	self = [super init];
 	if (self == nil) return self;
+	
+	self.userSortBlock = block;
 	
 	self.heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
 		NSObject *obj1 = (__bridge NSObject *)ptr1;
