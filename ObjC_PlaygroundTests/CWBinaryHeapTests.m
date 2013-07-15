@@ -12,7 +12,9 @@
 SpecBegin(CWBinaryHeap)
 
 it(@"should have correct count", ^{
-	CWBinaryHeap *heap = [CWBinaryHeap new];
+	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+		return NSOrderedSame;
+	}];
 	
 	expect(heap.count == 0).to.beTruthy();
 	
