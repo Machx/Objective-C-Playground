@@ -34,8 +34,8 @@
 
 @interface CWBinaryHeap : NSObject
 
-//need to typecast the const void ptr's to NSObjects
 //will throw an assertion if block is nil
+//designated initializer
 -(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block;
 //-(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block;
 
