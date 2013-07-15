@@ -107,10 +107,12 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	
 	self.userSortBlock = block;
 	
+	__weak __typeof(self) weakself = self;
 	self.heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
+		__strong __typeof(weakself) strongSelf = weakself;
 		NSObject *obj1 = (__bridge NSObject *)ptr1;
 		NSObject *obj2 = (__bridge NSObject *)ptr2;
-		return (CFComparisonResult)block(obj1,obj2);
+		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);;
 	};
 	
 	CFBinaryHeapCallBacks callBacks;
