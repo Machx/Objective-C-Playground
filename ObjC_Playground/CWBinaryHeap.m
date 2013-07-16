@@ -84,10 +84,10 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	self = [super init];
 	if (self == nil) return self;
 	
-	self.userSortBlock = block;
+	_userSortBlock = block;
 	
 	__weak __typeof(self) weakself = self;
-	self.heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
+	_heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
 		__strong __typeof(weakself) strongSelf = weakself;
 		NSObject *obj1 = (__bridge NSObject *)ptr1;
 		NSObject *obj2 = (__bridge NSObject *)ptr2;
@@ -99,7 +99,7 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	callBacks.retain = CWBinaryHeapRetain;
 	callBacks.release = CWBinaryHeapRelease;
 	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	callBacks.compare = (__bridge void *)self.heapInternalBlock;
+	callBacks.compare = (__bridge void *)_heapInternalBlock;
 	//callBacks.compare = (__bridge void *)block;
 	
 	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
