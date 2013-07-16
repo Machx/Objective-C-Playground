@@ -30,7 +30,7 @@ it(@"should sort", ^{
 	}];
 	
 	[heap addObject:@1];
-	//[heap addObject:@2];
+	[heap addObject:@2];
 //	[heap addObject:@3];
 //	[heap addObject:@4];
 //	[heap addObject:@5];
