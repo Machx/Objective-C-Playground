@@ -102,7 +102,9 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	callBacks.compare = (__bridge void *)_heapInternalBlock;
 	//callBacks.compare = (__bridge void *)block;
 	
-	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, 0, &callBacks, NULL);
+	NSUInteger capacity = 0;
+	
+	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, capacity, &callBacks, NULL);
 	
 	return self;
 }
