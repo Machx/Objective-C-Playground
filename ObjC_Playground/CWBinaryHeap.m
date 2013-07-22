@@ -67,8 +67,8 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 @interface CWBinaryHeap ()
 @property(assign) CFBinaryHeapRef heap;
-@property(copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
-@property(copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
+//@property(copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
+//@property(copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
 @end
 
 @implementation CWBinaryHeap
@@ -84,15 +84,15 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	self = [super init];
 	if (self == nil) return self;
 	
-	_userSortBlock = block;
-	
-	__weak __typeof(self) weakself = self;
-	_heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
-		__strong __typeof(weakself) strongSelf = weakself;
-		NSObject *obj1 = (__bridge NSObject *)ptr1;
-		NSObject *obj2 = (__bridge NSObject *)ptr2;
-		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);;
-	};
+//	_userSortBlock = block;
+//	
+//	__weak __typeof(self) weakself = self;
+//	_heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
+//		__strong __typeof(weakself) strongSelf = weakself;
+//		NSObject *obj1 = (__bridge NSObject *)ptr1;
+//		NSObject *obj2 = (__bridge NSObject *)ptr2;
+//		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);;
+//	};
 	
 	CFBinaryHeapCallBacks callBacks;
 	callBacks.version = 0;
