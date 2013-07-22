@@ -84,6 +84,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	self = [super init];
 	if (self == nil) return self;
 	
+	//block based sort is a work in progress
 //	_userSortBlock = block;
 //	
 //	__weak __typeof(self) weakself = self;
