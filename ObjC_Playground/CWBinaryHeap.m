@@ -33,7 +33,7 @@
 
 #import "CWBinaryHeap.h"
 #import <Zangetsu/CWAssertionMacros.h>
-#import <Zangetsu/CWLogging.h>
+#import "CWLogging.h"
 
 #pragma callbacks
 
