@@ -10,4 +10,11 @@
 
 @interface CWBlockTimer2 : NSObject
 
+//designated initializer
+- (id)initWithTimeInterval:(NSTimeInterval)interval
+				   onQueue:(dispatch_queue_t)queue
+				 withBlock:(dispatch_block_t)block;
+
+-(void)invalidate;
+
 @end
