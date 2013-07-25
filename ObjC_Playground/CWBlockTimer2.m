@@ -8,6 +8,52 @@
 
 #import "CWBlockTimer2.h"
 
+@interface CWBlockTimer2 ()
+@property(assign) dispatch_source_t source;
+@property(copy) dispatch_block_t block;
+@end
+
 @implementation CWBlockTimer2
+
+//- (id)init
+//{
+//    self = [super init];
+//    if (self == nil) return self;
+//	
+//	_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+//	
+//	
+//	
+//    return self;
+//}
+
+- (id)initWithTimeInterval:(NSTimeInterval)interval
+				   onQueue:(dispatch_queue_t)queue
+				 withBlock:(dispatch_block_t)block {
+    self = [super init];
+    if (self == nil) return self;
+	
+	_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+	
+	uint64_t nSec = (uint64_t)(interval * NSEC_PER_SEC);
+	//TODO: pick better parameter value for 10.9 
+	dispatch_source_set_timer(_source,
+							  dispatch_time(DISPATCH_TIME_NOW, nSec),
+							  nSec,
+							  0 /* leeway, should pick something better for 10.9*/);
+	
+	dispatch_source_set_event_handler(_source, block);
+	dispatch_resume(_source);
+	
+    return self;
+}
+
+- (void)dealloc {
+    if (_source) {
+		dispatch_source_cancel(_source);
+		dispatch_release(_source);
+		_source = nil;
+	}
+}
 
 @end
