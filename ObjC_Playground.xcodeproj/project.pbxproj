@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B802877C17A164EF0055A67E /* CWBlockTimer2.m in Sources */ = {isa = PBXBuildFile; fileRef = B802877B17A164EF0055A67E /* CWBlockTimer2.m */; };
 		B81F415F177F50F800ABED6D /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F415E177F50F800ABED6D /* CWLogging.m */; };
 		B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F4161177F511900ABED6D /* CWLoggingTests.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
@@ -81,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B802877A17A164EF0055A67E /* CWBlockTimer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBlockTimer2.h; sourceTree = "<group>"; };
+		B802877B17A164EF0055A67E /* CWBlockTimer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBlockTimer2.m; sourceTree = "<group>"; };
 		B81F415D177F50F800ABED6D /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLogging.h; path = ../External/CWLogging/CWLogging.h; sourceTree = "<group>"; };
 		B81F415E177F50F800ABED6D /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWLogging.m; path = ../External/CWLogging/CWLogging.m; sourceTree = "<group>"; };
 		B81F4160177F511900ABED6D /* CWLoggingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLoggingTests.h; path = External/CWLogging/CWLoggingTests.h; sourceTree = SOURCE_ROOT; };
@@ -288,6 +291,8 @@
 				B85EE758163AECB000265870 /* main.m */,
 				B84E0479178DBBFB00E272D6 /* CWBinaryHeap.h */,
 				B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */,
+				B802877A17A164EF0055A67E /* CWBlockTimer2.h */,
+				B802877B17A164EF0055A67E /* CWBlockTimer2.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
 				B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */,
@@ -507,6 +512,7 @@
 				B850337C1764D75C00B17D1B /* CWFuture.m in Sources */,
 				B81F415F177F50F800ABED6D /* CWLogging.m in Sources */,
 				B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */,
+				B802877C17A164EF0055A67E /* CWBlockTimer2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
