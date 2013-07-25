@@ -48,6 +48,14 @@
     return self;
 }
 
+-(void)invalidate {
+	if (self.source) {
+		dispatch_source_cancel(self.source);
+		dispatch_release(self.source);
+		self.source = nil;
+	}
+}
+
 - (void)dealloc {
     if (_source) {
 		dispatch_source_cancel(_source);
