@@ -7,6 +7,8 @@
 //
 
 #import "CWBlockTimer2.h"
+#import "CWLogging.h"
+#import <Zangetsu/CWAssertionMacros.h>
 
 @interface CWBlockTimer2 ()
 @property(assign) dispatch_source_t source;
@@ -22,6 +24,9 @@
 - (id)initWithTimeInterval:(NSTimeInterval)interval
 				   onQueue:(dispatch_queue_t)queue
 				 withBlock:(dispatch_block_t)block {
+	CWAssert(queue != NULL);
+	CWAssert(block != nil);
+	
     self = [super init];
     if (self == nil) return self;
 	
