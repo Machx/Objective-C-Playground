@@ -15,7 +15,7 @@
 @implementation CWBlockTimer2
 
 - (id)init {
-	NSAssert(0, @"Call -initWithTimeInterval:onQueue:withBlock:");
+	CWLogInfo(@"Wrong initializer for CWBlockTimer2. Call -initWithTimeInterval:onQueue:withBlock:");
 	return nil;
 }
 
