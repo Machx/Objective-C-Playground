@@ -11,7 +11,7 @@
 #import <Zangetsu/CWAssertionMacros.h>
 
 @interface CWBlockTimer2 ()
-@property(assign) dispatch_source_t source;
+@property(nonatomic,assign) dispatch_source_t source;
 @end
 
 @implementation CWBlockTimer2
