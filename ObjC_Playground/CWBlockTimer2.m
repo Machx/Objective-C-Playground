@@ -15,17 +15,10 @@
 
 @implementation CWBlockTimer2
 
-//- (id)init
-//{
-//    self = [super init];
-//    if (self == nil) return self;
-//	
-//	_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-//	
-//	
-//	
-//    return self;
-//}
+- (id)init {
+	NSAssert(0, @"Call -initWithTimeInterval:onQueue:withBlock:");
+	return nil;
+}
 
 - (id)initWithTimeInterval:(NSTimeInterval)interval
 				   onQueue:(dispatch_queue_t)queue
