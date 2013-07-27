@@ -43,6 +43,24 @@
 	
     return self;
 }
+
+- (id)initWithTimeInterval:(NSTimeInterval)interval
+					leeway:(uint64_t)leeway
+				   onQueue:(dispatch_queue_t)queue
+				 withBlock:(dispatch_block_t)block {
+	CWAssert(queue != NULL);
+	CWAssert(block != nil);
+	
+    self = [super init];
+    if (self == nil) return self;
+	
+	_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+	
+	uint64_t nSec = (uint64_t)(interval * NSEC_PER_SEC);
+	dispatch_source_set_timer(_source,
+							  dispatch_time(DISPATCH_TIME_NOW, nSec),
+							  nSec,
+							  leeway);
 	
 	dispatch_source_set_event_handler(_source, block);
 	dispatch_resume(_source);
