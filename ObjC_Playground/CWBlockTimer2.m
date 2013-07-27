@@ -33,11 +33,16 @@
 	_source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
 	
 	uint64_t nSec = (uint64_t)(interval * NSEC_PER_SEC);
-	//TODO: pick better parameter value for 10.9 
 	dispatch_source_set_timer(_source,
 							  dispatch_time(DISPATCH_TIME_NOW, nSec),
 							  nSec,
-							  0 /* leeway, should pick something better for 10.9*/);
+							  (0.5 * NSEC_PER_SEC));
+	
+	dispatch_source_set_event_handler(_source, block);
+	dispatch_resume(_source);
+	
+    return self;
+}
 	
 	dispatch_source_set_event_handler(_source, block);
 	dispatch_resume(_source);
