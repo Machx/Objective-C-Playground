@@ -23,7 +23,13 @@
 @interface CWBlockTimer2 : NSObject
 
 /**
- CWBlockTimer2 Designated Initializer
+ Creates a new CWBlockTimer instance
+ 
+ This creates a new timer instance set to fire the block passed in on the queue
+ given every interval seconds. This default timer also gives the system a
+ default leeway of half a second for the system delaying the timer. If you want
+ to set the leeway for the timer yourself you should use the alternate init 
+ method that lets you specify the leeway for the timer.
  
  @param interval seconds between timer firing
  @param queue block should be executed on. Must not be null
@@ -31,6 +37,23 @@
  @return a new CWBlockTimer2 configured instance
  */
 - (id)initWithTimeInterval:(NSTimeInterval)interval
+				   onQueue:(dispatch_queue_t)queue
+				 withBlock:(dispatch_block_t)block;
+
+/**
+ Creates a new CWBlockTimer2 instance
+ 
+ This creates a new timer instance set to fire the block passed in on the queue
+ given every interval seconds. 
+ 
+ @param interval seconds between timer firing
+ @param leeway the time in nanoseconds that the system can deferr the timer
+ @param queue block should be executed on. Must not be null
+ @param block to be executed by the timer
+ @return a new CWBlockTimer2 configured instance
+ */
+- (id)initWithTimeInterval:(NSTimeInterval)interval
+					leeway:(uint64_t)leeway
 				   onQueue:(dispatch_queue_t)queue
 				 withBlock:(dispatch_block_t)block;
 
