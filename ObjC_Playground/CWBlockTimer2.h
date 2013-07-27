@@ -35,7 +35,10 @@
 				 withBlock:(dispatch_block_t)block;
 
 /**
- Invalidates the timer so it stops firing
+ Invalidates the timer so it stops firing.
+ 
+ Once the timer has been invalidated it will never fire again. You must dealloc
+ the instance and create a new instance.
  */
 -(void)invalidate;
 
