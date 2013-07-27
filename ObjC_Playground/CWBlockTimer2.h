@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ CWBlockTimer is a simple class that is designed to be a minimal wrapper around
+ Grand Central Dispatch and its dispatch_source timer API. Internally it sets
+ up a dispatch_source_t object and configures it with the time interval, queue
+ and block you give it. Then it will immediately begin firing the block at the
+ time interval you give it. 
+ 
+ To stop the timer forever, call the -invalidate method which will take care of
+ that, or just let ARC dealloc a CWBlockTimer instance and that will also 
+ stop the timer.
+ */
+
 @interface CWBlockTimer2 : NSObject
 
 /**
