@@ -47,7 +47,7 @@ static void CWBinaryHeapRelease(CFAllocatorRef allocator, const void *ptr) {
 
 static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	NSObject *event = (__bridge NSObject *)ptr;
-	CFStringRef description = (__bridge CFStringRef)[event description];
+	CFStringRef description = (__bridge_retained CFStringRef)[event description];
 	return description;
 }
 
