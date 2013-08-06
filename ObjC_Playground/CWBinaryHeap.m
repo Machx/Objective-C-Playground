@@ -85,15 +85,16 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	if (self == nil) return self;
 	
 	//block based sort is a work in progress
-//	_userSortBlock = block;
-//	
-//	__weak __typeof(self) weakself = self;
-//	_heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
-//		__strong __typeof(weakself) strongSelf = weakself;
-//		NSObject *obj1 = (__bridge NSObject *)ptr1;
-//		NSObject *obj2 = (__bridge NSObject *)ptr2;
-//		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);;
-//	};
+	_userSortBlock = [block copy];
+	
+	__weak __typeof(self) weakself = self;
+	_heapInternalBlock = [^(const void *ptr1, const void *ptr2, void *context) {
+		fprintf(stderr, "called block");
+		__strong __typeof(weakself) strongSelf = weakself;
+		NSObject *obj1 = (__bridge NSObject *)ptr1;
+		NSObject *obj2 = (__bridge NSObject *)ptr2;
+		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);
+	} copy];
 	
 	CFBinaryHeapCallBacks callBacks;
 	callBacks.version = 0;
