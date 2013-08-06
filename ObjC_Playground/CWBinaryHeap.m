@@ -66,9 +66,9 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 #pragma class extension
 
 @interface CWBinaryHeap ()
-@property(assign) CFBinaryHeapRef heap;
-//@property(copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
-//@property(copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
+@property(nonatomic,assign) CFBinaryHeapRef heap;
+@property(nonatomic,copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
+@property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
 @end
 
 @implementation CWBinaryHeap
