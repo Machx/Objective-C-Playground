@@ -101,9 +101,8 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	callBacks.retain = CWBinaryHeapRetain;
 	callBacks.release = CWBinaryHeapRelease;
 	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	//callBacks.compare = (__bridge void *)_heapInternalBlock;
-	//callBacks.compare = (__bridge void *)block;
-	callBacks.compare = CWBinaryHeapCompare;
+	//callBacks.compare = CWBinaryHeapCompare;
+	callBacks.compare = (__bridge void *)_heapInternalBlock;
 	
 	NSUInteger capacity = 0;
 	
