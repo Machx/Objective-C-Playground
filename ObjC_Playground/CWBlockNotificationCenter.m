@@ -121,9 +121,8 @@ forNotification:(NSString *)notificationName
 	
 	CWBlockNotification *notification = [self.notifications cw_findWithBlock:^BOOL(id object) {
 		CWBlockNotification *not = (CWBlockNotification *)object;
-		if ([not.notificationName isEqualToString:notificationName]) {
-			return YES;
-		}
+		if ([not.notificationName isEqualToString:notificationName]) return YES;
+		
 		return NO;
 	}];
 	
