@@ -117,6 +117,8 @@ forNotification:(NSString *)notificationName
 }
 
 -(BOOL)postNotificationWithName:(NSString *)notificationName {
+	CWAssert(notificationName != nil);
+	
 	CWBlockNotification *notification = [self.notifications cw_findWithBlock:^BOOL(id object) {
 		CWBlockNotification *not = (CWBlockNotification *)object;
 		if ([not.notificationName isEqualToString:notificationName]) {
