@@ -17,14 +17,12 @@
 		B85EE756163AECB000265870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE755163AECB000265870 /* Foundation.framework */; };
 		B85EE759163AECB000265870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE758163AECB000265870 /* main.m */; };
 		B85EE75D163AECB000265870 /* ObjC_Playground.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EE75C163AECB000265870 /* ObjC_Playground.1 */; };
-		B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
 		B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE77E163B277200265870 /* SenTestingKit.framework */; };
 		B85EE781163B277300265870 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE780163B277300265870 /* Cocoa.framework */; };
 		B85EE78B163B277300265870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85EE789163B277300265870 /* InfoPlist.strings */; };
 		B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 		B8AF363F1790526900988248 /* CWBinaryHeapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AF363E1790526900988248 /* CWBinaryHeapTests.m */; };
 		B8AF3644179052CE00988248 /* CWBinaryHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */; };
-		B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */; };
 		B8F28C6C1641F78C00BA8497 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 		B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = B850337B1764D75C00B17D1B /* CWFuture.m */; };
 /* End PBXBuildFile section */
@@ -140,8 +138,6 @@
 		B85EE758163AECB000265870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B85EE75B163AECB000265870 /* ObjC_Playground-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC_Playground-Prefix.pch"; sourceTree = "<group>"; };
 		B85EE75C163AECB000265870 /* ObjC_Playground.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObjC_Playground.1; sourceTree = "<group>"; };
-		B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBlockNotificationCenter.h; sourceTree = "<group>"; };
-		B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBlockNotificationCenter.m; sourceTree = "<group>"; };
 		B85EE766163AF96700265870 /* Zangetsu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zangetsu.xcodeproj; path = ../Zangetsu/Zangetsu.xcodeproj; sourceTree = "<group>"; };
 		B85EE77D163B277200265870 /* ObjC_PlaygroundTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjC_PlaygroundTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85EE77E163B277200265870 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -290,8 +286,6 @@
 				B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
-				B85EE763163AF4C100265870 /* CWBlockNotificationCenter.h */,
-				B85EE764163AF4C100265870 /* CWBlockNotificationCenter.m */,
 			);
 			path = ObjC_Playground;
 			sourceTree = "<group>";
@@ -503,7 +497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85EE759163AECB000265870 /* main.m in Sources */,
-				B85EE765163AF4C100265870 /* CWBlockNotificationCenter.m in Sources */,
 				B850337C1764D75C00B17D1B /* CWFuture.m in Sources */,
 				B81F415F177F50F800ABED6D /* CWLogging.m in Sources */,
 				B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */,
@@ -514,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F28C341641BCF500BA8497 /* CWBlockNotificationCenter.m in Sources */,
 				B85033831764D76C00B17D1B /* CWFutureTests.m in Sources */,
 				B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */,
 				B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */,
