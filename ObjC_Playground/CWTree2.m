@@ -33,6 +33,42 @@
 
 #import "CWTree2.h"
 
+static const void* CWTree2Retain(CFAllocatorRef allocator, const void *ptr) {
+	return CFBridgingRetain((__bridge id)ptr);
+}
+
+static void CWTree2Release(CFAllocatorRef allocator, const void *ptr) {
+	CFBridgingRelease(ptr);
+}
+
+static CFStringRef CWTree2CopyDescription(const void *ptr) {
+	NSObject *event = (__bridge NSObject *)ptr;
+	CFStringRef description = (__bridge_retained CFStringRef)[event description];
+	return description;
+}
+
+@interface CWTree2()
+@property(nonatomic,assign) CFTreeRef tree;
+@end
+
 @implementation CWTree2
+
+- (id)init
+{
+    self = [super init];
+    if (self == nil) return self;
+	
+	CFTreeContext context = {
+		.version = 0,
+		.info = NULL,
+		.retain = CWTree2Retain,
+		.release = CWTree2Release,
+		.copyDescription = CWTree2CopyDescription
+	};
+	
+	_tree = CFTreeCreate(kCFAllocatorDefault, &context);
+	
+    return self;
+}
 
 @end
