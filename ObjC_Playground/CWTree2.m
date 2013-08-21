@@ -53,8 +53,7 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 
 @implementation CWTree2
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self == nil) return self;
 	
