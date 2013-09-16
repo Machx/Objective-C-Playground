@@ -35,6 +35,27 @@
 #import <Zangetsu/CWAssertionMacros.h>
 #import "CWLogging.h"
 
+#pragma Node
+
+@interface CWBinaryHeapNode : NSObject
+@property(strong) id data;
+@property(weak) CWBinaryHeap *parent;
+@end
+
+@implementation CWBinaryHeapNode
+
+- (id)init {
+    self = [super init];
+    if (!self) return nil;
+	
+	_data = nil;
+	_parent = nil;
+	
+    return self;
+}
+
+@end
+
 #pragma callbacks
 
 static const void* CWBinaryHeapRetain(CFAllocatorRef allocator, const void *ptr) {
