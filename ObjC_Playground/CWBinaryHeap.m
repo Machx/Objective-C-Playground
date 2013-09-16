@@ -67,7 +67,6 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 @interface CWBinaryHeap ()
 @property(nonatomic,assign) CFBinaryHeapRef heap;
-@property(nonatomic,copy) CFComparisonResult (^heapInternalBlock)(const void *ptr1, const void *ptr2, void *context);
 @property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
 @end
 
@@ -87,22 +86,12 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	//block based sort is a work in progress
 	_userSortBlock = block;
 	
-	__weak __typeof(self) weakself = self;
-	_heapInternalBlock = ^(const void *ptr1, const void *ptr2, void *context) {
-		fprintf(stderr, "called block");
-		__strong __typeof(weakself) strongSelf = weakself;
-		NSObject *obj1 = (__bridge NSObject *)ptr1;
-		NSObject *obj2 = (__bridge NSObject *)ptr2;
-		return (CFComparisonResult)strongSelf.userSortBlock(obj1,obj2);
-	};
-	
 	CFBinaryHeapCallBacks callBacks;
 	callBacks.version = 0;
 	callBacks.retain = CWBinaryHeapRetain;
 	callBacks.release = CWBinaryHeapRelease;
 	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	//callBacks.compare = CWBinaryHeapCompare;
-	callBacks.compare = (__bridge void *)_heapInternalBlock;
+	callBacks.compare = CWBinaryHeapCompare;
 	
 	NSUInteger capacity = 0;
 	
