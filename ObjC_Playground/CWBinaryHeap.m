@@ -35,6 +35,13 @@
 #import <Zangetsu/CWAssertionMacros.h>
 #import "CWLogging.h"
 
+#pragma class extension
+
+@interface CWBinaryHeap ()
+@property(nonatomic,assign) CFBinaryHeapRef heap;
+@property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
+@end
+
 #pragma Node
 
 @interface CWBinaryHeapNode : NSObject
@@ -72,24 +79,21 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 	return description;
 }
 
-//static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2, void *context) {
-//	NSObject *obj1 = (__bridge NSObject *)ptr1;
-//	NSObject *obj2 = (__bridge NSObject *)ptr2;
-//	
-//	if ([obj1 respondsToSelector:@selector(compare:)]) {
-//		return [(id)obj1 compare:(id)obj2];
-//	}
-//	
-//	CWLogInfo(@"Object does not respond to the -compare message. The benefits of this data structure have been lost.");
-//	return kCFCompareEqualTo;
-//}
-
-#pragma class extension
-
-@interface CWBinaryHeap ()
-@property(nonatomic,assign) CFBinaryHeapRef heap;
-@property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
-@end
+static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2, void *context) {
+	CWBinaryHeapNode *obj1 = (__bridge CWBinaryHeapNode *)ptr1;
+	CWBinaryHeapNode *obj2 = (__bridge CWBinaryHeapNode *)ptr2;
+	
+	if (obj1.parent.userSortBlock) {
+		return obj1.parent.userSortBlock(obj1.data,obj2.data);
+	}
+	
+	if ([obj1.data respondsToSelector:@selector(compare:)]) {
+		return [(id)obj1.data compare:(id)obj2.data];
+	}
+	
+	CWLogInfo(@"Object does not respond to the -compare message. The benefits of this data structure have been lost.");
+	return kCFCompareEqualTo;
+}
 
 @implementation CWBinaryHeap
 
@@ -123,7 +127,10 @@ static CFStringRef CWBinaryHeapCopyDescription(const void *ptr) {
 
 -(void)addObject:(id)object {
 	CWAssert(object != nil);
-	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(object));
+	CWBinaryHeapNode *node = [CWBinaryHeapNode new];
+	node.data = object;
+	node.parent = self;
+	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(node));
 }
 
 -(NSUInteger)count {
