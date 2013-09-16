@@ -103,7 +103,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block {
-	//CWAssert(block != nil);
+	CWAssert(block != nil);
 	
 	self = [super init];
 	if (self == nil) return self;
@@ -154,7 +154,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(void)dealloc {
-	CFRelease(_heap);
+	CFRelease(_heap); _heap = NULL;
 }
 
 @end
