@@ -146,7 +146,13 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	
 	free(carray);
 	
-	return values;
+	NSMutableArray *extractedValues = [NSMutableArray array];
+	
+	for (CWBinaryHeapNode *node in values) {
+		[extractedValues addObject:node.data];
+	}
+	
+	return extractedValues;
 }
 
 -(void)removeAllObjects {
