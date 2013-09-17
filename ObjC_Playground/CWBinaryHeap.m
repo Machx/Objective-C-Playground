@@ -106,7 +106,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CWAssert(block != nil);
 	
 	self = [super init];
-	if (self == nil) return self;
+	if (!self) return self;
 	
 	//block based sort is a work in progress
 	_userSortBlock = block;
