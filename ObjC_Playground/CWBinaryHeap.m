@@ -40,7 +40,6 @@
 @interface CWBinaryHeap ()
 @property(nonatomic,assign) CFBinaryHeapRef heap;
 @property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
-+(instancetype)nodeWithData:(id)data;
 @end
 
 #pragma Node
@@ -48,6 +47,7 @@
 @interface CWBinaryHeapNode : NSObject
 @property(strong) id data;
 @property(weak) CWBinaryHeap *parent;
++(instancetype)nodeWithData:(id)data;
 @end
 
 @implementation CWBinaryHeapNode
