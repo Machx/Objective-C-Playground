@@ -25,7 +25,7 @@ it(@"should have correct count", ^{
 
 it(@"should sort", ^{
 	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
-		NSLog(@"yup called with 1: %@ and 2: %@",obj1,obj2);
+		NSLog(@"called with 1: %@ and 2: %@",obj1,obj2);
 		return [obj1 compare:obj2];
 	}];
 	
