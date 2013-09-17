@@ -12,28 +12,28 @@
 SpecBegin(CWBinaryHeap)
 
 it(@"should have correct count", ^{
-//	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
-//		return NSOrderedSame;
-//	}];
-//	
-//	expect(heap.count == 0).to.beTruthy();
-//	
-//	[heap addObject:@"hello"];
-//	
-//	expect(heap.count == 1).to.beTruthy();
+	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+		return NSOrderedSame;
+	}];
+	
+	expect(heap.count == 0).to.beTruthy();
+	
+	[heap addObject:@"hello"];
+	
+	expect(heap.count == 1).to.beTruthy();
 });
 
 it(@"should sort", ^{
-//	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
-//		NSLog(@"yup called");
-//		return [obj1 compare:obj2];
-//	}];
-//	
-//	[heap addObject:@1];
-//	[heap addObject:@2];
-//	[heap addObject:@3];
-//	[heap addObject:@4];
-//	[heap addObject:@5];
+	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+		NSLog(@"yup called with 1: %@ and 2: %@",obj1,obj2);
+		return [obj1 compare:obj2];
+	}];
+	
+	[heap addObject:@1];
+	[heap addObject:@2];
+	[heap addObject:@3];
+	[heap addObject:@4];
+	[heap addObject:@5];
 	
 	
 });
