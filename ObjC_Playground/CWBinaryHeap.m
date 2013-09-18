@@ -162,6 +162,20 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return extractedValues;
 }
 
+-(id)removeMinimumValue {
+	const void **value = calloc(1, sizeof(void *));
+	if (CFBinaryHeapGetMinimumIfPresent(self.heap, value)) {
+		NSArray *extracted = [NSArray arrayWithObjects:(__unsafe_unretained id *)(void *)value
+												 count:1];
+		CWBinaryHeapNode *node = extracted[0];
+		free(value);
+		return node;
+	}
+	CWLogInfo(@"%@: No minimum value present",[self class]);
+	free(value);
+	return nil;
+}
+
 -(void)removeAllObjects {
 	CFBinaryHeapRemoveAllValues(self.heap);
 }
