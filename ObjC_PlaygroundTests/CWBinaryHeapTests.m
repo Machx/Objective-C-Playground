@@ -38,4 +38,25 @@ it(@"should sort", ^{
 	
 });
 
+it(@"should remove the minimum Value & return it", ^{
+	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+		NSLog(@"called with 1: %@ and 2: %@",obj1,obj2);
+		return [obj1 compare:obj2];
+	}];
+	
+	[heap addObject:@1];
+	[heap addObject:@2];
+	[heap addObject:@3];
+	[heap addObject:@4];
+	[heap addObject:@5];
+	
+	expect(heap.count == 5).to.beTruthy();
+	
+	id minimum = [heap removeMinimumValue];
+	
+	expect(minimum).notTo.beNil();
+	expect(minimum).to.equal(@1);
+	expect(heap.count == 4).to.beTruthy();
+});
+
 SpecEnd
