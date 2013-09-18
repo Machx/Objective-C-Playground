@@ -63,6 +63,7 @@
 }
 
 +(instancetype)nodeWithData:(id)data {
+	CWAssert(data != nil);
 	CWBinaryHeapNode *node = [self new];
 	node.data = data;
 	return node;

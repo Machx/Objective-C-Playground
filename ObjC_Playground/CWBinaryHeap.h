@@ -48,6 +48,8 @@
 
 -(NSArray *)allObjects;
 
+-(id)removeMinimumValue;
+
 -(void)removeAllObjects;
 
 @end
