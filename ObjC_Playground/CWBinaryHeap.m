@@ -169,7 +169,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 												 count:1];
 		CWBinaryHeapNode *node = extracted[0];
 		free(value);
-		return node;
+		CFBinaryHeapRemoveMinimumValue(self.heap);
+		return node.data;
 	}
 	CWLogInfo(@"%@: No minimum value present",[self class]);
 	free(value);
