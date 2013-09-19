@@ -69,6 +69,13 @@
 	return node;
 }
 
+-(NSString *)debugDescription {
+	return [NSString stringWithFormat:@"%@: (Value: %@\nParent: %@",
+			self.class,
+			self.data,
+			self.parent];
+}
+
 @end
 
 #pragma callbacks
