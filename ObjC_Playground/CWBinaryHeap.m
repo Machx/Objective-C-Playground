@@ -76,6 +76,15 @@
 			self.parent];
 }
 
+-(BOOL)isEqual:(id)object {
+	if ([object isMemberOfClass:[self class]]) {
+		CWBinaryHeapNode *node = (CWBinaryHeapNode *)object;
+		//TODO: also should compare parent pointer
+		return [self.data isEqual:node.data];
+	}
+	return NO;
+}
+
 @end
 
 #pragma callbacks
