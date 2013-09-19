@@ -193,6 +193,11 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return nil;
 }
 
+-(BOOL)containsObject:(id)object {
+	CWBinaryHeapNode *node = [CWBinaryHeapNode nodeWithData:object];
+	return CFBinaryHeapContainsValue(self.heap, (__bridge const void *)(node));
+}
+
 -(void)removeAllObjects {
 	CFBinaryHeapRemoveAllValues(self.heap);
 }
