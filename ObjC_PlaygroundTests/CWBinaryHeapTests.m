@@ -25,7 +25,6 @@ it(@"should have correct count", ^{
 
 it(@"should remove the minimum Value & return it", ^{
 	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
-		NSLog(@"called with 1: %@ and 2: %@",obj1,obj2);
 		return [obj1 compare:obj2];
 	}];
 	
@@ -42,6 +41,18 @@ it(@"should remove the minimum Value & return it", ^{
 	expect(minimum).notTo.beNil();
 	expect(minimum).to.equal(@1);
 	expect(heap.count == 4).to.beTruthy();
+});
+
+it(@"should correctly report back if it contains an object", ^{
+	CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+		return [obj1 compare:obj2];
+	}];
+	
+	expect([heap containsObject:@4]).to.beFalsy();
+	
+	[heap addObject:@4];
+	
+	expect([heap containsObject:@4]).to.beTruthy();
 });
 
 SpecEnd
