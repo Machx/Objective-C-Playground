@@ -47,6 +47,28 @@ describe(@"-removeMinimumValue:", ^{
 	});
 });
 
+describe(@"-removeAllObjects", ^{
+	it(@"should remove all objects and give count = 0", ^{
+		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+			return [obj1 compare:obj2];
+		}];
+		
+		expect([heap count] == 0).to.beTruthy();
+		
+		[heap addObject:@1];
+		[heap addObject:@2];
+		[heap addObject:@3];
+		[heap addObject:@4];
+		[heap addObject:@5];
+		
+		expect([heap count] == 5).to.beTruthy();
+		
+		[heap removeAllObjects];
+		
+		expect([heap count] == 0).to.beTruthy();
+	});
+});
+
 describe(@"-containsObject:(id)object", ^{
 	it(@"should correctly report back if it contains an object", ^{
 		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
