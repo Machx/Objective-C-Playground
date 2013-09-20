@@ -34,14 +34,22 @@
 
 @interface CWBinaryHeap : NSObject
 
-//designated initializer
-//
+/**
+ Designated Initializer for CWBinaryHeap
+ 
+ This method iniitalizes the CWBinaryHeap instance. The block passed in to this
+ method must accurately compare the objects you intend to store in the heap. 
+ The reason for this is that the compare block is used in many operations that
+ make this structure efficient. For example when comparing objects this block is
+ called to compare objects. So if this block is not accurate the objects added
+ to it may not be stored efficiently and methods like -containsObject: may not
+ return reliable results.
+ 
+ @param block A block used to compare the contents. Must not be nil.
+ @return a newly initialized CWBinaryHeap instance
+ */
 -(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block;
-//-(id)initWithSortBlock:(NSComparisonResult (^)(const void *ptr1, const void *ptr2, void *context))block;
 
-//objects added here must respond to -compare: if not using -initWithSortBlock:
-//otherwise this data structure treats all objects as having the same value
-//therefore any benefits of the data structure are lost as a result
 -(void)addObject:(id)object;
 
 -(NSUInteger)count;
