@@ -55,6 +55,14 @@
  */
 -(id)initWithSortBlock:(NSComparisonResult (^)(id obj1, id obj2))block;
 
+/**
+ Add the object to the binary heap
+ 
+ This method adds the object to the binary heap instance. The object must not be
+ nil, otherwise CWAssert will log an assert message and call abort().
+ 
+ @param object The object to be added to the heap. Must not be nil.
+ */
 -(void)addObject:(id)object;
 
 -(NSUInteger)count;
