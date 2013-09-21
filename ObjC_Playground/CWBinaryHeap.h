@@ -65,6 +65,14 @@
  */
 -(void)addObject:(id)object;
 
+/**
+ Returns the count of objects in the receiver binary heap
+ 
+ This method is a wrapper around CFBinaryHeapGetCount() passing in the internal
+ CFBinaryHeap instance.
+ 
+ @return count the number of objects contained in the CWBinaryHeap instance
+ */
 -(NSUInteger)count;
 
 -(NSArray *)allObjects;
