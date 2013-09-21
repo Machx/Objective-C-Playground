@@ -32,6 +32,11 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ -init should not be used for CWBinaryHeap. If you should use this, then the
+ method logs an assertion and calls abort().
+ */
+
 @interface CWBinaryHeap : NSObject
 
 /**
