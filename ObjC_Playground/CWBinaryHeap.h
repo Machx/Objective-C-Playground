@@ -75,8 +75,21 @@
  */
 -(NSUInteger)count;
 
+
 -(NSArray *)allObjects;
 
+/**
+ Returns a BOOL indicating if the object passed in is contained in the receiver
+ 
+ This method is dependent on the block that you passed in -initWithSortBlock:
+ being accurate. The internal CFBinaryHeap instance calls a callback method
+ which then calls the block you passed in. As long as that block correctly 
+ returns NSOrderedSame when object and an instance in the CFBinaryHeap are the 
+ same then this method will return YES. Otherwise if the block isn't accurate
+ then this method might return incorrect results.
+ 
+ @return a BOOL indicating if the passed in object is contained in the receiver
+ */
 -(BOOL)containsObject:(id)object;
 
 -(id)removeMinimumValue;
