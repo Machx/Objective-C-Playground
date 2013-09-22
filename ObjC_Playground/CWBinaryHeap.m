@@ -132,7 +132,6 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	self = [super init];
 	if (!self) return self;
 	
-	//block based sort is a work in progress
 	_userSortBlock = block;
 	
 	CFBinaryHeapCallBacks callBacks;
@@ -157,6 +156,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(NSUInteger)count {
+	//FIXME: change to NSInteger? (signed vs unsigned)
 	return (NSUInteger)CFBinaryHeapGetCount(self.heap);
 }
 
