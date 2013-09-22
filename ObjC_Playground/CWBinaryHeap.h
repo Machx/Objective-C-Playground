@@ -75,7 +75,15 @@
  */
 -(NSUInteger)count;
 
-
+/**
+ Returns an array of all the objects in the receiver
+ 
+ If there are objects contained in the receiver this returns an array containing
+ those objects. If the receiver has no objects contained in it then it returns
+ an empty array.
+ 
+ @return an array with all the objects in the receiver or an empty array
+ */
 -(NSArray *)allObjects;
 
 /**
