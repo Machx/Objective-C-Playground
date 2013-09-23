@@ -112,6 +112,11 @@
  */
 -(id)removeMinimumValue;
 
+/**
+ Removes all objects from the heap
+ 
+ Removes all objects from the heap, making it empty
+ */
 -(void)removeAllObjects;
 
 @end
