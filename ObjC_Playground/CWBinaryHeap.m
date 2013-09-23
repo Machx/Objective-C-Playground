@@ -155,9 +155,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(node));
 }
 
--(NSUInteger)count {
-	//FIXME: change to NSInteger? (signed vs unsigned)
-	return (NSUInteger)CFBinaryHeapGetCount(self.heap);
+-(NSInteger)count {
+	return (NSInteger)CFBinaryHeapGetCount(self.heap);
 }
 
 -(NSArray *)allObjects {
