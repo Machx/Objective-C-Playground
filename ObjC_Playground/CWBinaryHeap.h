@@ -100,6 +100,16 @@
  */
 -(BOOL)containsObject:(id)object;
 
+/**
+ Removes the minimum value from the heap and returns it to you
+ 
+ This method removes the minimum value from the heap and returns it. If there
+ are several minumum values then this returns one of them after removing it from
+ the heap. If no value is present then this method will log a message and return
+ nil.
+ 
+ @return the minimum value from the heap or nil if there are no objects present
+ */
 -(id)removeMinimumValue;
 
 -(void)removeAllObjects;
