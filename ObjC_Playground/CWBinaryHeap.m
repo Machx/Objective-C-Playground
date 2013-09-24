@@ -148,6 +148,14 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return self;
 }
 
+-(BOOL)isEqual:(id)object {
+	if ([object isMemberOfClass:[self class]]) {
+		CWBinaryHeap *otherHeap = (CWBinaryHeap *)object;
+		return (CFHash(self.heap) == CFHash(otherHeap.heap));
+	}
+	return NO;
+}
+
 -(void)addObject:(id)object {
 	CWAssert(object != nil);
 	CWBinaryHeapNode *node = [CWBinaryHeapNode nodeWithData:object];
