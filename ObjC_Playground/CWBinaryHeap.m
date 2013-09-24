@@ -156,6 +156,12 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return NO;
 }
 
+-(NSUInteger)hash {
+	CFIndex hash = CFHash(self.heap);
+	if (hash > 0) return (NSUInteger)hash;
+	return 0;
+}
+
 -(void)addObject:(id)object {
 	CWAssert(object != nil);
 	CWBinaryHeapNode *node = [CWBinaryHeapNode nodeWithData:object];
