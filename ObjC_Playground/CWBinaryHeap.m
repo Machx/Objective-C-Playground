@@ -115,7 +115,9 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 		return [(id)obj1.data compare:(id)obj2.data];
 	}
 	
-	CWLogInfo(@"Object does not respond to the -compare message. The benefits of this data structure have been lost.");
+	CWLogInfo(@"No sort block present...calling abort()");
+	CWAssert(0);
+	
 	return kCFCompareEqualTo;
 }
 
