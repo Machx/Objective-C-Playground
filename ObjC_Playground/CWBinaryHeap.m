@@ -111,10 +111,6 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 		return obj1.parent.userSortBlock(obj1.data,obj2.data);
 	}
 	
-	if ([obj1.data respondsToSelector:@selector(compare:)]) {
-		return [(id)obj1.data compare:(id)obj2.data];
-	}
-	
 	CWLogInfo(@"No sort block present...calling abort()");
 	CWAssert(0);
 	
