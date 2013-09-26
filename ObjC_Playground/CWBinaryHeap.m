@@ -111,8 +111,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 		return obj1.parent.userSortBlock(obj1.data,obj2.data);
 	}
 	
-	CWLogInfo(@"No sort block present...calling abort()");
-	CWAssert(0);
+	CWLogInfo(@"No sort block present...this data structure cannot return accurate results");
 	
 	return kCFCompareEqualTo;
 }
