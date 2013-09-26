@@ -83,4 +83,24 @@ describe(@"-containsObject:(id)object", ^{
 	});
 });
 
+describe(@"-allObjects", ^{
+	it(@"should return a copy of all objects in the heap", ^{
+		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+			return [obj1 compare:obj2];
+		}];
+		
+		[heap addObject:@1];
+		[heap addObject:@2];
+		[heap addObject:@3];
+		[heap addObject:@4];
+		[heap addObject:@5];
+		
+		expect([heap count] == 5).to.beTruthy();
+		
+		NSArray *expectedResults = @[@1,@2,@3,@4,@5];
+		
+		expect([heap allObjects]).to.equal(expectedResults);
+	});
+});
+
 SpecEnd
