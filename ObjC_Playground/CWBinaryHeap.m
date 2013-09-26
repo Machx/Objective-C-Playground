@@ -160,8 +160,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	//greater than 0, otherwise we just bail and return 0 rather than returning
 	//a negative number which will get clobbered in the conversion processess
 	CFIndex hash = CFHash(self.heap);
-	if (hash > 0) return (NSUInteger)hash;
-	return 0;
+	return (hash > 0) ? (NSUInteger)hash : 0;
 }
 
 -(void)addObject:(id)object {
