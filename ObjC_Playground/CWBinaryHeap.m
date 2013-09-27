@@ -107,8 +107,14 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CWBinaryHeapNode *obj1 = (__bridge CWBinaryHeapNode *)ptr1;
 	CWBinaryHeapNode *obj2 = (__bridge CWBinaryHeapNode *)ptr2;
 	
+	//we may end up in a situation where we have to add a object in a node
+	//to compare it and it will have a nil parent pointer so check both
+	//nodes for sort blocks
 	if (obj1.parent.userSortBlock) {
 		return obj1.parent.userSortBlock(obj1.data,obj2.data);
+	}
+	if (obj2.parent.userSortBlock) {
+		return obj2.parent.userSortBlock(obj1.data,obj2.data);
 	}
 	
 	CWLogInfo(@"No sort block present...this data structure cannot return accurate results");
