@@ -113,7 +113,10 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	
 	CWLogInfo(@"No sort block present...this data structure cannot return accurate results");
 	
-	return kCFCompareEqualTo;
+	//return greater than or less than here never equal to
+	//the reason for this is that when this data structure
+	//has no objects contained 
+	return kCFCompareGreaterThan;
 }
 
 @implementation CWBinaryHeap
