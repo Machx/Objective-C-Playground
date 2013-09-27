@@ -81,6 +81,24 @@ describe(@"-containsObject:(id)object", ^{
 		
 		expect([heap containsObject:@4]).to.beTruthy();
 	});
+	
+	it(@"should not automatically return true when 1 object is present", ^{
+		/*
+		 This bug occurrs when
+		 1 - The Data structure contains only 1 object
+		 2 - Only 1 node is checked for a sort block (vs both)
+		 3 - the compare callback automatically returns kCWCompareEqualTo
+		 */
+		
+		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+			return [obj1 compare:obj2];
+		}];
+		
+		[heap addObject:@2];
+		
+		//if this bug occurrs it will happen here
+		expect([heap containsObject:@4]).to.beFalsy();
+	});
 });
 
 describe(@"-allObjects", ^{
