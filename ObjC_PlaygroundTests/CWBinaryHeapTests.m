@@ -101,6 +101,23 @@ describe(@"-containsObject:(id)object", ^{
 	});
 });
 
+describe(@"-countOfObjectInHeap:", ^{
+	it(@"should return the correct count of an object in the heap", ^{
+		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+			return [obj1 compare:obj2];
+		}];
+		
+		[heap addObject:@2];
+		expect([heap countofObjectInHeap:@2] == 1).to.beTruthy();
+		
+		[heap addObject:@2];
+		expect([heap countofObjectInHeap:@2] == 2).to.beTruthy();
+		
+		[heap addObject:@2];
+		expect([heap countofObjectInHeap:@2] == 3).to.beTruthy();
+	});
+});
+
 describe(@"-allObjects", ^{
 	it(@"should return a copy of all objects in the heap", ^{
 		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
