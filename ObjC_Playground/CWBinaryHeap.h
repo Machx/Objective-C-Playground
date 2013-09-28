@@ -100,6 +100,8 @@
  */
 -(BOOL)containsObject:(id)object;
 
+-(NSUInteger)countofObjectInHeap:(id)object;
+
 /**
  Removes the minimum value from the heap and returns it to you
  

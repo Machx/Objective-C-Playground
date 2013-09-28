@@ -226,6 +226,13 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	return CFBinaryHeapContainsValue(self.heap, (__bridge const void *)(node));
 }
 
+-(NSUInteger)countofObjectInHeap:(id)object {
+	CWAssert(object != nil);
+	CWBinaryHeapNode *node = [CWBinaryHeapNode nodeWithData:object];
+	CFIndex count = CFBinaryHeapGetCountOfValue(self.heap, (__bridge const void *)(node));
+	return (count > 0) ? (NSUInteger)count : 0;
+}
+
 -(void)removeAllObjects {
 	CFBinaryHeapRemoveAllValues(self.heap);
 }
