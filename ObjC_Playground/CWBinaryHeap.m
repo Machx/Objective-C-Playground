@@ -221,6 +221,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(BOOL)containsObject:(id)object {
+	CWAssert(object != nil);
 	CWBinaryHeapNode *node = [CWBinaryHeapNode nodeWithData:object];
 	return CFBinaryHeapContainsValue(self.heap, (__bridge const void *)(node));
 }
