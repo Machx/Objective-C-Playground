@@ -33,11 +33,11 @@
 
 #import "CWTree2.h"
 
-static const void* CWTree2Retain(CFAllocatorRef allocator, const void *ptr) {
+static const void* CWTree2Retain(const void *ptr) {
 	return CFBridgingRetain((__bridge id)ptr);
 }
 
-static void CWTree2Release(CFAllocatorRef allocator, const void *ptr) {
+static void CWTree2Release(const void *ptr) {
 	CFBridgingRelease(ptr);
 }
 
