@@ -33,6 +33,8 @@
 
 #import "CWTree2.h"
 
+#pragma mark CFTree Callbacks -
+
 static const void* CWTree2Retain(const void *ptr) {
 	return CFBridgingRetain((__bridge id)ptr);
 }
@@ -46,6 +48,8 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 	CFStringRef description = (__bridge_retained CFStringRef)[event description];
 	return description;
 }
+
+#pragma mark CWTree2 implementation -
 
 @interface CWTree2()
 @property(nonatomic,assign) CFTreeRef tree;
