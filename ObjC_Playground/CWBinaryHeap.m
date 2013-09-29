@@ -141,12 +141,13 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	
 	_userSortBlock = block;
 	
-	CFBinaryHeapCallBacks callBacks;
-	callBacks.version = 0;
-	callBacks.retain = CWBinaryHeapRetain;
-	callBacks.release = CWBinaryHeapRelease;
-	callBacks.copyDescription = CWBinaryHeapCopyDescription;
-	callBacks.compare = CWBinaryHeapCompare;
+	CFBinaryHeapCallBacks callBacks = {
+		.version = 0,
+		.retain = CWBinaryHeapRetain,
+		.release = CWBinaryHeapRelease,
+		.copyDescription = CWBinaryHeapCopyDescription,
+		.compare = CWBinaryHeapCompare
+	};
 	
 	NSUInteger capacity = 0;
 	
