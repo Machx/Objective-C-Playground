@@ -100,6 +100,14 @@
  */
 -(BOOL)containsObject:(id)object;
 
+/**
+ Returns a count of the number of times object appears in the heap
+ 
+ This method uses the sort block you specified when creating the heap to search
+ all objects in the heap and match against object.
+ 
+ @return the number of times object appears in heap according to the sort block
+ */
 -(NSUInteger)countofObjectInHeap:(id)object;
 
 /**
