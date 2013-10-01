@@ -180,9 +180,9 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CFBinaryHeapAddValue(self.heap, (__bridge const void *)(node));
 }
 
--(NSInteger)count {
+-(NSUInteger)count {
 	CFIndex count = CFBinaryHeapGetCount(self.heap);
-	return (count > 0) ? (NSInteger)count : 0;
+	return (count > 0) ? (NSUInteger)count : 0;
 }
 
 -(NSArray *)allObjects {

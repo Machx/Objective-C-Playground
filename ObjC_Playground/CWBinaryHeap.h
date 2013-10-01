@@ -73,7 +73,7 @@
  
  @return count the number of objects contained in the CWBinaryHeap instance
  */
--(NSInteger)count;
+-(NSUInteger)count;
 
 /**
  Returns an array of all the objects in the receiver
