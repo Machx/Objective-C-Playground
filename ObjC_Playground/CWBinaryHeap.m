@@ -181,7 +181,8 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(NSInteger)count {
-	return (NSInteger)CFBinaryHeapGetCount(self.heap);
+	CFIndex count = CFBinaryHeapGetCount(self.heap);
+	return (count > 0) ? (NSInteger)count : 0;
 }
 
 -(NSArray *)allObjects {
