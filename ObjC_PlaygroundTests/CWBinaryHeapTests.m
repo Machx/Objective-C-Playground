@@ -41,7 +41,6 @@ describe(@"-removeMinimumValue:", ^{
 		
 		id minimum = [heap removeMinimumValue];
 		
-		expect(minimum).notTo.beNil();
 		expect(minimum).to.equal(@1);
 		expect(heap.count == 4).to.beTruthy();
 	});
