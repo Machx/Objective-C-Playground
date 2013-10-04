@@ -46,6 +46,37 @@ describe(@"-removeMinimumValue:", ^{
 	});
 });
 
+describe(@"experimental test to use a heap as a queue", ^{
+	it(@"should be able to remove the minimum object every time", ^{
+		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
+			return [obj1 compare:obj2];
+		}];
+		
+		[heap addObject:@1];
+		[heap addObject:@2];
+		[heap addObject:@3];
+		[heap addObject:@4];
+		[heap addObject:@5];
+		
+		expect(heap.count == 5).to.beTruthy();
+		
+		expect([heap removeMinimumValue]).to.equal(@1);
+		expect(heap.count == 4).to.beTruthy();
+		
+		expect([heap removeMinimumValue]).to.equal(@2);
+		expect(heap.count == 3).to.beTruthy();
+		
+		expect([heap removeMinimumValue]).to.equal(@3);
+		expect(heap.count == 2).to.beTruthy();
+		
+		expect([heap removeMinimumValue]).to.equal(@4);
+		expect(heap.count == 1).to.beTruthy();
+		
+		expect([heap removeMinimumValue]).to.equal(@5);
+		expect(heap.count == 0).to.beTruthy();
+	});
+});
+
 describe(@"-removeAllObjects", ^{
 	it(@"should remove all objects and give count = 0", ^{
 		CWBinaryHeap *heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
