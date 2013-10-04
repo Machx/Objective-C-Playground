@@ -44,6 +44,13 @@
 
 #pragma Node
 
+/**
+ CWBinaryHeap wraps all the objects it stores into CWBinaryHeap nodes so that
+ when the callback functions get called a pointer to the CWBinaryHeap instance
+ can be obtained and then the sort block can then be used for various functions
+ including sorting and comparisons.
+ */
+
 @interface CWBinaryHeapNode : NSObject
 @property(strong) id data;
 @property(weak) CWBinaryHeap *parent;
