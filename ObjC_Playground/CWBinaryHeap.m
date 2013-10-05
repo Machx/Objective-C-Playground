@@ -61,7 +61,7 @@
 
 - (id)init {
     self = [super init];
-    if (!self) return nil;
+    if (self == nil) return nil;
 	
 	_data = nil;
 	_parent = nil;
@@ -144,7 +144,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	CWAssert(block != nil);
 	
 	self = [super init];
-	if (!self) return self;
+	if (self == nil) return nil;
 	
 	_userSortBlock = block;
 	
