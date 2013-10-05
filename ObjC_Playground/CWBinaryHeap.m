@@ -194,23 +194,18 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 
 -(NSArray *)allObjects {
 	CFIndex count = CFBinaryHeapGetCount(self.heap);
-	
 	if (count == 0) return [NSArray array];
 	
 	const void **carray = calloc(count, sizeof(void *));
 	CFBinaryHeapGetValues(self.heap, carray);
-	
 	NSArray *values = [NSArray arrayWithObjects:(__unsafe_unretained id *)(void *)carray
 										  count:count];
-	
 	free(carray);
 	
 	NSMutableArray *extractedValues = [NSMutableArray array];
-	
 	for (CWBinaryHeapNode *node in values) {
 		[extractedValues addObject:node.data];
 	}
-	
 	return extractedValues;
 }
 
