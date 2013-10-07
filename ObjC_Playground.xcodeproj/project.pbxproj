@@ -153,6 +153,7 @@
 		B8AF363E1790526900988248 /* CWBinaryHeapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBinaryHeapTests.m; sourceTree = "<group>"; };
 		B8C9BC5717B7DFC200679B86 /* CWTree2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTree2.h; sourceTree = "<group>"; };
 		B8C9BC5817B7DFC200679B86 /* CWTree2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTree2.m; sourceTree = "<group>"; };
+		B8DDA33418030B9000285F60 /* CWBinaryHeap_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBinaryHeap_Private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +286,7 @@
 			children = (
 				B83C4B1416DE780F0011506D /* External */,
 				B85EE758163AECB000265870 /* main.m */,
+				B8DDA33418030B9000285F60 /* CWBinaryHeap_Private.h */,
 				B84E0479178DBBFB00E272D6 /* CWBinaryHeap.h */,
 				B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */,
 				B8C9BC5717B7DFC200679B86 /* CWTree2.h */,
