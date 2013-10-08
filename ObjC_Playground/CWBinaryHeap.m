@@ -32,15 +32,9 @@
  */
 
 #import "CWBinaryHeap.h"
+#import "CWBinaryHeap_Private.h"
 #import <Zangetsu/CWAssertionMacros.h>
 #import "CWLogging.h"
-
-#pragma class extension
-
-@interface CWBinaryHeap ()
-@property(nonatomic,assign) CFBinaryHeapRef heap;
-@property(nonatomic,copy) NSComparisonResult (^userSortBlock)(id obj1,id obj2);
-@end
 
 #pragma Node
 
@@ -50,12 +44,6 @@
  can be obtained and then the sort block can then be used for various functions
  including sorting and comparisons.
  */
-
-@interface CWBinaryHeapNode : NSObject
-@property(strong) id data;
-@property(weak) CWBinaryHeap *parent;
-+(instancetype)nodeWithData:(id)data;
-@end
 
 @implementation CWBinaryHeapNode
 
