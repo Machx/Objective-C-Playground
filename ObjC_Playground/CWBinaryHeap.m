@@ -113,7 +113,6 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 	if (obj2.parent.userSortBlock) {
 		return obj2.parent.userSortBlock(obj1.data,obj2.data);
 	}
-	
 	CWLogInfo(@"No sort block present...this data structure cannot return accurate results");
 	
 	//return greater than or less than here never equal to
@@ -145,9 +144,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 		.copyDescription = CWBinaryHeapCopyDescription,
 		.compare = CWBinaryHeapCompare
 	};
-	
 	NSUInteger capacity = 0;
-	
 	_heap = CFBinaryHeapCreate(kCFAllocatorDefault, capacity, &callBacks, NULL);
 	
 	return self;
