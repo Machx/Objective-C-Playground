@@ -33,8 +33,10 @@
 
 #import "CWBinaryHeap.h"
 #import "CWBinaryHeap_Private.h"
-#import <Zangetsu/CWAssertionMacros.h>
 #import "CWLogging.h"
+//use standalone or from zangetsu
+#import <Zangetsu/CWAssertionMacros.h>
+//#import "CWAssertionMacros.h"
 
 #pragma Node
 
