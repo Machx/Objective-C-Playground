@@ -74,4 +74,21 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
     return self;
 }
 
+-(id)initWithRootObject:(id)object {
+	self = [super init];
+	if(self == nil) return nil;
+	
+	CFTreeContext context = {
+		.version = 0,
+		.info = object,
+		.retain = CWTree2Retain,
+		.release = CWTree2Release,
+		.copyDescription = CWTree2CopyDescription
+	};
+	
+	_tree = CFTreeCreate(kCFAllocatorDefault, &context);
+	
+	return self;
+}
+
 @end
