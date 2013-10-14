@@ -91,4 +91,9 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 	return self;
 }
 
+
+-(void)dealloc {
+	CFRelease(_tree);
+}
+
 @end
