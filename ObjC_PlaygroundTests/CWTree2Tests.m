@@ -7,7 +7,16 @@
 //
 
 #import "CWTree2Tests.h"
+#import "CWTree2.h"
 
-@implementation CWTree2Tests
+SpecBegin(CWTree2)
 
-@end
+it(@"should retrieve the root object", ^{
+	NSString *hello = @"world";
+	
+	CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:hello];
+	
+	expect([tree rootObject]).to.equal(hello);
+});
+
+SpecEnd
