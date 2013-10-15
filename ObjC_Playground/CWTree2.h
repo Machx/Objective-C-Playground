@@ -35,6 +35,8 @@
 
 @interface CWTree2 : NSObject
 
+-(id)initWithRootObject:(id)object;
 
+-(id)rootObject;
 
 @end
