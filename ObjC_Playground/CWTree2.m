@@ -80,7 +80,7 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 	
 	CFTreeContext context = {
 		.version = 0,
-		.info = object,
+		.info = (__bridge void *)object,
 		.retain = CWTree2Retain,
 		.release = CWTree2Release,
 		.copyDescription = CWTree2CopyDescription
@@ -100,7 +100,7 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 }
 
 -(void)dealloc {
-	CFRelease(_tree);
+	CFRelease(_tree); _tree = NULL;
 }
 
 @end
