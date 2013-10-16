@@ -33,6 +33,10 @@
 
 #import "CWTree2.h"
 
+//Part of framework or standalone
+#import <Zangetsu/CWAssertionMacros.h>
+//#import "CWAssertionMacros.h"
+
 #pragma mark CFTree Callbacks -
 
 static const void* CWTree2Retain(const void *ptr) {
