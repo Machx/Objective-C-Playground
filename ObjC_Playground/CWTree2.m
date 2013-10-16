@@ -55,6 +55,29 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 
 #pragma mark CWTree2 implementation -
 
+/**
+ Appends a given CFTreeRef with a new CFTreeRef child containing object
+ 
+ @param root the CFTreeRef you whish to append with a child. Must not be NULL.
+ @param object the object with which to append to root. Must not be nil.
+ */
+void CWTreeAppendWithChild(CFTreeRef root, id object) {
+	CWAssert(root != NULL);
+	CWAssert(object != nil);
+	
+	CFTreeContext context = {
+		.version = 0,
+		.info = (__bridge void *)object,
+		.retain = CWTree2Retain,
+		.release = CWTree2Release,
+		.copyDescription = CWTree2CopyDescription
+	};
+	
+	CFTreeRef tree = CFTreeCreate(kCFAllocatorDefault, &context);
+	
+	CFTreeAppendChild(root, tree);
+}
+
 @interface CWTree2()
 @property(nonatomic,assign) CFTreeRef tree;
 @end
