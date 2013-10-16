@@ -75,6 +75,8 @@ static CFStringRef CWTree2CopyDescription(const void *ptr) {
 }
 
 -(id)initWithRootObject:(id)object {
+	CWAssert(object != nil);
+	
 	self = [super init];
 	if(self == nil) return nil;
 	
