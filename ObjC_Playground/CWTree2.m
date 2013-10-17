@@ -78,6 +78,12 @@ void CWTreeAppendWithChild(CFTreeRef root, id object) {
 	CFTreeAppendChild(root, tree);
 }
 
+/**
+ Gets the Objective-C Object from a given CFTreeRef
+ 
+ @param tree a valid CFTreeRef to extract the ObC object from. Must not be nil.
+ @return the object from the given CFTreeRef
+ */
 id CWTreeGetObjectFromTree(CFTreeRef tree) {
 	CWAssert(tree != NULL);
 	CFTreeContext context;
