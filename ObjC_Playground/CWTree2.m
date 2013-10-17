@@ -136,9 +136,7 @@ id CWTreeGetObjectFromTree(CFTreeRef tree) {
 
 -(id)rootObject {
 	if(self.tree == NULL) return nil;
-	CFTreeContext context;
-	CFTreeGetContext(_tree, &context);
-	id object = (__bridge id)context.info;
+	id object = CWTreeGetObjectFromTree(_tree);
 	return object;
 }
 
