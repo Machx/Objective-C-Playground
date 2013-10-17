@@ -78,6 +78,14 @@ void CWTreeAppendWithChild(CFTreeRef root, id object) {
 	CFTreeAppendChild(root, tree);
 }
 
+id CWTreeGetObjectFromTree(CFTreeRef tree) {
+	CWAssert(tree != NULL);
+	CFTreeContext context;
+	CFTreeGetContext(tree, &context);
+	id object = (__bridge id)context.info;
+	return object;
+}
+
 @interface CWTree2()
 @property(nonatomic,assign) CFTreeRef tree;
 @end
