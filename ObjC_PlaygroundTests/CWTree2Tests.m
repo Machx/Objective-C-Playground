@@ -19,4 +19,21 @@ it(@"should retrieve the root object", ^{
 	expect([tree rootObject]).to.equal(hello);
 });
 
+describe(@"-enumerateObjects", ^{
+	it(@"shouldEnumerate", ^{
+		NSString *hello = @"world";
+		
+		CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:hello];
+		
+		__block NSUInteger count = 0;
+		
+		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+			NSLog(@"object is %@",obj);
+			count++;
+		}];
+		
+		expect(count == 1).to.beTruthy();
+	});
+});
+
 SpecEnd
