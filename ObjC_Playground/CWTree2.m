@@ -169,6 +169,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 		
 		CFArrayRemoveValueAtIndex(queue, 0);
 	}
+	CFRelease(queue);
 }
 
 -(void)dealloc {
