@@ -140,6 +140,11 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	return object;
 }
 
+-(void)appendToRoot:(id)object {
+	CWAssert(object != nil);
+	CWTreeAppendWithChild(self.tree, object);
+}
+
 -(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block {
 	if(self.tree == NULL) return;
 	

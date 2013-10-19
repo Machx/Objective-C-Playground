@@ -39,6 +39,8 @@
 
 -(id)rootObject;
 
+-(void)appendToRoot:(id)object;
+
 -(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block;
 
 @end
