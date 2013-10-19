@@ -25,6 +25,9 @@ describe(@"-enumerateObjects", ^{
 		
 		CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:hello];
 		
+		[tree appendToRoot:@"Hypnotoad"];
+		[tree appendToRoot:@"Farnsworth"];
+		
 		__block NSUInteger count = 0;
 		
 		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
@@ -32,7 +35,7 @@ describe(@"-enumerateObjects", ^{
 			count++;
 		}];
 		
-		expect(count == 1).to.beTruthy();
+		expect(count == 3).to.beTruthy();
 	});
 });
 
