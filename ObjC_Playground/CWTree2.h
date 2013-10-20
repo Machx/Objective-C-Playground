@@ -33,6 +33,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Appends a given CFTreeRef with a new CFTreeRef child containing object
+ 
+ @param root the CFTreeRef you whish to append with a child. Must not be NULL.
+ @param object the object with which to append to root. Must not be nil.
+ */
+void CWTreeAppendWithChild(CFTreeRef root, id object);
+
 @interface CWTree2 : NSObject
 
 -(id)initWithRootObject:(id)object;
