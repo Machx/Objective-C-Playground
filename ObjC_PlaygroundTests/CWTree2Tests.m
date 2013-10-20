@@ -37,6 +37,21 @@ describe(@"-enumerateObjects", ^{
 		
 		expect(count == 3).to.beTruthy();
 	});
+	
+	it(@"should be able to modify the tree while enumerating it", ^{
+		CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:@"Hello"];
+		
+		__block NSUInteger count = 0;
+		
+		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+			if([(NSString *)obj isEqualToString:@"Hello"]){
+				CWTreeAppendWithChild(tree, @"World");
+			}
+			count++;
+		}];
+		
+		expect(count == 2).to.beTruthy();
+	});
 });
 
 SpecEnd
