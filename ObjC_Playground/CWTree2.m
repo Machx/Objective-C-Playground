@@ -93,7 +93,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 }
 
 @interface CWTree2()
-@property(nonatomic,assign) CFTreeRef tree;
+@property(nonatomic,readwrite,assign) CFTreeRef tree;
 @end
 
 @implementation CWTree2

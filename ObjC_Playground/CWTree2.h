@@ -37,6 +37,8 @@
 
 -(id)initWithRootObject:(id)object;
 
+@property(nonatomic,readonly,assign) CFTreeRef tree;
+
 -(id)rootObject;
 
 -(void)appendToRoot:(id)object;
