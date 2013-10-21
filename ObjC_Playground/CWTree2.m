@@ -115,7 +115,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
     return self;
 }
 
--(id)initWithRootObject:(id)object {
+-(instancetype)initWithRootObject:(id)object {
 	CWAssert(object != nil);
 	
 	self = [super init];

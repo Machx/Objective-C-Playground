@@ -43,7 +43,7 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
 
 @interface CWTree2 : NSObject
 
--(id)initWithRootObject:(id)object;
+-(instancetype)initWithRootObject:(id)object;
 
 @property(nonatomic,readonly,assign) CFTreeRef tree;
 
