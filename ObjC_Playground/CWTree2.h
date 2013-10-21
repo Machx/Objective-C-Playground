@@ -34,6 +34,14 @@
 #import <Foundation/Foundation.h>
 
 /**
+ CWTree2 
+ 
+ CWTree2 is an experiment to wrap an objective-c class around CFTreeRef to
+ support containing Objective-C objects and enable features like block based
+ enumeration.
+ */
+
+/**
  Appends a given CFTreeRef with a new CFTreeRef child containing object
  
  @param root the CFTreeRef you whish to append with a child. Must not be NULL.
