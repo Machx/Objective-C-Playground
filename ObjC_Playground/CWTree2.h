@@ -51,6 +51,12 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
 
 @interface CWTree2 : NSObject
 
+/**
+ Returns a new instance of CWTree2 containing object for the root node
+ 
+ @param object a valid Objective-C Object, must not be nil.
+ @return a CWTree2 instance containing object at the root node.
+ */
 -(instancetype)initWithRootObject:(id)object;
 
 @property(nonatomic,readonly,assign) CFTreeRef tree;
