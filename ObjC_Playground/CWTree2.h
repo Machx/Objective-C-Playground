@@ -61,8 +61,18 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
 
 @property(nonatomic,readonly,assign) CFTreeRef tree;
 
+/**
+ Returns the root node in the given CWTree2 instance
+ 
+ @return the Objective-C object contained in the root node of the receiver
+ */
 -(id)rootObject;
 
+/**
+ Appends the given objec to the root node in the tree
+ 
+ @param object the object to be added as a child to root. Must not be nil.
+ */
 -(void)appendToRoot:(id)object;
 
 -(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block;
