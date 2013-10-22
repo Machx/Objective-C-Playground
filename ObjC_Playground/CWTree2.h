@@ -59,6 +59,11 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
  */
 -(instancetype)initWithRootObject:(id)object;
 
+/**
+ Reference to the root CFTreeRef node that is created for you
+ 
+ @return the internal CFTreeRef node serving as the root node
+ */
 @property(nonatomic,readonly,assign) CFTreeRef tree;
 
 /**
