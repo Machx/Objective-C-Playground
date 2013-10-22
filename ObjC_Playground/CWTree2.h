@@ -75,6 +75,19 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
  */
 -(void)appendToRoot:(id)object;
 
+/**
+ Enumerates the objects in the receiver
+ 
+ This method enumerates all the objects in the tree by enumerating over the root
+ node and then adding the root nodes children (if there are any) to a queue and
+ then taking the head of the queue off, enumerating over it and repeating the 
+ process over and over until the queue is empty. Thus the tree is enumerated in
+ a breadth first pattern.
+ 
+ @param obj the Objective-C object being contained in the node
+ @param tree the CFTreeRef node containing obj
+ @param stop when this is set to YES then the search stops
+ */
 -(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block;
 
 @end
