@@ -145,6 +145,43 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	CWTreeAppendWithChild(self.tree, object);
 }
 
+-(BOOL)containsObject:(id)object {
+	if(self.tree == NULL) return NO;
+	
+	CFMutableArrayRef queue = CFArrayCreateMutable(kCFAllocatorDefault, 0, &kCFTypeArrayCallBacks);
+	CFArrayAppendValue(queue, self.tree);
+	
+	BOOL contains = NO;
+	
+	while (CFArrayGetCount(queue) > 0) {
+		CFTreeRef tree = (CFTreeRef)CFArrayGetValueAtIndex(queue, 0);
+		id containedObject = CWTreeGetObjectFromCFTree(tree);
+		
+		if ([object isEqual:containedObject]) {
+			contains = YES;
+			break;
+		}
+		
+		CFIndex count = CFTreeGetChildCount(tree);
+		if (count > 0) {
+			CFTreeRef *children = calloc(count, sizeof(CFTreeRef));
+			CFTreeGetChildren(tree, children);
+			
+			for (NSInteger i = 0; i < count; i++) {
+				CFTreeRef tree = children[i];
+				CFArrayAppendValue(queue, tree);
+			}
+			free(children);
+		}
+		
+		CFArrayRemoveValueAtIndex(queue, 0);
+	}
+	
+	CFRelease(queue);
+	
+	return contains;
+}
+
 -(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block {
 	if(self.tree == NULL) return;
 	

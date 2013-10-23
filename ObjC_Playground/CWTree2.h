@@ -80,6 +80,8 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
  */
 -(void)appendToRoot:(id)object;
 
+-(BOOL)containsObject:(id)object;
+
 /**
  Enumerates the objects in the receiver
  
