@@ -31,7 +31,6 @@ describe(@"-enumerateObjects", ^{
 		__block NSUInteger count = 0;
 		
 		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
-			NSLog(@"object is %@",obj);
 			count++;
 		}];
 		
