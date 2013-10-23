@@ -53,4 +53,16 @@ describe(@"-enumerateObjects", ^{
 	});
 });
 
+describe(@"-containsObject:", ^{
+	CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:@"Hypnotoad"];
+	
+	it(@"should correctly say when we contain an object", ^{
+		expect([tree containsObject:@"Hypnotoad"]).to.beTruthy();
+	});
+	
+	it(@"should correctly say when we do not contain an object", ^{
+		expect([tree containsObject:@"Quizzyjimbo"]).to.beFalsy();
+	});
+});
+
 SpecEnd
