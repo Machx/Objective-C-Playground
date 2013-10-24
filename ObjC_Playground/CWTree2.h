@@ -80,6 +80,11 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
  */
 -(void)appendToRoot:(id)object;
 
+/**
+ Returns if the given object is contained in the receiver
+ 
+ @return a BOOL value of YES if object is in the given tree, NO otherwise.
+ */
 -(BOOL)containsObject:(id)object;
 
 /**
