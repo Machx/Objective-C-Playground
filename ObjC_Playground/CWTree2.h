@@ -95,6 +95,6 @@ void CWTreeAppendWithChild(CFTreeRef root, id object);
  @param tree the CFTreeRef node containing obj
  @param stop when this is set to YES then the search stops
  */
--(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block;
+-(void)enumerateObjectsUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block;
 
 @end

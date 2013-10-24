@@ -150,7 +150,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	
 	__block BOOL contains = NO;
 	
-	[self enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+	[self enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
 		if ([object isEqual:obj]) {
 			contains = YES;
 			*stop = YES;
@@ -160,7 +160,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	return contains;
 }
 
--(void)enumerateObjectsInTreeUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block {
+-(void)enumerateObjectsUsingBlock:(void (^)(id obj, CFTreeRef tree, BOOL *stop))block {
 	if(self.tree == NULL) return;
 	
 	CFMutableArrayRef queue = CFArrayCreateMutable(kCFAllocatorDefault, 0, &kCFTypeArrayCallBacks);
