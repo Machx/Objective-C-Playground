@@ -192,6 +192,20 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	CFRelease(queue);
 }
 
+-(NSString *)debugDescription {
+	__block NSMutableString *description = [NSMutableString string];
+	
+	[description appendString:@"CWTree: (\n"];
+	
+	[self enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+		[description appendFormat:@"%@\n",[obj description]];
+	}];
+	
+	[description appendString:@")"];
+	
+	return description;
+}
+
 -(void)dealloc {
 	CFRelease(_tree); _tree = NULL;
 }
