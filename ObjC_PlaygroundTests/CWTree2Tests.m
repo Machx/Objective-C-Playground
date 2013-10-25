@@ -65,4 +65,17 @@ describe(@"-containsObject:", ^{
 	});
 });
 
+//describe(@"Debug Description", ^{
+//	CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:@"Hello"];
+//	
+//	[tree enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+//		if([(NSString *)obj isEqualToString:@"Hello"]){
+//			CWTreeAppendWithChild(tree, @"World");
+//		}
+//	}];
+//	
+//	NSLog(@"CWTree Debug Description");
+//	NSLog(@"%@",[tree debugDescription]);
+//});
+
 SpecEnd
