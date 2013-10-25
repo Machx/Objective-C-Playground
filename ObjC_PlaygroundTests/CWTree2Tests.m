@@ -30,7 +30,7 @@ describe(@"-enumerateObjects", ^{
 		
 		__block NSUInteger count = 0;
 		
-		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+		[tree enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
 			count++;
 		}];
 		
@@ -42,7 +42,7 @@ describe(@"-enumerateObjects", ^{
 		
 		__block NSUInteger count = 0;
 		
-		[tree enumerateObjectsInTreeUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+		[tree enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
 			if([(NSString *)obj isEqualToString:@"Hello"]){
 				CWTreeAppendWithChild(tree, @"World");
 			}
