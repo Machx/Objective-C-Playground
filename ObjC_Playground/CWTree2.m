@@ -198,7 +198,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	[description appendString:@"CWTree: (\n"];
 	
 	[self enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
-		[description appendFormat:@"%@\n",[obj description]];
+		[description appendFormat:@"%@,\n",[obj description]];
 	}];
 	
 	[description appendString:@")"];
