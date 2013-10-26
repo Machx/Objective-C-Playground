@@ -65,6 +65,18 @@ describe(@"-containsObject:", ^{
 	});
 });
 
+describe(@"CWTreeGetObjectFromCFTree", ^{
+	it(@"should get the correct object", ^{
+		CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:@"Hypnotoad"];
+		
+		CFTreeRef cftree = tree.tree;
+		
+		id obj = CWTreeGetObjectFromCFTree(cftree);
+		
+		expect(obj).to.equal(@"Hypnotoad");
+	});
+});
+
 //describe(@"Debug Description", ^{
 //	CWTree2 *tree = [[CWTree2 alloc] initWithRootObject:@"Hello"];
 //	
