@@ -42,6 +42,14 @@
  */
 
 /**
+ Gets the Objective-C Object from a given CFTreeRef
+ 
+ @param tree a valid CFTreeRef to extract the ObC object from. Must not be nil.
+ @return the object from the given CFTreeRef
+ */
+id CWTreeGetObjectFromCFTree(CFTreeRef tree);
+
+/**
  Appends a given CFTreeRef with a new CFTreeRef child containing object
  
  @param root the CFTreeRef you whish to append with a child. Must not be NULL.
