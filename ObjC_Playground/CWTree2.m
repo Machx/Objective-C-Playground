@@ -188,7 +188,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 }
 
 -(NSString *)debugDescription {
-	__block NSMutableString *description = [NSMutableString string];
+	NSMutableString *description = [NSMutableString string];
 	
 	[description appendString:@"CWTree: (\n"];
 	
