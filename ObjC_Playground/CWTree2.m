@@ -190,7 +190,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 -(NSString *)debugDescription {
 	NSMutableString *description = [NSMutableString string];
 	
-	[description appendString:@"CWTree: (\n"];
+	[description appendFormat:@"CWTree <%p> : (\n",self];
 	
 	[self enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
 		[description appendFormat:@"%@,\n",[obj description]];
