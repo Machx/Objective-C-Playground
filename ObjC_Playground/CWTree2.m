@@ -80,6 +80,7 @@ void CWTreeAppendWithChild(CFTreeRef root, id object) {
 
 id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	CWAssert(tree != NULL);
+	CWAssert(CFGetTypeID(tree) == CFTreeGetTypeID());
 	CFTreeContext context;
 	CFTreeGetContext(tree, &context);
 	id object = (__bridge id)context.info;
