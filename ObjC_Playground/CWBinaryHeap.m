@@ -159,10 +159,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(NSUInteger)hash {
-	//have to be careful here since CFIndex is signed and NSUInteger is unsigned
-	//take the best route we can and return a typecast value if the value is
-	//greater than 0, otherwise we just bail and return 0 rather than returning
-	//a negative number which will get clobbered in the conversion processess
+	//return an unsigned value from a signed one, so only return values > 0
 	CFIndex hash = CFHash(self.heap);
 	return (hash > 0) ? (NSUInteger)hash : 0;
 }
