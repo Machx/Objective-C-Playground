@@ -172,6 +172,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 }
 
 -(NSUInteger)count {
+	//again be careful about signed to unsigned conversion...
 	CFIndex count = CFBinaryHeapGetCount(self.heap);
 	return (count > 0) ? (NSUInteger)count : 0;
 }

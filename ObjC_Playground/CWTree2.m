@@ -188,6 +188,7 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 }
 
 -(NSString *)debugDescription {
+	//TODO: Add node depth information to this...
 	NSMutableString *description = [NSMutableString string];
 	
 	[description appendFormat:@"CWTree <%p> : (\n",self];
