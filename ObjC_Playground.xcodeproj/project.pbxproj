@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176DC48A18288829000ECCCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176DC48918288829000ECCCD /* Cocoa.framework */; };
+		176DC48C18288930000ECCCD /* libSpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3916DE785C0011506D /* libSpecta-macosx.a */; };
+		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		B81F415F177F50F800ABED6D /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F415E177F50F800ABED6D /* CWLogging.m */; };
 		B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F4161177F511900ABED6D /* CWLoggingTests.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
@@ -18,7 +21,6 @@
 		B85EE759163AECB000265870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE758163AECB000265870 /* main.m */; };
 		B85EE75D163AECB000265870 /* ObjC_Playground.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EE75C163AECB000265870 /* ObjC_Playground.1 */; };
 		B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE77E163B277200265870 /* SenTestingKit.framework */; };
-		B85EE781163B277300265870 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE780163B277300265870 /* Cocoa.framework */; };
 		B85EE78B163B277300265870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85EE789163B277300265870 /* InfoPlist.strings */; };
 		B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EE771163AF96800265870 /* Zangetsu.framework */; };
 		B8A2FA1E180D825A00DA2C2E /* CWTree2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A2FA1D180D825A00DA2C2E /* CWTree2Tests.m */; };
@@ -69,6 +71,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		176DC48B18288915000ECCCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */,
+				176DC48C18288930000ECCCD /* libSpecta-macosx.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B85EE74F163AECB000265870 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		176DC48918288829000ECCCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B81F415D177F50F800ABED6D /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLogging.h; path = ../External/CWLogging/CWLogging.h; sourceTree = "<group>"; };
 		B81F415E177F50F800ABED6D /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWLogging.m; path = ../External/CWLogging/CWLogging.m; sourceTree = "<group>"; };
 		B81F4160177F511900ABED6D /* CWLoggingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLoggingTests.h; path = External/CWLogging/CWLoggingTests.h; sourceTree = SOURCE_ROOT; };
@@ -174,11 +188,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176DC48A18288829000ECCCD /* Cocoa.framework in Frameworks */,
+				B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */,
 				B83C4B4416DE785C0011506D /* libSpecta-macosx.a in Frameworks */,
 				B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */,
 				B85EE7CF163CDB6900265870 /* Zangetsu.framework in Frameworks */,
-				B85EE77F163B277300265870 /* SenTestingKit.framework in Frameworks */,
-				B85EE781163B277300265870 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +291,7 @@
 		B85EE754163AECB000265870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				176DC48918288829000ECCCD /* Cocoa.framework */,
 				B85EE755163AECB000265870 /* Foundation.framework */,
 				B85EE77E163B277200265870 /* SenTestingKit.framework */,
 				B85EE780163B277300265870 /* Cocoa.framework */,
@@ -401,6 +416,7 @@
 				B85EE778163B277200265870 /* Sources */,
 				B85EE779163B277200265870 /* Frameworks */,
 				B85EE77A163B277200265870 /* Resources */,
+				176DC48B18288915000ECCCD /* CopyFiles */,
 				B85EE77B163B277200265870 /* ShellScript */,
 			);
 			buildRules = (
@@ -421,6 +437,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Colin Wheeler";
+				TargetAttributes = {
+					B85EE77C163B277200265870 = {
+						TestTargetID = B85EE750163AECB000265870;
+					};
+				};
 			};
 			buildConfigurationList = B85EE74B163AECB000265870 /* Build configuration list for PBXProject "ObjC_Playground" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -629,7 +650,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -657,7 +681,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjC_PlaygroundTests/ObjC_PlaygroundTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
