@@ -77,7 +77,8 @@
 	if ([object isMemberOfClass:[self class]]) {
 		CWBinaryHeapNode *node = (CWBinaryHeapNode *)object;
 		//TODO: also should compare parent pointer
-		return [self.data isEqual:node.data];
+		return ([self.data isEqual:node.data] &&
+                [self.parent isEqual:((CWBinaryHeapNode *)object).parent]);
 	}
 	return NO;
 }
