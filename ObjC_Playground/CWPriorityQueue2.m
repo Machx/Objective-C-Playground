@@ -25,4 +25,12 @@
     return self;
 }
 
+-(void)enqueue:(id)obj {
+    [self.heap addObject:obj];
+}
+
+-(id)dequeue {
+    return [self.heap removeMinimumValue];
+}
+
 @end
