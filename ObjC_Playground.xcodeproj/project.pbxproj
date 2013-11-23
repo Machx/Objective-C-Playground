@@ -11,6 +11,7 @@
 		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		17945696182F14250052E113 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		1794569B182F14620052E113 /* libSpecta-OSX.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
+		17F6485318411B4800028065 /* CWPriorityQueue2.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6485218411B4800028065 /* CWPriorityQueue2.m */; };
 		B81F415F177F50F800ABED6D /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F415E177F50F800ABED6D /* CWLogging.m */; };
 		B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F4161177F511900ABED6D /* CWLoggingTests.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
@@ -106,6 +107,8 @@
 		17945692182F14250052E113 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "External/Specta/XCTestCase+Specta.h"; sourceTree = SOURCE_ROOT; };
 		17945693182F14250052E113 /* XCTestLog+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestLog+Specta.h"; path = "External/Specta/XCTestLog+Specta.h"; sourceTree = SOURCE_ROOT; };
 		17945694182F14250052E113 /* XCTestRun+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestRun+Specta.h"; path = "External/Specta/XCTestRun+Specta.h"; sourceTree = SOURCE_ROOT; };
+		17F6485118411B4800028065 /* CWPriorityQueue2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPriorityQueue2.h; sourceTree = "<group>"; };
+		17F6485218411B4800028065 /* CWPriorityQueue2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueue2.m; sourceTree = "<group>"; };
 		B81F415D177F50F800ABED6D /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLogging.h; path = ../External/CWLogging/CWLogging.h; sourceTree = "<group>"; };
 		B81F415E177F50F800ABED6D /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWLogging.m; path = ../External/CWLogging/CWLogging.m; sourceTree = "<group>"; };
 		B81F4160177F511900ABED6D /* CWLoggingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLoggingTests.h; path = External/CWLogging/CWLoggingTests.h; sourceTree = SOURCE_ROOT; };
@@ -322,6 +325,8 @@
 				B8DDA33418030B9000285F60 /* CWBinaryHeap_Private.h */,
 				B84E0479178DBBFB00E272D6 /* CWBinaryHeap.h */,
 				B84E047A178DBBFB00E272D6 /* CWBinaryHeap.m */,
+				17F6485118411B4800028065 /* CWPriorityQueue2.h */,
+				17F6485218411B4800028065 /* CWPriorityQueue2.m */,
 				B8C9BC5717B7DFC200679B86 /* CWTree2.h */,
 				B8C9BC5817B7DFC200679B86 /* CWTree2.m */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
@@ -547,6 +552,7 @@
 				B85EE759163AECB000265870 /* main.m in Sources */,
 				B850337C1764D75C00B17D1B /* CWFuture.m in Sources */,
 				B81F415F177F50F800ABED6D /* CWLogging.m in Sources */,
+				17F6485318411B4800028065 /* CWPriorityQueue2.m in Sources */,
 				B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */,
 				B8C9BC5917B7DFC200679B86 /* CWTree2.m in Sources */,
 			);
