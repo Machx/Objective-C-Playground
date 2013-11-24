@@ -10,7 +10,7 @@
 
 @interface CWPriorityQueue2 : NSObject
 
--(void)enqueue:(id)obj;
+-(void)enqueue:(id)obj withPriority:(NSNumber *)priority;
 -(id)dequeue;
 
 @end
