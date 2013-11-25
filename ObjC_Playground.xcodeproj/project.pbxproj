@@ -178,9 +178,7 @@
 		B85EE788163B277300265870 /* ObjC_PlaygroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjC_PlaygroundTests-Info.plist"; sourceTree = "<group>"; };
 		B85EE78A163B277300265870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B85EE78F163B277300265870 /* ObjC_PlaygroundTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC_PlaygroundTests-Prefix.pch"; sourceTree = "<group>"; };
-		B8A2FA1C180D825A00DA2C2E /* CWTree2Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTree2Tests.h; sourceTree = "<group>"; };
 		B8A2FA1D180D825A00DA2C2E /* CWTree2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTree2Tests.m; sourceTree = "<group>"; };
-		B8AF363D1790526900988248 /* CWBinaryHeapTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBinaryHeapTests.h; sourceTree = "<group>"; };
 		B8AF363E1790526900988248 /* CWBinaryHeapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBinaryHeapTests.m; sourceTree = "<group>"; };
 		B8C9BC5717B7DFC200679B86 /* CWTree2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTree2.h; sourceTree = "<group>"; };
 		B8C9BC5817B7DFC200679B86 /* CWTree2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTree2.m; sourceTree = "<group>"; };
@@ -370,9 +368,7 @@
 		B85EE786163B277300265870 /* ObjC_PlaygroundTests */ = {
 			isa = PBXGroup;
 			children = (
-				B8AF363D1790526900988248 /* CWBinaryHeapTests.h */,
 				B8AF363E1790526900988248 /* CWBinaryHeapTests.m */,
-				B8A2FA1C180D825A00DA2C2E /* CWTree2Tests.h */,
 				B8A2FA1D180D825A00DA2C2E /* CWTree2Tests.m */,
 				17F64859184267D300028065 /* CWPriorityQueue2Tests.m */,
 				B85EE787163B277300265870 /* Supporting Files */,
