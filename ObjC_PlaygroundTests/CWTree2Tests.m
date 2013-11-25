@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Colin Wheeler. All rights reserved.
 //
 
-#import "CWTree2Tests.h"
 #import "CWTree2.h"
 
 SpecBegin(CWTree2)

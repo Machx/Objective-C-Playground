@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Colin Wheeler. All rights reserved.
 //
 
-#import "CWBinaryHeapTests.h"
 #import "CWBinaryHeap.h"
 
 SpecBegin(CWBinaryHeap)
