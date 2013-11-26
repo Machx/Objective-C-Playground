@@ -6,7 +6,15 @@
 //  Copyright (c) 2013 Colin Wheeler. All rights reserved.
 //
 
-#import "CWBinaryHeap.h"
+#import <Foundation/Foundation.h>
+
+/**
+ CWPriorityQueue2 is a class demonstrating using CWBinaryHeap as a priority
+ queue. Internally it enqueues items onto the heap and adds a NSNumber to the
+ enqued item (through objc associated objects) which it uses to determine its 
+ priority in the queue. When an object is removed from the queue the NSNumber
+ ivar is removed from the item and returned to you.
+ */
 
 @interface CWPriorityQueue2 : NSObject
 
