@@ -29,4 +29,18 @@ it(@"should dequeue objects in order", ^{
     expect([queue dequeue]).to.equal(@90);
 });
 
+it(@"should correctly report if an object is contained in the queue", ^{
+    CWPriorityQueue2 *queue = [[CWPriorityQueue2 alloc] init];
+    
+    [queue enqueue:@45 withPriority:@45];
+    [queue enqueue:@54 withPriority:@54];
+    [queue enqueue:@22 withPriority:@22];
+    [queue enqueue:@31 withPriority:@31];
+    [queue enqueue:@90 withPriority:@90];
+    [queue enqueue:@10 withPriority:@10];
+    
+    expect([queue containsObject:@31]).to.beTruthy();
+    expect([queue containsObject:@99]).to.beFalsy();
+});
+
 SpecEnd
