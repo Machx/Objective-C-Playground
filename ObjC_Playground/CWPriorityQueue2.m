@@ -42,4 +42,8 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
     return dequeued;
 }
 
+-(BOOL)containsObject:(id)object {
+    return [self.heap containsObject:object];
+}
+
 @end

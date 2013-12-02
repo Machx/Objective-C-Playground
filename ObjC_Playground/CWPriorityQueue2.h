@@ -36,4 +36,6 @@
  */
 -(id)dequeue;
 
+-(BOOL)containsObject:(id)object;
+
 @end
