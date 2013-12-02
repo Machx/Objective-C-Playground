@@ -36,6 +36,13 @@
  */
 -(id)dequeue;
 
+/**
+ Returns a BOOL value of YES if object is contained, NO otherwise
+ 
+ @param object the queue compares its contents against this to see if it 
+ contains this object
+ @return A BOOL with YES if it contains this object, NO otherwise
+ */
 -(BOOL)containsObject:(id)object;
 
 @end
