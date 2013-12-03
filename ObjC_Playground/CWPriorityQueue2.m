@@ -25,7 +25,10 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
     _heap = [[CWBinaryHeap alloc] initWithSortBlock:^NSComparisonResult(id obj1, id obj2) {
         NSNumber *obj1Priority = objc_getAssociatedObject(obj1, kCWPriorityQueue2ObjKey);
         NSNumber *obj2Priority = objc_getAssociatedObject(obj2, kCWPriorityQueue2ObjKey);
-        return [obj1Priority compare:obj2Priority];
+        if (obj1Priority && obj2Priority) {
+            return [obj1Priority compare:obj2Priority];
+        }
+        return [obj1 compare:obj2];
     }];
     
     return self;
