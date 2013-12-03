@@ -43,4 +43,10 @@ it(@"should correctly report if an object is contained in the queue", ^{
     expect([queue containsObject:@99]).to.beFalsy();
 });
 
+it(@"should return nil from dequeue with 0 objects", ^{
+    CWPriorityQueue2 *queue = [[CWPriorityQueue2 alloc] init];
+    
+    expect([queue dequeue]).to.beNil();
+});
+
 SpecEnd
