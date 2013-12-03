@@ -8,6 +8,7 @@
 
 #import "CWPriorityQueue2.h"
 #import "CWBinaryHeap.h"
+#import <Zangetsu/CWAssertionMacros.h>
 #import <objc/runtime.h>
 
 void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
@@ -35,6 +36,8 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 }
 
 -(void)enqueue:(id)obj withPriority:(NSNumber *)priority {
+    CWAssert(obj != nil);
+    CWAssert(priority != nil);
     objc_setAssociatedObject(obj, kCWPriorityQueue2ObjKey, priority, OBJC_ASSOCIATION_RETAIN);
     [self.heap addObject:obj];
 }
