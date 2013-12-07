@@ -49,6 +49,14 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 }
 
 -(BOOL)containsObject:(id)object {
+    /* 
+     This is really inefficient and shoudl probably
+     be scrapped, due to the potential downsides it has. 
+     This method basically allocates memory for all the 
+     objects contained in the receiver into a new array
+     then searches that array for the object and throws
+     the allocated array away when done.
+     */
     return [[self.heap allObjects] containsObject:object];
 }
 
