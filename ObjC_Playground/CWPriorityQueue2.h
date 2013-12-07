@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//TODO: consider for removal
+
 /**
  CWPriorityQueue2 is a class demonstrating using CWBinaryHeap as a priority
  queue. Internally it enqueues items onto the heap and adds a NSNumber to the
