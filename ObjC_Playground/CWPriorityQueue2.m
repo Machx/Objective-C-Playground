@@ -38,14 +38,16 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 -(void)enqueue:(id)obj withPriority:(NSNumber *)priority {
     CWAssert(obj != nil);
     CWAssert(priority != nil);
-    objc_setAssociatedObject(obj, kCWPriorityQueue2ObjKey, priority, OBJC_ASSOCIATION_RETAIN);
-    [self.heap addObject:obj];
+    //set the object as an associated object on the NSNumber (priority) object
+    objc_setAssociatedObject(priority, kCWPriorityQueue2ObjKey, obj, OBJC_ASSOCIATION_RETAIN);
+    [self.heap addObject:priority];
 }
 
 -(id)dequeue {
     id dequeued = [self.heap removeMinimumValue];
+    id dequeuedValue = objc_getAssociatedObject(dequeued, kCWPriorityQueue2ObjKey);
     objc_setAssociatedObject(dequeued, kCWPriorityQueue2ObjKey, nil, OBJC_ASSOCIATION_RETAIN);
-    return dequeued;
+    return dequeuedValue;
 }
 
 -(BOOL)containsObject:(id)object {
