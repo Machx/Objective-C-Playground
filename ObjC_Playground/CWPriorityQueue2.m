@@ -54,7 +54,16 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
      then searches that array for the object and throws
      the allocated array away when done.
      */
-    return [[self.heap allObjects] containsObject:object];
+    NSArray *values = [self.heap allObjects];
+    __block BOOL contains = NO;
+    [values enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        id storedObject = objc_getAssociatedObject(obj, kCWPriorityQueue2ObjKey);
+        if ([storedObject isEqual:object]) {
+            contains = YES;
+            *stop = YES;
+        }
+    }];
+    return contains;
 }
 
 @end
