@@ -58,7 +58,7 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
     __block BOOL contains = NO;
     [values enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id storedObject = objc_getAssociatedObject(obj, kCWPriorityQueue2ObjKey);
-        if ([storedObject isEqual:object]) {
+        if (storedObject && [storedObject isEqual:object]) {
             contains = YES;
             *stop = YES;
         }
