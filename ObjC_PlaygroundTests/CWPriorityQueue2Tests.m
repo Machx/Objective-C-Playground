@@ -38,8 +38,10 @@ it(@"should correctly report if an object is contained in the queue", ^{
     [queue enqueue:@31 withPriority:@31];
     [queue enqueue:@90 withPriority:@90];
     [queue enqueue:@10 withPriority:@10];
+    [queue enqueue:@"Hello World" withPriority:@55];
     
     expect([queue containsObject:@31]).to.beTruthy();
+    expect([queue containsObject:@"Hello World"]).to.beTruthy();
     expect([queue containsObject:@99]).to.beFalsy();
 });
 
