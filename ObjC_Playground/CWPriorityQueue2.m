@@ -40,9 +40,12 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 
 -(id)dequeue {
     id dequeued = [self.heap removeMinimumValue];
-    id dequeuedValue = objc_getAssociatedObject(dequeued, kCWPriorityQueue2ObjKey);
-    objc_setAssociatedObject(dequeued, kCWPriorityQueue2ObjKey, nil, OBJC_ASSOCIATION_RETAIN);
-    return dequeuedValue;
+    if (dequeued) {
+        id dequeuedValue = objc_getAssociatedObject(dequeued, kCWPriorityQueue2ObjKey);
+        objc_setAssociatedObject(dequeued, kCWPriorityQueue2ObjKey, nil, OBJC_ASSOCIATION_RETAIN);
+        return dequeuedValue;
+    }
+    return nil;
 }
 
 -(BOOL)containsObject:(id)object {
