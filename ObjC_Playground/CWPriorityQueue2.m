@@ -47,7 +47,7 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 
 -(BOOL)containsObject:(id)object {
     /* 
-     This is really inefficient and shoudl probably
+     This is really inefficient and should probably
      be scrapped, due to the potential downsides it has. 
      This method basically allocates memory for all the 
      objects contained in the receiver into a new array
