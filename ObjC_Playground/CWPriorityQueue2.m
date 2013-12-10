@@ -46,6 +46,7 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 }
 
 -(BOOL)containsObject:(id)object {
+    CWAssert(object != nil);
     /* 
      This is really inefficient and should probably
      be scrapped, due to the potential downsides it has. 
