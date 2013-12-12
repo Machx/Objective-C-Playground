@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+//TODO: implement Specta/Expecta
+
 @interface Objc_Playground_iOSTests : XCTestCase
 
 @end
@@ -28,7 +30,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
