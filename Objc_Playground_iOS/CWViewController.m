@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 300, 50)];
+    label.text = @"Objective-C Playground";
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning

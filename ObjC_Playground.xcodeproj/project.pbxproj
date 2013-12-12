@@ -1092,6 +1092,7 @@
 				1737D6CB185A079C00AF9774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1737D6CC185A079C00AF9774 /* Build configuration list for PBXNativeTarget "Objc_Playground_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1100,6 +1101,7 @@
 				1737D6CE185A079C00AF9774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B85EE74B163AECB000265870 /* Build configuration list for PBXProject "ObjC_Playground" */ = {
 			isa = XCConfigurationList;
