@@ -26,6 +26,7 @@
 		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		17945696182F14250052E113 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		1794569B182F14620052E113 /* libSpecta-OSX.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
+		17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DCE2F8185B5EE800BE6276 /* CWAlertView.m */; };
 		17F6485318411B4800028065 /* CWPriorityQueue2.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6485218411B4800028065 /* CWPriorityQueue2.m */; };
 		17F6485A184267D300028065 /* CWPriorityQueue2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F64859184267D300028065 /* CWPriorityQueue2Tests.m */; };
 		17F6485F184269D900028065 /* CWPriorityQueue2.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6485218411B4800028065 /* CWPriorityQueue2.m */; };
@@ -150,6 +151,8 @@
 		17945692182F14250052E113 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "External/Specta/XCTestCase+Specta.h"; sourceTree = SOURCE_ROOT; };
 		17945693182F14250052E113 /* XCTestLog+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestLog+Specta.h"; path = "External/Specta/XCTestLog+Specta.h"; sourceTree = SOURCE_ROOT; };
 		17945694182F14250052E113 /* XCTestRun+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestRun+Specta.h"; path = "External/Specta/XCTestRun+Specta.h"; sourceTree = SOURCE_ROOT; };
+		17DCE2F7185B5EE800BE6276 /* CWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertView.h; sourceTree = "<group>"; };
+		17DCE2F8185B5EE800BE6276 /* CWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertView.m; sourceTree = "<group>"; };
 		17F6485118411B4800028065 /* CWPriorityQueue2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPriorityQueue2.h; sourceTree = "<group>"; };
 		17F6485218411B4800028065 /* CWPriorityQueue2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueue2.m; sourceTree = "<group>"; };
 		17F64859184267D300028065 /* CWPriorityQueue2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueue2Tests.m; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				1737D6AE185A079C00AF9774 /* Main_iPad.storyboard */,
 				1737D6B1185A079C00AF9774 /* CWViewController.h */,
 				1737D6B2185A079C00AF9774 /* CWViewController.m */,
+				17DCE2F7185B5EE800BE6276 /* CWAlertView.h */,
+				17DCE2F8185B5EE800BE6276 /* CWAlertView.m */,
 				1737D6B4185A079C00AF9774 /* Images.xcassets */,
 				1737D6A0185A079C00AF9774 /* Supporting Files */,
 			);
@@ -722,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1737D6AA185A079C00AF9774 /* CWAppDelegate.m in Sources */,
+				17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */,
 				1737D6A6185A079C00AF9774 /* main.m in Sources */,
 				1737D6B3185A079C00AF9774 /* CWViewController.m in Sources */,
 			);
