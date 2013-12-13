@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CWAlertView : UIView
+@class CWAlertView;
 
+@protocol CWAlertViewDelegate <NSObject>
+@optional
+-(void)willShowAlertView:(CWAlertView *)alertView;
+@end
+
+@interface CWAlertView : UIView
+-(instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
+-(void)show;
+-(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block;
 @end

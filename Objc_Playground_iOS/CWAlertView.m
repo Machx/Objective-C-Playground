@@ -8,6 +8,10 @@
 
 #import "CWAlertView.h"
 
+@interface CWAlertView ()
+@property(nonatomic,copy) NSString *title;
+@end
+
 @implementation CWAlertView
 
 - (id)initWithFrame:(CGRect)frame
@@ -19,13 +23,20 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(instancetype)initWithTitle:(NSString *)title message:(NSString *)message {
+    self = [super initWithFrame:CGRectMake(50, 50, 200, 200)]; //
+    if(self == nil) return nil;
+    
+    return self;
 }
-*/
+
+-(void)show {
+    
+}
+
+
+-(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block {
+    
+}
 
 @end
