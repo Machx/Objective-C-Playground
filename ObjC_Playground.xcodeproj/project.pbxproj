@@ -24,6 +24,7 @@
 		1737D6C8185A079C00AF9774 /* Objc_Playground_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */; };
 		176DC48A18288829000ECCCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176DC48918288829000ECCCD /* Cocoa.framework */; };
 		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
+		1786A713185CC079002C56D0 /* CWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1786A712185CC079002C56D0 /* CWAlertViewController.m */; };
 		17945696182F14250052E113 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		1794569B182F14620052E113 /* libSpecta-OSX.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DCE2F8185B5EE800BE6276 /* CWAlertView.m */; };
@@ -141,6 +142,8 @@
 		1737D6C5185A079C00AF9774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_Playground_iOSTests.m; sourceTree = "<group>"; };
 		176DC48918288829000ECCCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1786A711185CC079002C56D0 /* CWAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertViewController.h; sourceTree = "<group>"; };
+		1786A712185CC079002C56D0 /* CWAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertViewController.m; sourceTree = "<group>"; };
 		1794568B182F14250052E113 /* libSpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-iOS.a"; path = "External/Specta/libSpecta-iOS.a"; sourceTree = SOURCE_ROOT; };
 		1794568C182F14250052E113 /* libSpecta-OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-OSX.a"; path = "External/Specta/libSpecta-OSX.a"; sourceTree = SOURCE_ROOT; };
 		1794568D182F14250052E113 /* SPTNestedReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTNestedReporter.h; path = External/Specta/SPTNestedReporter.h; sourceTree = SOURCE_ROOT; };
@@ -285,6 +288,8 @@
 				1737D6B2185A079C00AF9774 /* CWViewController.m */,
 				17DCE2F7185B5EE800BE6276 /* CWAlertView.h */,
 				17DCE2F8185B5EE800BE6276 /* CWAlertView.m */,
+				1786A711185CC079002C56D0 /* CWAlertViewController.h */,
+				1786A712185CC079002C56D0 /* CWAlertViewController.m */,
 				1737D6B4185A079C00AF9774 /* Images.xcassets */,
 				1737D6A0185A079C00AF9774 /* Supporting Files */,
 			);
@@ -726,6 +731,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1786A713185CC079002C56D0 /* CWAlertViewController.m in Sources */,
 				1737D6AA185A079C00AF9774 /* CWAppDelegate.m in Sources */,
 				17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */,
 				1737D6A6185A079C00AF9774 /* main.m in Sources */,
