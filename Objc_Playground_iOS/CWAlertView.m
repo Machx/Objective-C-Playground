@@ -10,6 +10,8 @@
 
 @interface CWAlertView ()
 @property(nonatomic,copy) NSString *title;
+@property(nonatomic,copy) NSString *message;
+@property(nonatomic,strong) NSArray *buttons;
 @end
 
 @implementation CWAlertView
@@ -17,9 +19,12 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
+    if (self == nil) return nil;
+    
+    _title = nil;
+    _message = nil;
+    _buttons = nil;
+    
     return self;
 }
 
