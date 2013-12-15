@@ -194,6 +194,18 @@ id CWTreeGetObjectFromCFTree(CFTreeRef tree) {
 	[description appendFormat:@"CWTree <%p> : (\n",self];
 	
 	[self enumerateObjectsUsingBlock:^(id obj, CFTreeRef tree, BOOL *stop) {
+        CFTreeRef parentRef = CFTreeGetParent(tree);
+        if(parentRef != NULL) {
+            NSUInteger parentCount = 0;
+            while (parentRef != NULL) {
+                parentCount++;
+                parentRef = CFTreeGetParent(parentRef);
+            }
+            while (parentCount != 0) {
+                [description appendFormat:@"\t"];
+                parentCount--;
+            }
+        }
 		[description appendFormat:@"%@,\n",[obj description]];
 	}];
 	
