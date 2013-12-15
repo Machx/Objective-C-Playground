@@ -48,26 +48,4 @@ void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
     return nil;
 }
 
--(BOOL)containsObject:(id)object {
-    CWAssert(object != nil);
-    /* 
-     This is really inefficient and should probably
-     be scrapped, due to the potential downsides it has. 
-     This method basically allocates memory for all the 
-     objects contained in the receiver into a new array
-     then searches that array for the object and throws
-     the allocated array away when done.
-     */
-    NSArray *values = [self.heap allObjects];
-    __block BOOL contains = NO;
-    [values enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        id storedObject = objc_getAssociatedObject(obj, kCWPriorityQueue2ObjKey);
-        if (storedObject && [storedObject isEqual:object]) {
-            contains = YES;
-            *stop = YES;
-        }
-    }];
-    return contains;
-}
-
 @end
