@@ -8,6 +8,8 @@
 
 #import "CWAlertView.h"
 
+static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
+
 @interface CWAlertView ()
 @property(nonatomic,copy) NSString *title;
 @property(nonatomic,copy) NSString *message;
@@ -21,9 +23,9 @@
     self = [super initWithFrame:frame];
     if (self == nil) return nil;
     
-    _title = nil;
-    _message = nil;
-    _buttons = nil;
+    _title = @"Alert";
+    _message = @"Alert Message";
+    _buttons = @[kCWAlertDefaultOkButton];
     
     return self;
 }
@@ -31,6 +33,10 @@
 -(instancetype)initWithTitle:(NSString *)title message:(NSString *)message {
     self = [super initWithFrame:CGRectMake(50, 50, 200, 200)]; //
     if(self == nil) return nil;
+    
+    _title = title;
+    _message = message;
+    _buttons = @[kCWAlertDefaultOkButton];
     
     return self;
 }
