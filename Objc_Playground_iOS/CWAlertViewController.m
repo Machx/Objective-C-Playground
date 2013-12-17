@@ -23,6 +23,15 @@
     return self;
 }
 
++(instancetype)sharedController {
+    static CWAlertViewController *controller = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        controller = [[CWAlertViewController alloc] init];
+    });
+    return controller;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

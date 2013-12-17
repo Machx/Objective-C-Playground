@@ -10,4 +10,6 @@
 
 @interface CWAlertViewController : UIViewController
 
++(instancetype)sharedController;
+
 @end
