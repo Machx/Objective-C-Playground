@@ -9,17 +9,17 @@
 #import "CWAlertViewController.h"
 
 @interface CWAlertViewController ()
-
+@property(nonatomic,strong) NSMutableArray *alertViews;
 @end
 
 @implementation CWAlertViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+-(instancetype)init {
+    self = [super init];
+    if(self == nil) return nil;
+    
+    _alertViews = [[NSMutableArray alloc] init];
+    
     return self;
 }
 
