@@ -38,6 +38,10 @@
 	// Do any additional setup after loading the view.
 }
 
+-(BOOL)shouldAutorotate {
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
