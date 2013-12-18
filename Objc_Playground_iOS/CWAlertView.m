@@ -43,6 +43,11 @@ static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
 
 -(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block {
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(willShowAlertView:)]) {
+        [self.delegate willShowAlertView:self];
+    }
+    
+    //show
 }
 
 @end

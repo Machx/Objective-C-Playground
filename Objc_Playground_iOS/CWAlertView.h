@@ -16,6 +16,7 @@
 @end
 
 @interface CWAlertView : UIView
+@property(weak) id <CWAlertViewDelegate> delegate;
 -(instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
 -(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block;
 @end
