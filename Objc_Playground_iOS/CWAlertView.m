@@ -7,6 +7,7 @@
 //
 
 #import "CWAlertView.h"
+#import "CWAlertViewController.h"
 
 static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
 
@@ -18,8 +19,7 @@ static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
 
 @implementation CWAlertView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self == nil) return nil;
     
@@ -43,7 +43,7 @@ static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
 
 -(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block {
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(willShowAlertView:)]) {
+    if ([self.delegate respondsToSelector:@selector(willShowAlertView:)]) {
         [self.delegate willShowAlertView:self];
     }
     
