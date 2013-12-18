@@ -17,6 +17,5 @@
 
 @interface CWAlertView : UIView
 -(instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
--(void)show;
 -(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block;
 @end

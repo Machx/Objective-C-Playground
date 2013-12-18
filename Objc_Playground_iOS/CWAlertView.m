@@ -41,11 +41,6 @@ static NSString const *kCWAlertDefaultOkButton = @"kCWAlertDefaultOkButton";
     return self;
 }
 
--(void)show {
-    
-}
-
-
 -(void)showWithCompletionBlock:(void (^)(NSUInteger selectedButtom))block {
     
 }
