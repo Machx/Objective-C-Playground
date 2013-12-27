@@ -8,8 +8,16 @@
 
 #import "CWPriorityQueue2.h"
 #import "CWBinaryHeap.h"
-#import <Zangetsu/CWAssertionMacros.h>
+//#import <Zangetsu/CWAssertionMacros.h>
 #import <objc/runtime.h>
+
+#define CWAssert(expression, ...) \
+do { \
+    if(!(expression)) { \
+        NSLog(@"Assertion Failure '%s' in %s on line %s:%d. %@", #expression, __func__, __FILE__, __LINE__, [NSString stringWithFormat: @"" __VA_ARGS__]); \
+        abort(); \
+    } \
+} while(0)
 
 void *kCWPriorityQueue2ObjKey = &kCWPriorityQueue2ObjKey;
 
