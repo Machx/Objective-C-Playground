@@ -22,6 +22,7 @@
 		1737D6BE185A079C00AF9774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1737D69D185A079C00AF9774 /* UIKit.framework */; };
 		1737D6C6185A079C00AF9774 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1737D6C4185A079C00AF9774 /* InfoPlist.strings */; };
 		1737D6C8185A079C00AF9774 /* Objc_Playground_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */; };
+		174D928218731AF500D0B42C /* CWTrie2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 174D928118731AF500D0B42C /* CWTrie2.mm */; };
 		176DC48A18288829000ECCCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176DC48918288829000ECCCD /* Cocoa.framework */; };
 		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		1786A713185CC079002C56D0 /* CWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1786A712185CC079002C56D0 /* CWAlertViewController.m */; };
@@ -141,6 +142,8 @@
 		1737D6C3185A079C00AF9774 /* Objc_Playground_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Objc_Playground_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		1737D6C5185A079C00AF9774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_Playground_iOSTests.m; sourceTree = "<group>"; };
+		174D928018731AF500D0B42C /* CWTrie2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTrie2.h; sourceTree = "<group>"; };
+		174D928118731AF500D0B42C /* CWTrie2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CWTrie2.mm; sourceTree = "<group>"; };
 		176DC48918288829000ECCCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1786A711185CC079002C56D0 /* CWAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertViewController.h; sourceTree = "<group>"; };
 		1786A712185CC079002C56D0 /* CWAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertViewController.m; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 				17F6485218411B4800028065 /* CWPriorityQueue2.m */,
 				B8C9BC5717B7DFC200679B86 /* CWTree2.h */,
 				B8C9BC5817B7DFC200679B86 /* CWTree2.m */,
+				174D928018731AF500D0B42C /* CWTrie2.h */,
+				174D928118731AF500D0B42C /* CWTrie2.mm */,
 				B85EE75C163AECB000265870 /* ObjC_Playground.1 */,
 				B85EE75A163AECB000265870 /* Supporting Files */,
 			);
@@ -757,6 +762,7 @@
 				17F6485318411B4800028065 /* CWPriorityQueue2.m in Sources */,
 				B84E047B178DBBFB00E272D6 /* CWBinaryHeap.m in Sources */,
 				B8C9BC5917B7DFC200679B86 /* CWTree2.m in Sources */,
+				174D928218731AF500D0B42C /* CWTrie2.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
