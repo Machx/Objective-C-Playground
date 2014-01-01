@@ -9,15 +9,16 @@
 #import "CWTrie2.h"
 
 typedef struct CWTrie2Node {
-    id *value;
+    id __strong value;
     char *key;
+    void **children;
 } CWTrie2Node;
 
 CWTrie2Node *CWTrie2NodeCreate(id *value,char key) {
-    CWTrie2Node *node = calloc(1, sizeof(CWTrie2Node));
-    node->value = value;
+    CWTrie2Node *node = (CWTrie2Node *)calloc(1, sizeof(CWTrie2Node));
+    node->value = *value;
     node->key = ({
-        char *str = calloc(2, sizeof(char));
+        char *str = (char *)calloc(2, sizeof(char));
         strncpy(str, &key, 1);
         str;
     });
