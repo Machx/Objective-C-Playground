@@ -25,6 +25,11 @@ CWTrie2Node *CWTrie2NodeCreate(id *value,char key) {
     return node;
 }
 
+void CWTrie2NodeRelease(CWTrie2Node *node) {
+    free(node->key);
+    delete node;
+}
+
 BOOL CWTrie2NodeEqual(CWTrie2Node *node1, CWTrie2Node *node2) {
     BOOL keyEqual = ({
         BOOL result = YES;
