@@ -8,6 +8,15 @@
 
 #import "CWTrie2.h"
 
+/*
+ This is really more an exercise in working with structs in ARC/C++ that have 
+ Objective-C References in them than anything else. This has been described how
+ this works in WWDC Videos, but i've never seen actual code using this.
+ 
+ Please don't use this code in your projects, nothing about this should ever be
+ used in production.
+ */
+
 typedef struct CWTrie2Node {
     id __strong value;
     char *key;
