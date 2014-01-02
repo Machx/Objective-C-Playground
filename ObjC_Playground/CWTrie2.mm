@@ -18,7 +18,7 @@
  */
 
 typedef struct CWTrie2Node {
-    id __strong value;
+    id value;
     char *key;
     void **children;
 } CWTrie2Node;
