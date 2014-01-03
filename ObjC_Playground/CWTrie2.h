@@ -10,4 +10,6 @@
 
 @interface CWTrie2 : NSObject
 
+-(void)setObjectValue:(id)value forKey:(NSString *)key;
+
 @end
