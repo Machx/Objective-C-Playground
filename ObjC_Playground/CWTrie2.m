@@ -43,7 +43,7 @@
 @property(strong) dispatch_queue_t queue;
 @end
 
-static uint32_t queue_counter = 0;
+static int64_t queue_counter = 0;
 
 @implementation CWTrie2
 
@@ -53,9 +53,9 @@ static uint32_t queue_counter = 0;
     
     _root = nil;
     _queue = ({
-        NSString *classString = NSStringFromClass([self class]);
-        NSString *label = [NSString stringWithFormat:@"%@%i",
-                           classString,OSAtomicIncrement32(&queue_counter)];
+        NSString *label = [NSString stringWithFormat:@"%@%lli",
+                           NSStringFromClass([self class]),
+                           OSAtomicIncrement64(&queue_counter)];
         dispatch_queue_t aQueue = dispatch_queue_create([label UTF8String], 0);
         aQueue;
     });
@@ -65,10 +65,12 @@ static uint32_t queue_counter = 0;
 
 -(void)setObjectValue:(id)value
                forKey:(NSString *)key {
-    dispatch_async(self.queue, ^{
-        const char *keyValue = [key UTF8String];
-        
-    });
+//    dispatch_async(self.queue, ^{
+//        const char *keyValue = [key UTF8String];
+//        while (keyValue) {
+//            keyValue++;
+//        }
+//    });
 }
 
 @end
