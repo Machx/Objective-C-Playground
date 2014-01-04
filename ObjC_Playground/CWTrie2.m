@@ -69,7 +69,7 @@ static int64_t queue_counter = 0;
     self = [super init];
     if(!self) return self;
     
-    _root = nil;
+    _root = [CWTrie2Node new];
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
