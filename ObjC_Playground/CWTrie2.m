@@ -36,6 +36,24 @@
     return self;
 }
 
+-(CWTrie2Node *)setNodeForKeyValue:(char)ch {
+    CWTrie2Node *node = [CWTrie2Node new];
+    node.key = ch;
+    [self.children addObject:node];
+    return node;
+}
+
+-(CWTrie2Node *)nodeForKeyValue:(char)ch {
+    CWTrie2Node *result = nil;
+    for (CWTrie2Node *node in self.children) {
+        if (node.key == ch) {
+            result = node;
+            break;
+        }
+    }
+    return result;
+}
+
 @end
 
 @interface CWTrie2 ()
