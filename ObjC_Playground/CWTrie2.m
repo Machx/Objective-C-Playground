@@ -83,12 +83,20 @@ static int64_t queue_counter = 0;
 
 -(void)setObjectValue:(id)value
                forKey:(NSString *)key {
-//    dispatch_async(self.queue, ^{
-//        const char *keyValue = [key UTF8String];
-//        while (keyValue) {
-//            keyValue++;
-//        }
-//    });
+    dispatch_async(self.queue, ^{
+        const char *keyValue = [key UTF8String];
+        
+        CWTrie2Node *search = self.root;
+        
+        while (keyValue) {
+            char sc = keyValue;
+            CWTrie2Node *nextNode = [search nodeForKeyValue:sc];
+            search = nextNode ?: [search setNodeForKeyValue:sc];
+            keyValue++;
+        }
+        
+        search.storedValue = value;
+    });
 }
 
 @end
