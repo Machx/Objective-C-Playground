@@ -101,4 +101,20 @@ static int64_t queue_counter = 0;
     });
 }
 
+-(id)objectValueForKey:(NSString *)key {
+    __block id result = nil;
+    
+    dispatch_sync(self.queue, ^{
+        CWTrie2Node *node = self.root;
+        const char *keystr = [key UTF8String];
+        while (*keystr && (node != nil)) {
+            node = [node nodeForKeyValue:*keystr];
+            keystr++;
+        }
+        result = node.storedValue;
+    });
+    
+    return result;
+}
+
 @end
