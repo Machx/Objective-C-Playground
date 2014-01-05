@@ -8,6 +8,7 @@
 
 #import "CWTrie2.h"
 #import <libkern/OSAtomic.h>
+#import <Zangetsu/CWAssertionMacros.h>
 
 @interface CWTrie2Node : NSObject
 @property(assign) char key;
@@ -83,18 +84,19 @@ static int64_t queue_counter = 0;
 
 -(void)setObjectValue:(id)value
                forKey:(NSString *)key {
+    CWAssert(value != nil);
+    CWAssert(key != nil);
+    
     dispatch_async(self.queue, ^{
         const char *keyValue = [key UTF8String];
-        
         CWTrie2Node *search = self.root;
         
-        while (keyValue) {
-            char sc = keyValue;
+        while (*keyValue) {
+            char sc = *keyValue;
             CWTrie2Node *nextNode = [search nodeForKeyValue:sc];
             search = nextNode ?: [search setNodeForKeyValue:sc];
             keyValue++;
         }
-        
         search.storedValue = value;
     });
 }
