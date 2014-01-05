@@ -75,7 +75,7 @@ static int64_t queue_counter = 0;
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
                            OSAtomicIncrement64(&queue_counter)];
-        dispatch_queue_t aQueue = dispatch_queue_create([label UTF8String], 0);
+        dispatch_queue_t aQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_SERIAL);
         aQueue;
     });
     
