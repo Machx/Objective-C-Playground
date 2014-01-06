@@ -18,4 +18,10 @@ it(@"should store and retreieve a object", ^{
     expect([trie objectValueForKey:@"Hello"]).to.equal(@"World!");
 });
 
+it(@"should return nil for objects it doesn't contain", ^{
+    CWTrie2 *trie = [[CWTrie2 alloc] init];
+    
+    expect([trie objectValueForKey:@"Hypnotoad"]).to.beNil();
+});
+
 SpecEnd
