@@ -124,10 +124,12 @@ static int64_t queue_counter = 0;
 }
 
 -(id)objectValueForKey:(NSString *)key {
+    CWAssert(key != nil);
     __block id result = nil;
+    __weak CWTrie2Node *wroot = self.root;
     
     dispatch_sync(self.queue, ^{
-        CWTrie2Node *node = self.root;
+        CWTrie2Node *node = wroot;
         const char *keystr = [key UTF8String];
         while (*keystr && (node != nil)) {
             node = [node nodeForKeyValue:*keystr];
