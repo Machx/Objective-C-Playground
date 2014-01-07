@@ -111,10 +111,10 @@ static int64_t queue_counter = 0;
                forKey:(NSString *)key {
     CWAssert(value != nil);
     CWAssert(key != nil);
-    
+    __weak CWTrie2Node *weakRoot = self.root;
     dispatch_async(self.queue, ^{
-        CWTrie2Node *search = self.root;
         const char *keyValue = CWTrieKey();
+        CWTrie2Node *search = weakRoot;
         
         while (*keyValue) {
             char sc = *keyValue;
