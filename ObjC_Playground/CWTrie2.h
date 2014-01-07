@@ -38,4 +38,6 @@
 
 -(id)objectValueForKey:(NSString *)key;
 
+-(void)removeObjectValueForKey:(NSString *)key;
+
 @end

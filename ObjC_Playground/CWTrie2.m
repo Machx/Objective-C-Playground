@@ -126,6 +126,26 @@ static int64_t queue_counter = 0;
     });
 }
 
+-(void)removeObjectValueForKey:(NSString *)key {
+    CWAssert(key != nil);
+    /* 
+     this is slightly different than setObjectValue:forKey: as it stops upon 
+     encountering nil (in other words trying to remove a value for a key that 
+     doesn't exist in the trie instance.) If it reaches its intended node it 
+     sets the storedValue to nil, otherwise its just sending a message to nil.
+     */
+    __weak CWTrie2Node *weakRoot = self.root;
+    dispatch_async(self.queue, ^{
+        const char *keyValue = CWTrieKey();
+        CWTrie2Node *search = weakRoot;
+        while (*keyValue && (search != nil)) {
+            search = [search nodeForKeyValue:*keyValue];
+            keyValue++;
+        }
+        search.storedValue = nil;
+    });
+}
+
 -(id)objectValueForKey:(NSString *)key {
     CWAssert(key != nil);
     __block id result = nil;
