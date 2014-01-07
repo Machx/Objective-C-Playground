@@ -24,4 +24,27 @@ it(@"should return nil for objects it doesn't contain", ^{
     expect([trie objectValueForKey:@"Hypnotoad"]).to.beNil();
 });
 
+describe(@"case sensitive", ^{
+    it(@"should return different values if case sensitive", ^{
+        CWTrie2 *trie = [CWTrie2 new];
+        trie.caseSensitive = YES;
+        
+        [trie setObjectValue:@5 forKey:@"Yes"];
+        [trie setObjectValue:@4 forKey:@"yes"];
+        
+        expect([trie objectValueForKey:@"Yes"]).to.equal(@5);
+        expect([trie objectValueForKey:@"yes"]).to.equal(@4);
+    });
+    
+    it(@"should return the same value if not case sensitive", ^{
+        CWTrie2 *trie = [CWTrie2 new];
+        trie.caseSensitive = NO;
+        
+        [trie setObjectValue:@5 forKey:@"Yes"];
+        [trie setObjectValue:@4 forKey:@"yes"];
+        
+        expect([trie objectValueForKey:@"yes"]).to.equal(@4);
+    });
+});
+
 SpecEnd
