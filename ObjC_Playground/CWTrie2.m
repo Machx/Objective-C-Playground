@@ -32,6 +32,8 @@
 #import <libkern/OSAtomic.h>
 #import <Zangetsu/CWAssertionMacros.h>
 
+#define CWTrieKey() self.caseSensitive ? [key UTF8String] : [[key uppercaseString] UTF8String]
+
 @interface CWTrie2Node : NSObject
 @property(assign) char key;
 @property(strong) id storedValue;
@@ -93,6 +95,7 @@ static int64_t queue_counter = 0;
     if(!self) return self;
     
     _root = [CWTrie2Node new];
+    _caseSensitive = YES;
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
@@ -110,8 +113,8 @@ static int64_t queue_counter = 0;
     CWAssert(key != nil);
     
     dispatch_async(self.queue, ^{
-        const char *keyValue = [key UTF8String];
         CWTrie2Node *search = self.root;
+        const char *keyValue = CWTrieKey();
         
         while (*keyValue) {
             char sc = *keyValue;
@@ -130,7 +133,7 @@ static int64_t queue_counter = 0;
     
     dispatch_sync(self.queue, ^{
         CWTrie2Node *node = wroot;
-        const char *keystr = [key UTF8String];
+        const char *keystr = CWTrieKey();
         while (*keystr && (node != nil)) {
             node = [node nodeForKeyValue:*keystr];
             keystr++;
