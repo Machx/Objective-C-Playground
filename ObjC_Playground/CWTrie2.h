@@ -32,10 +32,27 @@
 
 @interface CWTrie2 : NSObject
 
+/**
+ Initializes & returns a new CWTrie2 instance
+ 
+ @param caseSensitive sets if the trie instace should use case sensitive keys
+ @return An initialized CWTrie2 instance
+ */
 -(instancetype)initWithCaseSensitiveKeys:(BOOL)caseSensitive;
 
+/**
+ Sets a key value pair in the trie
+ 
+ @param value the value for key
+ @param key the key for value
+ */
 -(void)setObjectValue:(id)value forKey:(NSString *)key;
 
+/**
+ Returns the object corresponding to key or nil if no such key is set
+ 
+ @param key the key to be used to see if something exists 
+ */
 -(id)objectValueForKey:(NSString *)key;
 
 -(void)removeObjectValueForKey:(NSString *)key;

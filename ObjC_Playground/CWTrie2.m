@@ -61,6 +61,13 @@
     return self;
 }
 
+/**
+ Creates a new node, sets its key to ch, adds the node to children & returns it
+ 
+ This is a convenience method to help with adding keys in a trie
+ 
+ @return the CWTrie2Node added to the receivers children
+ */
 -(CWTrie2Node *)setNodeForKeyValue:(char)ch {
     CWTrie2Node *node = [CWTrie2Node new];
     node.key = ch;
@@ -68,6 +75,12 @@
     return node;
 }
 
+/**
+ Searches the nodes children for the value ch and returns it or nil
+ 
+ @param ch the character value to search for in the children
+ @return the node whose key is ch or nil if no such node could be found
+ */
 -(CWTrie2Node *)nodeForKeyValue:(char)ch {
     CWTrie2Node *result = nil;
     for (CWTrie2Node *node in self.children) {
