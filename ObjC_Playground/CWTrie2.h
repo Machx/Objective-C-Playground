@@ -32,7 +32,7 @@
 
 @interface CWTrie2 : NSObject
 
-@property(assign) BOOL caseSensitive;
+-(instancetype)initWithCaseSensitiveKeys:(BOOL)caseSensitive;
 
 -(void)setObjectValue:(id)value forKey:(NSString *)key;
 

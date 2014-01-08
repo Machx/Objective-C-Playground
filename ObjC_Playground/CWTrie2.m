@@ -82,6 +82,7 @@
 @end
 
 @interface CWTrie2 ()
+@property(assign) BOOL caseSensitive;
 @property(strong) CWTrie2Node *root;
 @property(strong) dispatch_queue_t queue;
 @end
@@ -91,11 +92,16 @@ static int64_t queue_counter = 0;
 @implementation CWTrie2
 
 -(instancetype)init {
+    NSAssert(0, @"use -initWithCaseSensitiveKeys");
+    return nil;
+}
+
+-(instancetype)initWithCaseSensitiveKeys:(BOOL)caseSensitive {
     self = [super init];
     if(!self) return self;
     
     _root = [CWTrie2Node new];
-    _caseSensitive = YES;
+    _caseSensitive = caseSensitive;
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
