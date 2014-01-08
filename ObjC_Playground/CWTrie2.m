@@ -110,7 +110,8 @@ static int64_t queue_counter = 0;
 -(void)setObjectValue:(id)value
                forKey:(NSString *)key {
     CWAssert(value != nil);
-    CWAssert(key != nil);
+    CWAssert((key != nil) && (key.length >= 1));
+    
     __weak CWTrie2Node *weakRoot = self.root;
     dispatch_async(self.queue, ^{
         const char *keyValue = CWTrieKey();
@@ -127,7 +128,7 @@ static int64_t queue_counter = 0;
 }
 
 -(void)removeObjectValueForKey:(NSString *)key {
-    CWAssert(key != nil);
+    CWAssert((key != nil) && (key.length >= 1));
     /* 
      this is slightly different than setObjectValue:forKey: as it stops upon 
      encountering nil (in other words trying to remove a value for a key that 
@@ -147,7 +148,7 @@ static int64_t queue_counter = 0;
 }
 
 -(id)objectValueForKey:(NSString *)key {
-    CWAssert(key != nil);
+    CWAssert((key != nil) && (key.length >= 1));
     __block id result = nil;
     __weak CWTrie2Node *wroot = self.root;
     
