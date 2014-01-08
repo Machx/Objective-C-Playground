@@ -11,7 +11,7 @@
 SpecBegin(CWTrie2)
 
 it(@"should store and retreieve a object", ^{
-    CWTrie2 *trie = [[CWTrie2 alloc] init];
+    CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:NO];
     
     [trie setObjectValue:@"World!" forKey:@"Hello"];
     
@@ -19,15 +19,14 @@ it(@"should store and retreieve a object", ^{
 });
 
 it(@"should return nil for objects it doesn't contain", ^{
-    CWTrie2 *trie = [[CWTrie2 alloc] init];
+    CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:NO];
     
     expect([trie objectValueForKey:@"Hypnotoad"]).to.beNil();
 });
 
 describe(@"case sensitive", ^{
     it(@"should return different values if case sensitive", ^{
-        CWTrie2 *trie = [CWTrie2 new];
-        trie.caseSensitive = YES;
+        CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:YES];
         
         [trie setObjectValue:@5 forKey:@"Yes"];
         [trie setObjectValue:@4 forKey:@"yes"];
@@ -37,8 +36,7 @@ describe(@"case sensitive", ^{
     });
     
     it(@"should return the same value if not case sensitive", ^{
-        CWTrie2 *trie = [CWTrie2 new];
-        trie.caseSensitive = NO;
+        CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:NO];
         
         [trie setObjectValue:@5 forKey:@"Yes"];
         [trie setObjectValue:@4 forKey:@"yes"];
