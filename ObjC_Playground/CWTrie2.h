@@ -55,6 +55,13 @@
  */
 -(id)objectValueForKey:(NSString *)key;
 
+/**
+ Removes the object value corresponding to key in the receiver
+ 
+ This method will try to find the key passed in, if at any time the trie can't
+ find it (it doesn't exist) then this method simply returns. Otherwise it 
+ will simply set the value corresponding with key to nil and return.
+ */
 -(void)removeObjectValueForKey:(NSString *)key;
 
 @end
