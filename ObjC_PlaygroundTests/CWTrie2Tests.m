@@ -11,7 +11,7 @@
 SpecBegin(CWTrie2)
 
 it(@"should store and retreieve a object", ^{
-    CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:NO];
+    CWTrie2 *trie = [[CWTrie2 alloc] init];
     
     [trie setObjectValue:@"World!" forKey:@"Hello"];
     
@@ -19,7 +19,7 @@ it(@"should store and retreieve a object", ^{
 });
 
 it(@"should return nil for objects it doesn't contain", ^{
-    CWTrie2 *trie = [[CWTrie2 alloc] initWithCaseSensitiveKeys:NO];
+    CWTrie2 *trie = [[CWTrie2 alloc] init];
     
     expect([trie objectValueForKey:@"Hypnotoad"]).to.beNil();
 });
