@@ -105,8 +105,20 @@ static int64_t queue_counter = 0;
 @implementation CWTrie2
 
 -(instancetype)init {
-    NSAssert(0, @"use -initWithCaseSensitiveKeys");
-    return nil;
+    self = [super init];
+    if(!self) return self;
+    
+    _root = [CWTrie2Node new];
+    _caseSensitive = NO;
+    _queue = ({
+        NSString *label = [NSString stringWithFormat:@"%@%lli",
+                           NSStringFromClass([self class]),
+                           OSAtomicIncrement64(&queue_counter)];
+        dispatch_queue_t aQueue = dispatch_queue_create([label UTF8String], DISPATCH_QUEUE_SERIAL);
+        aQueue;
+    });
+    
+    return self;
 }
 
 -(instancetype)initWithCaseSensitiveKeys:(BOOL)caseSensitive {
