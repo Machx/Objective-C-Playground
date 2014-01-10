@@ -55,6 +55,11 @@
  */
 -(id)objectValueForKey:(NSString *)key;
 
+/**
+ Returns if the key passed in is contained in the receiver
+ 
+ @return a BOOL value indicating if the key is in the receiver 
+ */
 -(BOOL)containsKey:(NSString *)key;
 
 /**
