@@ -178,6 +178,25 @@ static int64_t queue_counter = 0;
     });
 }
 
+-(BOOL)containsKey:(NSString *)key {
+    CWAssert((key != nil) && (key.length >= 1));
+    __block BOOL contains = YES;
+    __weak CWTrie2Node *weakRoot = self.root;
+    dispatch_sync(self.queue, ^{
+        CWTrie2Node *node = weakRoot;
+        const char *theKey = CWTrieKey();
+        while (*theKey) {
+            node = [node nodeForKeyValue:*theKey];
+            if(node == nil) {
+                contains = NO;
+                break;
+            }
+            theKey++;
+        }
+    });
+    return contains;
+}
+
 -(id)objectValueForKey:(NSString *)key {
     CWAssert((key != nil) && (key.length >= 1));
     __block id result = nil;

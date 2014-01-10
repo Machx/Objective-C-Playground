@@ -55,6 +55,8 @@
  */
 -(id)objectValueForKey:(NSString *)key;
 
+-(BOOL)containsKey:(NSString *)key;
+
 /**
  Removes the object value corresponding to key in the receiver
  
