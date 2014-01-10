@@ -45,4 +45,14 @@ describe(@"case sensitive", ^{
     });
 });
 
+it(@"should detect if a key has been set", ^{
+    CWTrie2 *trie = [CWTrie2 new];
+    
+    expect([trie containsKey:@"Hypnotoad"]).to.beFalsy();
+    
+    [trie setObjectValue:@4 forKey:@"Hypnotoad"];
+    
+    expect([trie containsKey:@"Hypnotoad"]).to.beTruthy();
+});
+
 SpecEnd
