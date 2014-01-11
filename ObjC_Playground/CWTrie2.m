@@ -204,10 +204,21 @@ static int64_t queue_counter = 0;
 
 -(id)objectValueForKey:(NSString *)key {
     CWAssert((key != nil) && (key.length >= 1));
+    
     __block id result = nil;
     __weak CWTrie2Node *wroot = self.root;
+    __weak NSCache *weakCache = self.cache;
     
     dispatch_sync(self.queue, ^{
+        NSCache *trieCache = weakCache;
+        //check the cache first
+        id obj = [trieCache objectForKey:key];
+        if (obj) {
+            result = obj;
+            return;
+        }
+        
+        //object not in the cache... do the normal search...
         CWTrie2Node *node = wroot;
         const char *keystr = CWTrieKey();
         while (*keystr && (node != nil)) {
