@@ -45,14 +45,31 @@ describe(@"case sensitive", ^{
     });
 });
 
-it(@"should detect if a key has been set", ^{
-    CWTrie2 *trie = [CWTrie2 new];
+describe(@"-containsKey", ^{
+    it(@"should detect if a key has been set", ^{
+        CWTrie2 *trie = [CWTrie2 new];
+        
+        expect([trie containsKey:@"Hypnotoad"]).to.beFalsy();
+        
+        [trie setObjectValue:@4 forKey:@"Hypnotoad"];
+        
+        expect([trie containsKey:@"Hypnotoad"]).to.beTruthy();
+    });
     
-    expect([trie containsKey:@"Hypnotoad"]).to.beFalsy();
-    
-    [trie setObjectValue:@4 forKey:@"Hypnotoad"];
-    
-    expect([trie containsKey:@"Hypnotoad"]).to.beTruthy();
+    it(@"should detect when a node exists, but not a stored value", ^{
+        /*
+         This detects that there is a stored value in a node and not that the 
+         node simply exists. I.e. If we set the key "hello" we should be able to
+         detect that the nodes for "he" exist, but that there is no stored value
+         which corresponds to that key
+         */
+        CWTrie2 *trie = [CWTrie2 new];
+        
+        [trie setObjectValue:@4 forKey:@"hello"];
+        
+        expect([trie containsKey:@"he"]).to.beFalsy();
+        expect([trie containsKey:@"hello"]).to.beTruthy();
+    });
 });
 
 SpecEnd
