@@ -185,9 +185,12 @@ static int64_t queue_counter = 0;
 
 -(BOOL)containsKey:(NSString *)key {
     CWAssert((key != nil) && (key.length >= 1));
+    
     __block BOOL contains = YES;
     __weak CWTrie2Node *weakRoot = self.root;
+    __weak CWTrie2 *weakSelf = self;
     dispatch_sync(self.queue, ^{
+        CWTrie2 *sself = weakSelf;
         CWTrie2Node *node = weakRoot;
         const char *theKey = CWTrieKey();
         while (*theKey) {
@@ -197,6 +200,25 @@ static int64_t queue_counter = 0;
                 break;
             }
             theKey++;
+        }
+        /* 
+         we know that the key exists here in that we've enumerated over the
+         chars in the string we were given and they exist, but that doesn't 
+         necessarily mean there is a node stored here. i.e. if someone stores
+         an object for the key @"hello" does the key @"he" exist? the nodes for
+         it exist but we need to check for a node value
+         */
+        if(node && (node.storedValue != nil)) {
+            /* this is convenient so you can do
+             if([trie containsKey:key]) {
+                id obj = [trie objectValueForKey:key];
+                ...
+             }
+             and we won't have to lookup the same value twice
+             */
+            [sself.cache setObject:node.storedValue forKey:key];
+        } else {
+            contains = NO;
         }
     });
     return contains;
