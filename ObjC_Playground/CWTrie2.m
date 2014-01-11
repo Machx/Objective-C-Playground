@@ -165,6 +165,8 @@ static int64_t queue_counter = 0;
 
 -(void)removeObjectValueForKey:(NSString *)key {
     CWAssert((key != nil) && (key.length >= 1));
+    //remove object from cache if it exists
+    [self.cache removeObjectForKey:key];
     /* 
      this is slightly different than setObjectValue:forKey: as it stops upon 
      encountering nil (in other words trying to remove a value for a key that 
