@@ -98,6 +98,7 @@
 @property(assign) BOOL caseSensitive;
 @property(strong) CWTrie2Node *root;
 @property(strong) dispatch_queue_t queue;
+@property(strong) NSCache *cache; //for holding the last value looked up by -containsKey
 @end
 
 static int64_t queue_counter = 0;
@@ -110,6 +111,8 @@ static int64_t queue_counter = 0;
     
     _root = [CWTrie2Node new];
     _caseSensitive = NO;
+    _cache = [NSCache new];
+    [_cache setCountLimit:1];
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
@@ -126,6 +129,8 @@ static int64_t queue_counter = 0;
     if(!self) return self;
     
     _root = [CWTrie2Node new];
+    _cache = [NSCache new];
+    [_cache setCountLimit:1];
     _caseSensitive = caseSensitive;
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
