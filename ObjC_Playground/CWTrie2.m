@@ -149,9 +149,11 @@ static int64_t queue_counter = 0;
     CWAssert((key != nil) && (key.length >= 1));
     
     __weak CWTrie2Node *weakRoot = self.root;
+    __weak NSCache *weakCache = self.cache;
     dispatch_async(self.queue, ^{
         const char *keyValue = CWTrieKey();
         CWTrie2Node *search = weakRoot;
+        NSCache *scache = weakCache;
         
         while (*keyValue) {
             char sc = *keyValue;
@@ -160,6 +162,7 @@ static int64_t queue_counter = 0;
             keyValue++;
         }
         search.storedValue = value;
+        [scache setObject:value forKey:key];
     });
 }
 
