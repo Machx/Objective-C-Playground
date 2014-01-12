@@ -53,22 +53,22 @@
 /**
  Sets a key value pair in the trie
  
- @param value the value for key
- @param key the key for value
+ @param value the value for key. Must not be nil.
+ @param key the key for value. Must not be nil.
  */
 -(void)setObjectValue:(id)value forKey:(NSString *)key;
 
 /**
  Returns the object corresponding to key or nil if no such key is set
  
- @param key the key to be used to see if something exists 
+ @param key the key to be used to see if something exists. Must not be nil.
  */
 -(id)objectValueForKey:(NSString *)key;
 
 /**
  Returns if the key passed in is contained in the receiver
  
- @return a BOOL value indicating if the key is in the receiver 
+ @return a BOOL value indicating if the key is in the receiver. Must not be nil.
  */
 -(BOOL)containsKey:(NSString *)key;
 
@@ -78,6 +78,8 @@
  This method will try to find the key passed in, if at any time the trie can't
  find it (it doesn't exist) then this method simply returns. Otherwise it 
  will simply set the value corresponding with key to nil and return.
+ 
+ @param key The key whose corresponding value should be removed. Must not be nil
  */
 -(void)removeObjectValueForKey:(NSString *)key;
 
