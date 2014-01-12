@@ -30,6 +30,16 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ CWTrie2
+ 
+ CWTrie2 is a Trie Data Structure that is built with pure Objective-C and is
+ thread safe. It uses a serial dispatch_queue_t to perform all operations to 
+ ensure that they are executed serially. The set method is asynchronous, but all
+ get methods (objectValueForKey,containsKey,etc.) are synchronous. Optionally
+ it can be set so that the keys are case sensitive, but by default they are not.
+ */
+
 @interface CWTrie2 : NSObject
 
 /**
