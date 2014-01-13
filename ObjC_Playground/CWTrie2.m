@@ -32,7 +32,7 @@
 #import <libkern/OSAtomic.h>
 #import <Zangetsu/CWAssertionMacros.h>
 
-#define kCWTrieCacheLimit 1
+#define kCWTrieCacheLimit 2
 
 #define CWTrieKey() self.caseSensitive ? [key UTF8String] : [[key uppercaseString] UTF8String]
 
