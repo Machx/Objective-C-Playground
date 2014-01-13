@@ -32,6 +32,8 @@
 #import <libkern/OSAtomic.h>
 #import <Zangetsu/CWAssertionMacros.h>
 
+#define kCWTrieCacheLimit 1
+
 #define CWTrieKey() self.caseSensitive ? [key UTF8String] : [[key uppercaseString] UTF8String]
 
 @interface CWTrie2Node : NSObject
@@ -112,7 +114,7 @@ static int64_t queue_counter = 0;
     _root = [CWTrie2Node new];
     _caseSensitive = NO;
     _cache = [NSCache new];
-    [_cache setCountLimit:1];
+    [_cache setCountLimit:kCWTrieCacheLimit];
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
                            NSStringFromClass([self class]),
@@ -130,7 +132,7 @@ static int64_t queue_counter = 0;
     
     _root = [CWTrie2Node new];
     _cache = [NSCache new];
-    [_cache setCountLimit:1];
+    [_cache setCountLimit:kCWTrieCacheLimit];
     _caseSensitive = caseSensitive;
     _queue = ({
         NSString *label = [NSString stringWithFormat:@"%@%lli",
