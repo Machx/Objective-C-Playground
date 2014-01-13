@@ -45,6 +45,13 @@
 /**
  Initializes & returns a new CWTrie2 instance
  
+ @return An initialized CWTrie2 instance
+ */
+-(instancetype)init;
+
+/**
+ Initializes & returns a new CWTrie2 instance
+ 
  @param caseSensitive sets if the trie instace should use case sensitive keys
  @return An initialized CWTrie2 instance
  */
