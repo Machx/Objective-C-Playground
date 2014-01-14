@@ -72,4 +72,20 @@ describe(@"-containsKey", ^{
     });
 });
 
+describe(@"cache tests", ^{
+    it(@"make sure the correct result is returned after using containsKey", ^{
+        CWTrie2 *trie = [CWTrie2 new];
+        
+        [trie setObjectValue:@4 forKey:@"Hypnotoad"];
+        
+        //-containsKey should store the value @4 in the cache
+        /* normally you'd use this like
+         if([trie containsKey:key]) {
+            id value = [trie objectValueForKey:key];
+         }*/
+        expect([trie containsKey:@"Hypnotoad"]).to.beTruthy();
+        expect([trie objectValueForKey:@"Hypnotoad"]).to.equal(@4);
+    });
+});
+
 SpecEnd
