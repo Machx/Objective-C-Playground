@@ -28,7 +28,6 @@
 		17945696182F14250052E113 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		1794569B182F14620052E113 /* libSpecta-OSX.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1794568C182F14250052E113 /* libSpecta-OSX.a */; };
 		17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DCE2F8185B5EE800BE6276 /* CWAlertView.m */; };
-		17F6485A184267D300028065 /* CWPriorityQueue2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F64859184267D300028065 /* CWPriorityQueue2Tests.m */; };
 		B81F415F177F50F800ABED6D /* CWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F415E177F50F800ABED6D /* CWLogging.m */; };
 		B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F4161177F511900ABED6D /* CWLoggingTests.m */; };
 		B83C4B3716DE78400011506D /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
@@ -154,7 +153,6 @@
 		17945694182F14250052E113 /* XCTestRun+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestRun+Specta.h"; path = "External/Specta/XCTestRun+Specta.h"; sourceTree = SOURCE_ROOT; };
 		17DCE2F7185B5EE800BE6276 /* CWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertView.h; sourceTree = "<group>"; };
 		17DCE2F8185B5EE800BE6276 /* CWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertView.m; sourceTree = "<group>"; };
-		17F64859184267D300028065 /* CWPriorityQueue2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPriorityQueue2Tests.m; sourceTree = "<group>"; };
 		B81F415D177F50F800ABED6D /* CWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLogging.h; path = ../External/CWLogging/CWLogging.h; sourceTree = "<group>"; };
 		B81F415E177F50F800ABED6D /* CWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWLogging.m; path = ../External/CWLogging/CWLogging.m; sourceTree = "<group>"; };
 		B81F4160177F511900ABED6D /* CWLoggingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLoggingTests.h; path = External/CWLogging/CWLoggingTests.h; sourceTree = SOURCE_ROOT; };
@@ -486,7 +484,6 @@
 			children = (
 				B8AF363E1790526900988248 /* CWBinaryHeapTests.m */,
 				B8A2FA1D180D825A00DA2C2E /* CWTree2Tests.m */,
-				17F64859184267D300028065 /* CWPriorityQueue2Tests.m */,
 				B85EE787163B277300265870 /* Supporting Files */,
 			);
 			path = ObjC_PlaygroundTests;
@@ -757,7 +754,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17F6485A184267D300028065 /* CWPriorityQueue2Tests.m in Sources */,
 				B85033831764D76C00B17D1B /* CWFutureTests.m in Sources */,
 				B8FDFEEF1766345000087D79 /* CWFuture.m in Sources */,
 				B81F4162177F511900ABED6D /* CWLoggingTests.m in Sources */,
