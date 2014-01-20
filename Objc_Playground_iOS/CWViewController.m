@@ -20,10 +20,8 @@ static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 {
     [super viewDidLoad];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x,
-                                                                   self.view.frame.origin.y + 20,
-                                                                   self.view.frame.size.width,
-                                                                   self.view.frame.size.height)];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 	// Do any additional setup after loading the view, typically from a nib.
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
