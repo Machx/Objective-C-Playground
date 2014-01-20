@@ -12,6 +12,7 @@ static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 
 @interface CWViewController () <UITableViewDataSource, UITableViewDelegate>
 @property(strong) UITableView *tableView;
+@property(strong) NSArray *tests;
 @end
 
 @implementation CWViewController
@@ -19,6 +20,8 @@ static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tests = @[ @"TestView1" ];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
@@ -36,18 +39,26 @@ static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark TableView Data Source -
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kObjCPlayGroundTableCell];
-    cell.textLabel.text = @"iOS Playground Test 1";
+    cell.textLabel.text = self.tests[indexPath.row];
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.tests.count;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+#pragma mark TableView Delegate -
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"selected row %i with title %@",indexPath.row,self.tests[indexPath.row]);
 }
 
 @end
