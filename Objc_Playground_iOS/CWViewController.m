@@ -8,8 +8,10 @@
 
 #import "CWViewController.h"
 
-@interface CWViewController ()
+static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 
+@interface CWViewController () <UITableViewDataSource, UITableViewDelegate>
+@property(strong) UITableView *tableView;
 @end
 
 @implementation CWViewController
@@ -17,16 +19,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x,
+                                                                   self.view.frame.origin.y + 20,
+                                                                   self.view.frame.size.width,
+                                                                   self.view.frame.size.height)];
 	// Do any additional setup after loading the view, typically from a nib.
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 300, 50)];
-    label.text = @"Objective-C Playground";
-    [self.view addSubview:label];
+    [self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kObjCPlayGroundTableCell];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kObjCPlayGroundTableCell];
+    cell.textLabel.text = @"iOS Playground Test 1";
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 @end
