@@ -7,6 +7,7 @@
 //
 
 #import "CWViewController.h"
+#import "CWAlertViewTestViewController.h"
 
 static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 
@@ -58,7 +59,12 @@ static NSString * const kObjCPlayGroundTableCell = @"kObjCPlayGroundTableCell";
 #pragma mark TableView Delegate -
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"selected row %i with title %@",indexPath.row,self.tests[indexPath.row]);
+    if (indexPath.row == 0) {
+        CWAlertViewTestViewController *controller = [[CWAlertViewTestViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:^{
+            //
+        }];
+    }
 }
 
 @end

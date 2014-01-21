@@ -22,6 +22,7 @@
 		1737D6BE185A079C00AF9774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1737D69D185A079C00AF9774 /* UIKit.framework */; };
 		1737D6C6185A079C00AF9774 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1737D6C4185A079C00AF9774 /* InfoPlist.strings */; };
 		1737D6C8185A079C00AF9774 /* Objc_Playground_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */; };
+		1761AF9F188ED9E8004AFDCE /* CWAlertViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1761AF9E188ED9E8004AFDCE /* CWAlertViewTestViewController.m */; };
 		176DC48A18288829000ECCCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176DC48918288829000ECCCD /* Cocoa.framework */; };
 		176DC48D1828893B000ECCCD /* libExpecta-macosx.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = B83C4B3416DE78400011506D /* libExpecta-macosx.a */; };
 		1786A713185CC079002C56D0 /* CWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1786A712185CC079002C56D0 /* CWAlertViewController.m */; };
@@ -138,6 +139,8 @@
 		1737D6C3185A079C00AF9774 /* Objc_Playground_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Objc_Playground_iOSTests-Info.plist"; sourceTree = "<group>"; };
 		1737D6C5185A079C00AF9774 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1737D6C7185A079C00AF9774 /* Objc_Playground_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objc_Playground_iOSTests.m; sourceTree = "<group>"; };
+		1761AF9D188ED9E8004AFDCE /* CWAlertViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertViewTestViewController.h; sourceTree = "<group>"; };
+		1761AF9E188ED9E8004AFDCE /* CWAlertViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertViewTestViewController.m; sourceTree = "<group>"; };
 		176DC48918288829000ECCCD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1786A711185CC079002C56D0 /* CWAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlertViewController.h; sourceTree = "<group>"; };
 		1786A712185CC079002C56D0 /* CWAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlertViewController.m; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				1737D6AE185A079C00AF9774 /* Main_iPad.storyboard */,
 				1737D6B1185A079C00AF9774 /* CWViewController.h */,
 				1737D6B2185A079C00AF9774 /* CWViewController.m */,
+				1761AF9D188ED9E8004AFDCE /* CWAlertViewTestViewController.h */,
+				1761AF9E188ED9E8004AFDCE /* CWAlertViewTestViewController.m */,
 				17DCE2F7185B5EE800BE6276 /* CWAlertView.h */,
 				17DCE2F8185B5EE800BE6276 /* CWAlertView.m */,
 				1786A711185CC079002C56D0 /* CWAlertViewController.h */,
@@ -726,6 +731,7 @@
 				1737D6AA185A079C00AF9774 /* CWAppDelegate.m in Sources */,
 				17DCE2F9185B5EE800BE6276 /* CWAlertView.m in Sources */,
 				1737D6A6185A079C00AF9774 /* main.m in Sources */,
+				1761AF9F188ED9E8004AFDCE /* CWAlertViewTestViewController.m in Sources */,
 				1737D6B3185A079C00AF9774 /* CWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
