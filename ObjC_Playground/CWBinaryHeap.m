@@ -162,7 +162,7 @@ static CFComparisonResult CWBinaryHeapCompare(const void *ptr1, const void *ptr2
 -(NSUInteger)hash {
 	//return an unsigned value from a signed one, so only return values > 0
 	CFIndex hash = CFHash(self.heap);
-	return (hash > 0) ? (NSUInteger)hash : 0;
+	return (hash >= 1) ? (NSUInteger)hash : 0;
 }
 
 -(void)addObject:(id)object {
